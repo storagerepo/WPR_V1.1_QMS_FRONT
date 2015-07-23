@@ -1,0 +1,454 @@
+
+<div class="row">
+	<div id="breadcrumb" class="col-md-12">
+		<ol class="breadcrumb">
+			<li><a href="index.html">QMS</a></li>
+			<li><a href="#">Document Control</a></li>
+			<li><a href="#">Forms</a></li>
+			<li><a href="#">View Form</a></li>
+		</ol>
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-12">
+		<div class="box">
+			<div class="box-header">
+				<div class="box-name">
+					<i class="fa fa-linux"></i>
+					<span>Search Form Details</span>
+				</div>
+			</div>
+			<div class="box-content no-padding table-responsive">
+				<table class="table table-bordered table-striped table-hover table-heading table-datatable" id="datatable-2">
+					<thead>
+						<tr>
+							<th><label><input type="text" name="search_Form/Rec_ID" value="Search Form/Rec ID" class="search_init"/></label></th>
+							<th><label><input type="text" name="search_Process" value="Search Process" class="search_init"/></label></th>
+							<th><label for="date_example" ><input type="text" name="search_Effective_Date" value="Search Effective Date" class="search_init" id="date_example"/></label></th>
+							<th><label><input type="text" name="search_Approver1" value="Search Approver1" class="search_init"/></label></th>
+							<th><label><input type="text" name="search_Issuer" value="Search Issuer" class="search_init"/></label></th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><a class="ajax-link" href="ajax/listDocumentRevision.html">EHR-111</a></td>
+							<td>title1</td>
+							<td>DocTyle</td>
+							<td>Sample Process2</td>
+							<td>Hard Copy</td>
+							<td><a href="#" onclick="editForm();" title="Edit Document" data-toggle="tooltip" data-placement="left"><i class="fa fa-edit txt-info"></i></a>&nbsp;
+								<a href="#" onclick="viewRevisionHistory();" title="View Revision History" data-toggle="tooltip" data-target="#myModal" data-placement="left"><i class="fa fa-tags txt-info"></i></a></td>
+						</tr>
+						<tr>
+							<td><a href="#">QMS-6</a></td>
+							<td>title2</td>
+							<td>PaperMake</td>
+							<td>Sample Process2</td>
+							<td>Hard Copy</td>
+							<td><a href="#" onclick="editForm();" title="Edit Document" data-toggle="tooltip" data-target="#myModal" data-placement="left"><i class="fa fa-edit txt-info"></i></a>&nbsp;
+								<a href="#" onclick="viewRevisionHistory();" title="View Revision History" data-toggle="tooltip" data-target="#myModal" data-placement="left"><i class="fa fa-tags txt-info"></i></a></td>
+						</tr>
+						<tr>
+							<td><a href="#">GRT-326</a></td>
+							<td>title2</td>
+							<td>ReportingDirector</td>
+							<td>Sample Process23</td>
+							<td>Hard Copy</td>
+							
+							<td><a href="#" onclick="editForm();" title="Edit Document" data-toggle="tooltip" data-target="#myModal" data-placement="left"><i class="fa fa-edit txt-info"></i></a>&nbsp;
+								<a href="#" onclick="viewRevisionHistory();" title="View Revision History" data-toggle="tooltip" data-target="#myModal" data-placement="left"><i class="fa fa-tags txt-info"></i></a></td>
+						</tr>
+						<tr>
+							<td><a href="#">GRT-328</a></td>
+							<td>title4</td>
+							<td>DocTyle</td>
+							<td>Process2</td>
+							<td><a href="#">Download</a> and Hard Copy</td>
+							<td><a href="#" onclick="editForm();" title="Edit Document" data-toggle="modal" data-target="#myModal" data-placement="left"><i class="fa fa-edit txt-info"></i></a>&nbsp;
+								<a href="#" onclick="viewRevisionHistory();" title="View Revision History" data-toggle="modal" data-target="#myModal" data-placement="left"><i class="fa fa-tags txt-info"></i></a></td>
+						</tr>
+						<tr>
+							<td><a href="#">BMS-325</a></td>
+							<td>title2</td>
+							<td>PaperMake</td>
+							<td>Process make</td>
+							<td>Hard Copy</td>
+							<td><a href="#" onclick="editForm();" title="Edit Document" data-toggle="modal" data-target="#myModal" data-placement="left"><i class="fa fa-edit txt-info"></i></a>&nbsp;
+								<a href="#" onclick="viewRevisionHistory();" title="View Revision History" data-toggle="modal" data-target="#myModal" data-placement="left"><i class="fa fa-tags txt-info"></i></a></td>
+						</tr>
+						<tr>
+							<td><a href="#">KHR-123</a></td>
+							<td>title6</td>
+							<td>DocTyle</td>
+							<td>Sample</td>
+							<td>Hard Copy</td>
+						
+							<td><a href="#" onclick="editForm();" title="Edit Document" data-toggle="modal" data-target="#myModal" data-placement="left"><i class="fa fa-edit txt-info"></i></a>&nbsp;
+								<a href="#" onclick="viewRevisionHistory();" title="View Revision History" data-toggle="modal" data-target="#myModal" data-placement="left"><i class="fa fa-tags txt-info"></i></a></td>
+						</tr>
+						<tr>
+							<td><a href="#">JRT-6</a></td>
+							<td>title1</td>
+							<td>PaperMake</td>
+							<td>Sampess2</td>
+							<td>Hard Copy</td>
+							
+							<td><a href="#" onclick="editForm();" title="Edit Document" data-toggle="modal" data-target="#myModal" data-placement="left"><i class="fa fa-edit txt-info"></i></a>&nbsp;
+								<a href="#" onclick="viewRevisionHistory();" title="View Revision History" data-toggle="modal" data-target="#myModal" data-placement="left"><i class="fa fa-tags txt-info"></i></a></td>
+						</tr>
+						<tr>
+							<td><a href="#">KJJ-678</a></td>
+							<td>title89</td>
+							<td>Health</td>
+							<td>Sample Process2</td>
+							<td><a href="#">Download</a> and Hard Copy</td>
+						
+							<td><a href="#" onclick="editForm();" title="Edit Document" data-toggle="modal" data-target="#myModal" data-placement="left"><i class="fa fa-edit txt-info"></i></a>&nbsp;
+								<a href="#" onclick="viewRevisionHistory();" title="View Revision History" data-toggle="modal" data-target="#myModal" data-placement="left"><i class="fa fa-tags txt-info"></i></a></td>
+						</tr>
+						<tr>
+							<td><a href="#">III-456</a></td>
+							<td>Doc Type</td>
+							<td>Doc Name</td>
+							<td>Sample 345</td>
+							<td>Hard Copy</td>
+							
+							<td><a href="#" onclick="editForm();" title="Edit Document" data-toggle="modal" data-target="#myModal" data-placement="left"><i class="fa fa-edit txt-info"></i></a>&nbsp;
+								<a href="#" onclick="viewRevisionHistory();" title="View Revision History" data-toggle="modal" data-target="#myModal" data-placement="left"><i class="fa fa-tags txt-info"></i></a></td>
+						</tr>
+						<tr>
+							<td><a href="#">DHR-902</a></td>
+							<td>titles</td>
+							<td>DocTyle</td>
+							<td>Sample Process2</td>
+							<td>Hard Copy</td>
+							
+							<td><a href="#" onclick="editForm();" title="Edit Document" data-toggle="modal" data-target="#myModal" data-placement="left"><i class="fa fa-edit txt-info"></i></a>&nbsp;
+								<a href="#" onclick="viewRevisionHistory();" title="View Revision History" data-toggle="modal" data-target="#myModal" data-placement="left"><i class="fa fa-tags txt-info"></i></a></td>
+						</tr>
+						<tr>
+						<td><a href="#">QMS-690</a></td>
+							<td>Home</td>
+							<td>PaperMake</td>
+							<td></td>
+							<td>Hard Copy</td>
+							
+							<td><a href="#" onclick="editForm();" title="Edit Document" data-toggle="modal" data-target="#myModal" data-placement="left"><i class="fa fa-edit txt-info"></i></a>&nbsp;
+								<a href="#" onclick="viewRevisionHistory();" title="View Revision History" data-toggle="modal" data-target="#myModal" data-placement="left"><i class="fa fa-tags txt-info"></i></a></td>
+						</tr>
+						<tr>
+							<td><a href="#">EHR-5668</a></td>
+							<td>title6</td>
+							<td>Manual</td>
+							<td>Sample Process2</td>
+							<td><a href="#">Download</a> and Hard Copy</td>
+							
+							<td><a href="#" onclick="editForm();" title="Edit Document" data-toggle="modal" data-target="#myModal" data-placement="left"><i class="fa fa-edit txt-info"></i></a>&nbsp;
+								<a href="#" onclick="viewRevisionHistory();" title="View Revision History" data-toggle="modal" data-target="#myModal" data-placement="left"><i class="fa fa-tags txt-info"></i></a></td>
+						</tr>
+						<tr>
+							<td><a href="#">QMS-6</a></td>
+							<td>title1</td>
+							<td>PaperMake</td>
+							<td>Sample Process2</td>
+							<td>Hard Copy</td>
+							
+							<td><a href="#" onclick="editForm();" title="Edit Document" data-toggle="modal" data-target="#myModal" data-placement="left"><i class="fa fa-edit txt-info"></i></a>&nbsp;
+								<a href="#" onclick="viewRevisionHistory();" title="View Revision History" data-toggle="modal" data-target="#myModal" data-placement="left"><i class="fa fa-tags txt-info"></i></a></td>
+						</tr>
+						<tr>
+							<td><a href="#">EHR-878</a></td>
+							<td>title6</td>
+							<td>DocTyle</td>
+							<td>Sample Process2</td>
+							<td><a href="#">Download</a> and Hard Copy</td>
+							
+							<td><a href="#" onclick="editForm();" title="Edit Document" data-toggle="modal" data-target="#myModal" data-placement="left"><i class="fa fa-edit txt-info"></i></a>&nbsp;
+								<a href="#" onclick="viewRevisionHistory();" title="View Revision History" data-toggle="modal" data-target="#myModal" data-placement="left"><i class="fa fa-tags txt-info"></i></a></td>
+						</tr>
+						<tr>
+							<td><a href="#">QMS-6</a></td>
+							<td>title1</td>
+							<td>PaperMake</td>
+							<td>Sample Process2</td>
+							<td>Hard Copy</td>
+							
+							<td><a href="#" onclick="editForm();" title="Edit Document" data-toggle="modal" data-target="#myModal" data-placement="left"><i class="fa fa-edit txt-info"></i></a>&nbsp;
+								<a href="#" onclick="viewRevisionHistory();" title="View Revision History" data-toggle="modal" data-target="#myModal" data-placement="left"><i class="fa fa-tags txt-info"></i></a></td>
+						</tr>
+						<tr>
+						<td><a href="#">EHR-1232</a></td>
+							<td>titian</td>
+							<td>DocTyle</td>
+							<td>Sample Process2</td>
+							<td><a href="#">Download</a> and Hard Copy</td>
+							
+							<td><a href="#" onclick="editForm();" title="Edit Document" data-toggle="modal" data-target="#myModal" data-placement="left"><i class="fa fa-edit txt-info"></i></a>&nbsp;
+								<a href="#" onclick="viewRevisionHistory();" title="View Revision History" data-toggle="modal" data-target="#myModal" data-placement="left"><i class="fa fa-tags txt-info"></i></a></td>
+						</tr>
+						<tr>
+							<td><a href="#">QMS-6</a></td>
+							<td>Jeen</td>
+							<td>PaperMake</td>
+							<td>Sample Process2</td>
+							<td>Hard Copy</td>
+							
+							<td><a href="#" onclick="editForm();" title="Edit Document" data-toggle="modal" data-target="#myModal" data-placement="left"><i class="fa fa-edit txt-info"></i></a>&nbsp;
+								<a href="#" onclick="viewRevisionHistory();" title="View Revision History" data-toggle="modal" data-target="#myModal" data-placement="left"><i class="fa fa-tags txt-info"></i></a></td>
+						</tr>
+						<tr>
+							<td><a href="#">OPI-1233</a></td>
+							<td>title6</td>
+							<td>DocTyle</td>
+							<td>Sample Process2</td>
+							<td><a href="#">Download</a> and Hard Copy</td>
+							
+							<td><a href="#" onclick="editForm();" title="Edit Document" data-toggle="modal" data-target="#myModal" data-placement="left"><i class="fa fa-edit txt-info"></i></a>&nbsp;
+								<a href="#" onclick="viewRevisionHistory();" title="View Revision History" data-toggle="modal" data-target="#myModal" data-placement="left"><i class="fa fa-tags txt-info"></i></a></td>
+						</tr>
+						<tr>
+						<td><a href="#">LLD-6</a></td>
+							<td>title1</td>
+							<td>PaperMake</td>
+							<td>Sample Process2</td>
+							<td>Hard Copy</td>
+							
+							<td><a href="#" onclick="editForm();" title="Edit Document" data-toggle="modal" data-target="#myModal" data-placement="left"><i class="fa fa-edit txt-info"></i></a>&nbsp;
+								<a href="#" onclick="viewRevisionHistory();" title="View Revision History" data-toggle="modal" data-target="#myModal" data-placement="left"><i class="fa fa-tags txt-info"></i></a></td>
+						</tr>
+						<tr>
+							<td><a href="#">AQS-5668</a></td>
+							<td>title78</td>
+							<td>DocTyle</td>
+							<td>Sample </td>
+							<td><a href="#">Download</a> and Hard Copy</td>
+							
+							<td><a href="#" onclick="editForm();" title="Edit Document" data-toggle="modal" data-target="#myModal" data-placement="left"><i class="fa fa-edit txt-info"></i></a>&nbsp;
+								<a href="#" onclick="viewRevisionHistory();" title="View Revision History" data-toggle="modal" data-target="#myModal" data-placement="left"><i class="fa fa-tags txt-info"></i></a></td>
+						</tr>
+						<tr>
+							<td><a href="#">QMS-126</a></td>
+							<td>title1</td>
+							<td>PaperMake</td>
+							<td>Sample Process2</td>
+							<td>Hard Copy</td>
+							
+							<td><a href="#" onclick="editForm();" title="Edit Document" data-toggle="modal" data-target="#myModal" data-placement="left"><i class="fa fa-edit txt-info"></i></a>&nbsp;
+								<a href="#" onclick="viewRevisionHistory();" title="View Revision History" data-toggle="modal" data-target="#myModal" data-placement="left"><i class="fa fa-tags txt-info"></i></a></td>
+						</tr>
+						<tr>
+							<td><a href="#">KKD-5668</a></td>
+							<td>title6</td>
+							<td>DocTyle</td>
+							<td>Sample Process2</td>
+							<td><a href="#">Download</a> and Hard Copy</td>
+							
+							<td><a href="#" onclick="editForm();" title="Edit Document" data-toggle="modal" data-target="#myModal" data-placement="left"><i class="fa fa-edit txt-info"></i></a>&nbsp;
+								<a href="#" onclick="viewRevisionHistory();" title="View Revision History" data-toggle="modal" data-target="#myModal" data-placement="left"><i class="fa fa-tags txt-info"></i></a></td>
+						</tr>
+						<tr>
+							<td><a href="#">QMS-617</a></td>
+							<td>title1</td>
+							<td>PaperMake</td>
+							<td>Sample Process2</td>
+							<td>Hard Copy</td>
+							
+							<td><a href="#" onclick="editForm();" title="Edit Document" data-toggle="modal" data-target="#myModal" data-placement="left"><i class="fa fa-edit txt-info"></i></a>&nbsp;
+								<a href="#" onclick="viewRevisionHistory();" title="View Revision History" data-toggle="modal" data-target="#myModal" data-placement="left"><i class="fa fa-tags txt-info"></i></a></td>
+						</tr>
+						<tr>
+							<td><a href="#">ASD-112</a></td>
+							<td>title634</td>
+							<td>DocTyle</td>
+							<td>Sample Process2</td>
+							<td>Hard Copy</td>
+							
+							<td><a href="#" onclick="editForm();" title="Edit Document" data-toggle="modal" data-target="#myModal" data-placement="left"><i class="fa fa-edit txt-info"></i></a>&nbsp;
+								<a href="#" onclick="viewRevisionHistory();" title="View Revision History" data-toggle="modal" data-target="#myModal" data-placement="left"><i class="fa fa-tags txt-info"></i></a></td>
+						</tr>
+						<tr>
+							<td><a href="#">QMS-6</a></td>
+							<td>title1</td>
+							<td>PaperMake</td>
+							<td>Sample Process2</td>
+							<td>Hard Copy</td>
+							
+							<td><a href="#" onclick="editForm();" title="Edit Document" data-toggle="modal" data-target="#myModal" data-placement="left"><i class="fa fa-edit txt-info"></i></a>&nbsp;
+								<a href="#" onclick="viewRevisionHistory();" title="View Revision History" data-toggle="modal" data-target="#myModal" data-placement="left"><i class="fa fa-tags txt-info"></i></a></td>
+						</tr>
+						<tr>
+							<td><a href="#">EHR-568</a></td>
+							<td>title6</td>
+							<td>DocTyle</td>
+							<td>Sample Process2</td>
+							<td><a href="#">Download</a> and Hard Copy</td>
+							
+							<td><a href="#" onclick="editForm();" title="Edit Document" data-toggle="modal" data-target="#myModal" data-placement="left"><i class="fa fa-edit txt-info"></i></a>&nbsp;
+								<a href="#" onclick="viewRevisionHistory();" title="View Revision History" data-toggle="modal" data-target="#myModal" data-placement="left"><i class="fa fa-tags txt-info"></i></a></td>
+						</tr>
+						<tr>
+							<td><a href="#">QMS-688</a></td>
+							<td>title1</td>
+							<td>PaperMake</td>
+							<td>Sample Process2</td>
+							<td>Hard Copy</td>
+							
+							<td><a href="#" onclick="editForm();" title="Edit Document" data-toggle="tooltip" data-target="#myModal" data-placement="left"><i class="fa fa-edit txt-info"></i></a>&nbsp;
+								<a href="#" onclick="viewRevisionHistory();" title="View Revision History" data-toggle="tooltip" data-target="#myModal" data-placement="left"><i class="fa fa-tags txt-info"></i></a></td>
+						</tr>
+						<tr>
+							<td><a href="#">EHR-368</a></td>
+							<td>titl</td>
+							<td>DocTyle</td>
+							<td>Sample Process2</td>
+							<td><a href="#">Download</a> and Hard Copy</td>
+							
+							<td><a href="#" onclick="editForm();" title="Edit Document" data-toggle="tooltip" data-target="#myModal" data-placement="left"><i class="fa fa-edit txt-info"></i></a>&nbsp;
+								<a href="#" onclick="viewRevisionHistory();" title="View Revision History" data-toggle="tooltip" data-target="#myModal" data-placement="left"><i class="fa fa-tags txt-info"></i></a></td>
+						</tr>
+						<tr>
+							<td><a href="#">QJK-6</a></td>
+							<td>title1</td>
+							<td>PaperMake</td>
+							<td>Sample Process2</td>
+							<td>Hard Copy</td>
+							
+							<td><a href="#" onclick="editForm();" title="Edit Document" data-toggle="tooltip" data-target="#myModal" data-placement="left"><i class="fa fa-edit txt-info"></i></a>&nbsp;
+								<a href="#" onclick="viewRevisionHistory();" title="View Revision History" data-toggle="tooltip" data-target="#myModal" data-placement="left"><i class="fa fa-tags txt-info"></i></a></td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<th>Form/Rec ID</th>
+							<th>Process</th>
+							<th>Effective Date</th>
+							<th>Approver1</th>
+							<th>Issuer</th>
+							<th>Action</th>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- revision Modal -->
+<div class="modal fade" id="revisionModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel1">Form Revsion Details</h4>
+            </div>
+            <div class="modal-body">
+				<table class="table table-striped table-bordered table-hover table-heading no-border-bottom">
+					<thead>
+						<tr>
+							<th>Form/Rec ID</th>
+							<th>Effective Date</th>
+							<th>Approver1</th>
+							<th>Issuer</th>
+							<th>Comments</th>
+							<th>Revision No</th>
+							
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>KKDD-8978</td>
+							<td>04/09/2015</td>
+							<td>Aravind</td>
+							<td>Stella</td>
+							<td>Nothing</td>
+							<td>0.a</td>
+						</tr>
+						<tr>
+							<td>KKDD-8978</td>
+							<td>11/07/2015</td>
+							<td>spike</td>
+							<td>Stella</td>
+							<td>Something</td>
+							<td>0.b</td>
+						</tr>
+						<tr>
+							<td>KKDD-8978</td>
+							<td>21/07/2015</td>
+							<td>spike</td>
+							<td>management</td>
+							<td>Changed</td>
+							<td>0.c</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger btn-lg" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+$(document).ready(function() {
+	// Load TimePicker plugin and callback all time and date pickers
+	LoadTimePickerScript(AllTimePickers);
+});
+</script>
+<script type="text/javascript">
+// Run Datables plugin and create 3 variants of settings
+function AllTables(){
+	TestTable1();
+	TestTable2();
+	TestTable3();
+	LoadSelect2Script(MakeSelect2);
+}
+function MakeSelect2(){
+	$('select').select2();
+	$('.dataTables_filter').each(function(){
+		$(this).find('label input[type=text]').attr('placeholder', 'Search');
+	});
+}
+$(document).ready(function() {
+	// Load Datatables and run plugin on tables 
+	LoadDataTablesScripts(AllTables);
+	// Add Drag-n-Drop feature
+	/*WinMove();*/
+});
+</script>
+<script type="text/javascript">
+function viewRevisionHistory(){
+	$("#revisionModal").modal("show");
+}
+</script>
+<style>
+@media screen and (min-width: 768px) {
+	
+	#revisionModal .modal-dialog  {width:900px;}
+
+}
+tfoot input {
+        width: 100%;
+        padding: 3px;
+        box-sizing: border-box;
+    }
+tfoot {
+    display: table-header-group;
+}
+.dataTables_filter {
+   width: 50%;
+   float: right;
+   text-align: right;
+   display: none;
+}
+div.dataTables_paginate {
+    float:right;
+    margin: 0;
+}
+tr.group,
+tr.group:hover {
+    background-color: red !important;
+}
+
+</style>
