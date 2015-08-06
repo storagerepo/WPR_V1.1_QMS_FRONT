@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+
+    <title>Deemsys QMS</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/css/datetimepicker.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <!--external css-->
+    <link href="../assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/zabuto_calendar.css">
+    <link rel="stylesheet" type="text/css" href="../assets/js/gritter/css/jquery.gritter.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/lineicons/style.css">    
+    <link href="../assets/css/vigo.datepicker.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <link href="../assets/css/style-responsive.css" rel="stylesheet">
+
+    <script src="../assets/js/chart-master/Chart.js"></script>
+    
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+  <section id="container" >
+      <!-- **********************************************************************************************************************************************************
+      TOP BAR CONTENT & NOTIFICATIONS
+      *********************************************************************************************************************************************************** -->
+      <!--header start-->
+      <header class="header black-bg">
+              <div class="sidebar-toggle-box">
+                  <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+              </div>
+            <!--logo start-->
+            <a href="../index.html" class="logo"><b>Quality Managment System</b></a>
+            <!--logo end-->
+            <div class="top-menu">
+              <ul class="nav pull-right top-menu">
+                    <li><a class="logout" href="../login.html">Logout</a></li>
+              </ul>
+            </div>
+        </header>
+      <!--header end-->
+      
+      <!-- **********************************************************************************************************************************************************
+      MAIN SIDEBAR MENU
+      *********************************************************************************************************************************************************** -->
+      <!--sidebar start-->
+      <aside>
+          <div id="sidebar"  class="nav-collapse ">
+              <!-- sidebar menu start-->
+              <ul class="sidebar-menu" id="nav-accordion">
+                  <!-- <li class="mt">
+                      <a class="active" href="index.html">
+                          <i class="fa fa-dashboard"></i>
+                          <span>Dashboard</span>
+                      </a>
+                  </li> -->
+
+                 <li class="sub-menu">
+                      <a href="#" >
+                          <i class="fa fa-cogs"></i>
+                          <span>Maintenance & Calibration</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="../Maintenance/addMaintenance.html">Enter/Modify Equipment</a></li>
+                          <li><a  href="../Maintenance/viewMaintenanceEquipment.html">View Equipment</a></li>
+                          <li><a  href="../Maintenance/viewMaintenanceDetails.html">View Maintenance and Calibration</a></li>
+                          <li><a  href="../Maintenance/maintenanceReport.html">Reports</a></li>
+                      </ul>
+                  </li>
+
+                  <li class="sub-menu">
+                      <a href="#" >
+                          <i class="fa fa-exclamation-circle"></i>
+                          <span>Non Conformance</span>
+                      </a>
+                      <ul class="sub">
+                         <li><a  href="../NonConformance/addnonConformance.html">Add NonConformance</a></li>
+                          <li><a  href="../NonConformance/viewNonConformanceDetails.html">View NonConformance</a></li>
+                          <li><a  href="../NonConformance/nonConformanceReport.html">Reports</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                         <i class="fa fa-users"></i>
+                          <span>Customers</span>
+                      </a>
+                      <ul class="sub">
+                         <li><a  href="../Customers/addCustomer.html">Add Customers</a></li>
+                         <li><a  href="../Customers/viewCustomer.html">View Customers</a></li>
+                         <li><a  href="../Customers/customerReport.html">Feedback Report</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a  class="active" href="javascript:;" >
+                        <i class="fa fa-user"></i>
+                          <span>HR and Training</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="../HRandTraining/addHR.html">Add HR and Training</a></li>
+                          <li class="active"><a  href="../HRandTraining/viewHR.html">View HR and Training</a></li>
+                          <li><a  href="../HRandTraining/hrReport.html">Reports</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                         <i class="fa fa-book"></i>
+                         <span>Document Control</span>
+                      </a>
+                      <ul class="sub">
+                         <li class="sub-menu-sub">
+                            <a href="javascript:;" >
+                               <i class="fa fa-plus-square"></i>
+                               <span>Document</span>
+                            </a>
+                             <ul class="sub">
+                              <li><a href="../document/addDocument.html">Add Document</a></li>
+                              <li><a href="../document/viewDocumentRevision.html">View Revision</a></li>
+                              <li><a href="../document/viewDocumentDetails.html">View Documents</a></li>
+                             </ul>
+                        </li>
+                        <li class="sub-menu-sub">
+                            <a href="javascript:;" >
+                               <i class="fa fa-plus-square"></i>
+                               <span>Forms/Records</span>
+                            </a>
+                             <ul class="sub">
+                              <li><a href="../forms/addForm.html">Add Form</a></li>
+                              <li><a href="../forms/viewFormRevision.html">View Revision</a></li>
+                              <li><a href="../forms/viewFormDetails.html">View Forms</a></li>
+                             </ul>
+                        </li>
+                         <li><a href="../document/documentReport.html">Document Reports</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                         <i class="fa fa-map-marker"></i>
+                         <span>Internal Audits</span>
+                      </a>
+                      <ul class="sub">
+                           <li><a href="../InternalAudit/addInternalAudit.html">Add Internal Audit</a></li>
+                           <li><a  href="../InternalAudit/viewInternalAudit.html">View Internal Audits</a></li>
+                           <li><a  href="../InternalAudit/internalAuditReport.html">Reports</a></li>
+                      </ul>
+                  </li>
+                 <li class="sub-menu">
+                      <a href="javascript:;" >
+                           <i class="fa fa-wrench"></i>
+                           <span>Corrective and Preventive Actions</span>
+                      </a>
+                      <ul class="sub">
+                         <li><a  href="../CorrectivePreventiveActions/addCorrectiveActions.html">Add Corrective and Preventive Actions</a></li>
+                        <li><a  href="../CorrectivePreventiveActions/viewCorrectiveActions.html">View Corrective and Preventive Actions</a></li>
+                        <li><a  href="../CorrectivePreventiveActions/correctiveActionsReport.html">Reports</a></li> 
+                      </ul>
+                  </li>
+                   <li class="sub-menu">
+                      <a href="javascript:;" >
+                            <i class="fa fa-truck"></i>
+                            <span>Supplier Performance</span>
+                      </a>
+                      <ul class="sub">
+                       <li><a  href="../SupplierPerformance/addSupplierPerformance.html">Add Supplier Performance</a></li>
+                        <li><a  href="../SupplierPerformance/viewSupplier.html">View Supplier</a></li>
+                        <li><a  href="../SupplierPerformance/viewSupplierPerformance.html">View Supplier Performance</a></li>
+                        <li><a  href="../SupplierPerformance/supplierPerformanceReport.html">Reports</a></li>
+                      </ul>
+                  </li>
+                   <li class="sub-menu">
+                      <a href="javascript:;" >
+                             <i class="fa fa-qrcode"></i>
+                             <span>Management Review</span>
+                      </a>
+                      <ul class="sub">
+                        <li><a  href="../ManagementReview/addManagementReview.html">Add Management Review</a></li>
+                        <li><a  href="../ManagementReview/viewManagementReview.html">View Management Review</a></li>
+                        <li><a  href="../ManagementReview/managementReviewReport.html">Reports</a></li>
+                      </ul>
+                  </li>
+              </ul>
+              <!-- sidebar menu end-->
+          </div>
+      </aside>
+      <!--sidebar end-->
+      
+      <!-- **********************************************************************************************************************************************************
+      MAIN CONTENT
+      *********************************************************************************************************************************************************** -->
+      <!--main content start-->
+      <section id="main-content">
+          <section class="wrapper">
+          <div class="row">
+  <div id="breadcrumb" class="col-md-12">
+    <ol class="breadcrumb">
+      <li><a href="../index.html">QMS</a></li>
+      <li><a href="#">HR and Training</a></li>
+         <li><a href="../HRandTraining/viewHR.html">View HR and Training Details</a></li>
+      <li><a href="#">Update HR and Training</a></li>
+    </ol>
+  </div>
+</div>
+<div class="row mt">
+  <form class="form-horizontal style-form" role="form">
+  <div class="col-xs-12 col-sm-12">
+    <div class="form-panel">
+      <div class="box-header">
+        <div class="box-name">
+          <i class="fa fa-user"></i>
+          <span>Update HR and Training Details</span>
+        </div>
+      </div>
+      <div class="box-content">
+          <div class="form-group">
+            <label class="col-sm-2 control-label">ID </label>
+            <div class="col-sm-4">  
+              <input type="text" class="form-control" placeholder="" readonly=true value="EMP0027">
+            </div>
+            <label class="col-sm-2 control-label">Name</label>
+            <div class="col-sm-4">
+              <input type="text" id="name" class="form-control" onblur="nameChildUpdate(this.value);" value="Willamson">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Job Title</label>
+            <div class="col-sm-4">
+               <select class="form-control" id="jobTitle" onchange="jobChildUpdate(this.value);">
+                <option>- Select -</option>
+                <option value="Job Title 1" selected>Job Title 1</option>
+                <option value="Job Title 2">Job Title 2 </option>
+                <option value="Job Title 3">Job Title 3 </option>
+              </select>
+            </div>
+            <label class="col-sm-2 control-label">Date Hired</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" id="dateHired" onchange="dateChildUpdate(this.value);"  placeholder="date picker" value="09/16/2015">
+            </div>
+            
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Attachments</label>
+            <div class="col-sm-3">
+            <input type="file" name="files[0]"  data-toggle="tooltip" data-placement="bottom" title="Here you can scan or attach documents such as resume, diploma, certificates, etc">myResume.doc
+            </div>
+            <div class="col-sm-2">
+              <!--  <input class="btn btn-primary" type="button" value="Click to Add more Attachments" /> -->
+              <button type="button" id="addFile" class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="Add Attachment">Add More <i class="fa fa-paperclip"></i></button>
+            </div>
+             <div class="col-sm-2">
+             
+                <button type="button" id="removeFile" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Remove Attachment">Remove Last <i class="fa fa-paperclip"></i></button>
+            </div>
+          </div>
+          <div class="form-group">
+             <div class="col-sm-2"></div>
+           <div class="col-sm-4" id="fileTable">
+            </div> 
+               <label class="col-sm-2 control-label">Working As</label>
+            <div class="col-sm-4">
+              <div class="checkbox-inline">
+                <label>
+                  <input type="checkbox" id="processOwner" onchange="checkWorkingAs()" checked>Process Owner  
+                  <i class="fa fa-square-o small"></i>
+                </label>
+             </div>
+             <div class="checkbox-inline">
+                <label>
+                  <input type="checkbox" id="documentControl" onchange="checkWorkingAs()" checked>Document Control
+                  <i class="fa fa-square-o small"></i>
+                </label>
+             </div>
+             <div class="checkbox">
+                <label>
+                  <input type="checkbox" id="mangmentRepresentative" onchange="checkWorkingAs()" disabled>Management Representative 
+                  <i class="fa fa-square-o small"></i>
+                </label>
+             </div>
+            </div>
+           </div>   
+      </div>    
+    </div>
+  </div>  
+  <!-- inner Fields -->
+        <div class="col-xs-12 col-sm-12">
+           <div class="form-panel">
+            <div class="box-content">
+               <div class="form-group">
+            <label class="col-sm-2 control-label">Name</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" readonly=true id="nameChild" value="Willamson" >
+            </div>
+             <label class="col-sm-2 control-label">Date Hired </label>
+            <div class="col-sm-4">  
+              <input type="text" class="form-control" placeholder="" readonly=true id="dateHiredChild" value="09/16/2013">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Job Title</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" placeholder="" readonly=true id="jobTitleChild" value="job Title 1">
+            </div>
+            <label class="col-sm-2 control-label">List of functions needes</label>
+            <div class="col-sm-4">
+             <div class="checkbox-inline">
+                <label>
+                  <input type="checkbox" checked>Calibration 
+                  <i class="fa fa-square-o small"></i>
+                </label>
+             </div>
+             <div class="checkbox-inline">
+                <label>
+                  <input type="checkbox" checked>Responsibility 
+                  <i class="fa fa-square-o small"></i>
+                </label>
+             </div>
+             <div class="checkbox-inline">
+                <label>
+                  <input type="checkbox" checked>Disposition 
+                  <i class="fa fa-square-o small"></i>
+                </label>
+             </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Documented In</label>
+            <div class="col-sm-4">
+               <input class="form-control" type="text" value="Documented In">
+            </div>
+            <label class="col-sm-2 control-label">Qualified By</label>
+            <div class="col-sm-4">
+              <select class="form-control" id="qualified" onchange="qualifiedBy(this.value);">
+                  <option value=""> -Select-</option>
+                <option value="1">Education</option>
+                <option value="2">Experience</option>
+                <option value="3" selected>Training</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Type of Training</label>
+            <div class="col-sm-4">
+                <select class="form-control" id="typeofTraining" >
+                  <option value=""> -Select-</option>
+                <option value="1">Classroom</option>
+                <option value="2" selected>Hands on</option>
+              </select>
+            </div>
+             <label class="col-sm-2 control-label">Trainer</label>
+            <div class="col-sm-4">
+               <input class="form-control" type="text" id="trainer" value="Nelisis">
+            </div>
+          </div>
+            <div class="form-group">
+            <label class="col-sm-2 control-label">Training Due Date</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" placeholder="date picker" value="10/20/2015"  id="trainingDueDate" >
+            </div>
+             <label class="col-sm-2 control-label">Training Completion Date</label>
+            <div class="col-sm-4">  
+              <input type="text" class="form-control" placeholder="date picker" id="trainingCompletionDate"  value="11/20/2015">
+            </div>
+          </div>
+            <div class="form-group">
+            <label class="col-sm-2 control-label">Training Effectiveness Notes</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" id="trainingEffectiveNotes" value="training effective notes">
+            </div>
+             <label class="col-sm-2 control-label">Training Effectivenesss Review Due Date</label>
+            <div class="col-sm-4">  
+              <input type="text" class="form-control" id="effectiveReviewDueDate"  placeholder="date picker"  value="10/03/2015">
+            </div>
+          </div>
+  
+          <div class="form-group" id="showbutton">
+            <div class="col-sm-10"></div>
+            <div class="col-sm-2">  
+                <button type="submit" class="btn btn-theme">Submit</button> 
+                <a  href="../HRandTraining/viewHR.html" class="btn btn-default">Cancel</button>
+            </div>
+          </div>      
+            </div>
+          </div>
+        </div>   
+     </form>        
+</div>  
+  </section>
+      </section>
+
+      <!--main content end-->
+      <!--footer start-->
+      <footer class="site-footer">
+          <div class="text-center">
+              2015 - Deemsys Inc
+              <a href="#" class="go-top">
+                  <i class="fa fa-angle-up"></i>
+              </a>
+          </div>
+      </footer>
+      <!--footer end-->
+  </section>
+
+
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script class="include" type="text/javascript" src="../assets/js/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="../assets/js/jquery.scrollTo.min.js"></script>
+   
+
+
+    <!--common script for all pages-->
+    <script src="../assets/js/common-scripts.js"></script>
+
+    <!--script for this page-->
+    <script src="../assets/js/jquery-ui-1.9.2.custom.min.js"></script>
+
+  <!--custom switch-->
+  <script src="../assets/js/bootstrap-switch.js"></script>
+  
+  <!--custom tagsinput-->
+  <script src="../assets/js/jquery.tagsinput.js"></script>
+  
+  <script type="text/javascript" src="../assets/js/datetimepicker/moment.js"></script>
+  <script type="text/javascript" src="../assets/js/datetimepicker/datetimepicker.js"></script>
+  
+  <script type="text/javascript" src="../assets/js/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
+  
+  
+  <script src="../assets/js/form-component.js"></script>  
+
+ <script type="text/javascript">
+ var count=0;
+ $(document)
+            .ready(
+                    function() {
+
+                        //add more file components if Add is clicked
+                        $('#addFile')
+                                .click(
+                                        function() {
+                                          
+                                            var fileIndex = ++count;
+                                           
+                                            var id = "file"+fileIndex;
+                                            $('#fileTable')
+                                                    .append(
+                                                            '   <span id="'+id+'"><input  type="file" name="files['+ fileIndex +']" /><br></span>'
+                                                                    );
+                                        });
+                         
+                          $('#removeFile')
+                                .click(
+                                        function() {
+                                         if (count >= 1) {
+                                            var id = "#file"+count;
+                                                count = --count;
+                                             
+                                            $(id)
+                                                    .remove();
+                                                  }
+                                        });
+                        
+                    });
+
+
+
+ $('#dateHired').datetimepicker({
+  pickTime : false
+});
+  $('#trainingDueDate').datetimepicker({
+  pickTime : false
+});
+   $('#trainingCompletionDate').datetimepicker({
+  pickTime : false
+});
+$('#effectiveReviewDueDate').datetimepicker({
+  pickTime : false
+});
+
+ function nameChildUpdate(value){
+  document.getElementById("nameChild").value = value;
+ }
+ function jobChildUpdate(value){
+  document.getElementById("jobTitleChild").value = value;
+ }
+ function dateChildUpdate(value){
+  document.getElementById("dateHiredChild").value = value;
+ }
+
+ function qualifiedBy(value){
+  document.getElementById('typeofTraining').disabled = true;
+  document.getElementById("trainer").disabled = true;
+  document.getElementById("trainingDueDate").disabled = true;
+  document.getElementById("trainingCompletionDate").disabled = true;
+  document.getElementById("trainingEffectiveNotes").disabled = true;
+  if (value == "3") {
+    document.getElementById('typeofTraining').disabled = false;
+  document.getElementById("trainer").disabled = false;
+  document.getElementById("trainingDueDate").disabled = false;
+  document.getElementById("trainingCompletionDate").disabled = false;
+  document.getElementById("trainingEffectiveNotes").disabled = false;
+  }
+ }
+
+ function checkWorkingAs(){
+  var processOwner = document.getElementById("processOwner").checked;
+  var documentControl = document.getElementById("documentControl").checked;
+  var mangmentRepresentative = document.getElementById("mangmentRepresentative").checked;
+   document.getElementById("processOwner").disabled = false;
+    document.getElementById("documentControl").disabled = false;
+     document.getElementById("mangmentRepresentative").disabled = false;
+  if (processOwner || documentControl) {
+      document.getElementById("mangmentRepresentative").disabled = true;
+  }
+  else if(mangmentRepresentative){
+    document.getElementById("processOwner").disabled = true;
+    document.getElementById("documentControl").disabled = true;
+  
+  }
+ }
+  </script>
+ 
+  </body>
+</html>

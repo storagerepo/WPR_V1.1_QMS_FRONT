@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+
+    <title>Deemsys QMS</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/css/datetimepicker.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <!--external css-->
+    <link href="../assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/zabuto_calendar.css">
+    <link rel="stylesheet" type="text/css" href="../assets/js/gritter/css/jquery.gritter.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/lineicons/style.css">    
+    <link href="../assets/css/vigo.datepicker.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <link href="../assets/css/style-responsive.css" rel="stylesheet">
+
+    <script src="../assets/js/chart-master/Chart.js"></script>
+    
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+  <section id="container" >
+      <!-- **********************************************************************************************************************************************************
+      TOP BAR CONTENT & NOTIFICATIONS
+      *********************************************************************************************************************************************************** -->
+      <!--header start-->
+      <header class="header black-bg">
+              <div class="sidebar-toggle-box">
+                  <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+              </div>
+            <!--logo start-->
+            <a href="../index.html" class="logo"><b>Quality Managment System</b></a>
+            <!--logo end-->
+            <div class="top-menu">
+            	<ul class="nav pull-right top-menu">
+                    <li><a class="logout" href="../login.html">Logout</a></li>
+            	</ul>
+            </div>
+        </header>
+      <!--header end-->
+      
+      <!-- **********************************************************************************************************************************************************
+      MAIN SIDEBAR MENU
+      *********************************************************************************************************************************************************** -->
+      <!--sidebar start-->
+      <aside>
+          <div id="sidebar"  class="nav-collapse ">
+              <!-- sidebar menu start-->
+              <ul class="sidebar-menu" id="nav-accordion">
+                  <!-- <li class="mt">
+                      <a class="active" href="index.html">
+                          <i class="fa fa-dashboard"></i>
+                          <span>Dashboard</span>
+                      </a>
+                  </li> -->
+
+                  <li class="sub-menu">
+                      <a href="#" >
+                          <i class="fa fa-cogs"></i>
+                          <span>Maintenance & Calibration</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="../Maintenance/addMaintenance.html">Enter/Modify Equipment</a></li>
+                          <li><a  href="../Maintenance/viewMaintenanceEquipment.html">View Equipment</a></li>
+                          <li><a  href="../Maintenance/viewMaintenanceDetails.html">View Maintenance and Calibration</a></li>
+                          <li><a  href="../Maintenance/maintenanceReport.html">Reports</a></li>
+                      </ul>
+                  </li>
+
+                  <li class="sub-menu">
+                      <a href="#" >
+                          <i class="fa fa-exclamation-circle"></i>
+                          <span>Non Conformance</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="../NonConformance/addNonConformance.html">Add NonConformance</a></li>
+                          <li><a  href="../NonConformance/viewNonConformanceDetails.html">View NonConformance</a></li>
+                          <li><a  href="../NonConformance/nonConformanceReport.html">Reports</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                         <i class="fa fa-users"></i>
+                          <span>Customers</span>
+                      </a>
+                      <ul class="sub">
+                         <li><a  href="../Customers/addCustomer.html">Add Customers</a></li>
+                         <li><a  href="../Customers/viewCustomer.html">View Customers</a></li>
+                         <li><a  href="../Customers/customerReport.html">Feedback Report</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                        <i class="fa fa-user"></i>
+                          <span>HR and Training</span>
+                      </a>
+                      <ul class="sub">
+                           <li><a  href="../HRandTraining/addHR.html">Add HR and Training</a></li>
+                          <li><a  href="../HRandTraining/viewHR.html">View HR and Training</a></li>
+                          <li><a  href="../HRandTraining/hrReport.html">Reports</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                         <i class="fa fa-book"></i>
+                         <span>Document Control</span>
+                      </a>
+                      <ul class="sub">
+                         <li class="sub-menu-sub">
+                            <a href="javascript:;" >
+                               <i class="fa fa-plus-square"></i>
+                               <span>Document</span>
+                            </a>
+                             <ul class="sub">
+                              <li><a href="../document/addDocument.html">Add Document</a></li>
+                              <li><a href="../document/viewDocumentRevision.html">View Revision</a></li>
+                              <li><a href="../document/viewDocumentDetails.html">View Documents</a></li>
+                             </ul>
+                        </li>
+                        <li class="sub-menu-sub">
+                            <a href="javascript:;" >
+                               <i class="fa fa-plus-square"></i>
+                               <span>Forms/Records</span>
+                            </a>
+                             <ul class="sub">
+                              <li><a href="../forms/addForm.html">Add Form</a></li>
+                              <li><a href="../forms/viewFormRevision.html">View Revision</a></li>
+                              <li><a href="../forms/viewFormDetails.html">View Forms</a></li>
+                             </ul>
+                        </li>
+                         <li><a href="../document/documentReport.html">Document Reports</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                         <i class="fa fa-map-marker"></i>
+                         <span>Internal Audits</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a href="../InternalAudit/addInternalAudit.html">Add Internal Audit</a></li>
+                           <li><a  href="../InternalAudit/viewInternalAudit.html">View Internal Audits</a></li>
+                           <li><a  href="../InternalAudit/internalAuditReport.html">Reports</a></li>
+                      </ul>
+                  </li>
+                 <li class="sub-menu">
+                      <a href="javascript:;" >
+                           <i class="fa fa-wrench"></i>
+                           <span>Corrective and Preventive Actions</span>
+                      </a>
+                      <ul class="sub">
+                        <li><a  href="../CorrectivePreventiveActions/addCorrectiveActions.html">Add Corrective and Preventive Actions</a></li>
+                        <li><a  href="../CorrectivePreventiveActions/viewCorrectiveActions.html">View Corrective and Preventive Actions</a></li>
+                        <li><a  href="../CorrectivePreventiveActions/correctiveActionsReport.html">Reports</a></li>   
+                      </ul>
+                  </li>
+                   <li class="sub-menu">
+                      <a class="active" href="javascript:;" >
+                            <i class="fa fa-truck"></i>
+                            <span>Supplier Performance</span>
+                      </a>
+                      <ul class="sub">
+                        <li><a  href="../SupplierPerformance/addSupplierPerformance.html">Add Supplier Performance</a></li>
+                        <li><a  href="../SupplierPerformance/viewSupplier.html">View Supplier</a></li>
+                        <li class="active"><a  href="../SupplierPerformance/viewSupplierPerformance.html">View Supplier Performance</a></li>
+                        <li><a  href="../SupplierPerformance/supplierPerformanceReport.html">Reports</a></li>
+                      </ul>
+                  </li>
+                   <li class="sub-menu">
+                      <a href="javascript:;" >
+                             <i class="fa fa-qrcode"></i>
+                             <span>Management Review</span>
+                      </a>
+                      <ul class="sub">
+                        <li><a  href="../ManagementReview/addManagementReview.html">Add Management Review</a></li>
+                        <li><a  href="../ManagementReview/viewManagementReview.html">View Management Review</a></li>
+                        <li><a  href="../ManagementReview/managementReviewReport.html">Reports</a></li>
+                      </ul>
+                  </li>
+              </ul>
+              <!-- sidebar menu end-->
+          </div>
+      </aside>
+      <!--sidebar end-->
+      
+      <!-- **********************************************************************************************************************************************************
+      MAIN CONTENT
+      *********************************************************************************************************************************************************** -->
+      <!--main content start-->
+      <section id="main-content">
+          <section class="wrapper">
+<div class="row">
+	<div id="breadcrumb" class="col-md-12">
+		<ol class="breadcrumb">
+			<li><a href="../index.html">QMS</a></li>
+			<li><a href="#">Supplier Performance</a></li>
+      <li><a href="../SupplierPerformance/viewSupplierPerformance.html">View Supplier Performance Details</a></li>
+			<li><a href="#">Update Supplier Performance</a></li>
+		</ol>
+	</div>
+</div>
+<div class="row">
+ <form class="form-horizontal" role="form" name="calc">
+	<div class="col-xs-12 col-sm-12">
+		<div class="form-panel">
+			<div class="box-header">
+				<div class="box-name">
+					<i class="fa fa-truck"></i>
+					<span>Update Supplier Performance Details</span>
+				</div>
+			</div>
+			<div class="box-content">
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Supplier ID</label>
+						<div class="col-sm-4">
+							<input type="text" readonly="true" class="form-control" value="C1033" placeholder=""/>
+						</div>
+						<label class="col-sm-2 control-label">Website</label>
+						<div class="col-sm-4">
+              <input type="text" class="form-control" id="" placeholder="www.example.com" value="www.mysite.com">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Supplier Name</label>
+						<div class="col-sm-4">
+							 <input type="text" class="form-control" id="" value="French">
+						</div>
+						<label class="col-sm-2 control-label">Certified to</label>
+						<div class="col-sm-4">
+							<input type="text" class="form-control" placeholder="" value="Nille">
+						</div>
+					</div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Category</label>
+            <div class="col-sm-4">
+               <input type="text" class="form-control" id="" value="Supplier">
+            </div>
+            <label class="col-sm-2 control-label">Contact name</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" placeholder="" value="QMS">
+            </div>
+          </div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Address</label>
+						<div class="col-sm-4" >
+							 <textarea class="form-control" rows="3">2-442, Ohio  </textarea>
+						</div>
+          <label class="col-sm-2 control-label">Title</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" placeholder="" value="Title">
+            </div>
+					</div>
+            <div class="form-group">
+            <label class="col-sm-2 control-label">City </label>
+            <div class="col-sm-4" >
+               <input type="text" class="form-control" value="Jesams">
+            </div>
+          <label class="col-sm-2 control-label">Phone</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" placeholder="" value="32445345">
+            </div>
+          </div>
+            <div class="form-group">
+            <label class="col-sm-2 control-label">State </label>
+            <div class="col-sm-4" >
+                <input type="text" class="form-control" value="Kesdsakl">
+            </div>
+          <label class="col-sm-2 control-label">Fax </label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" placeholder="" value="23423-353">
+            </div>
+          </div>
+            <div class="form-group">
+            <label class="col-sm-2 control-label">Country </label>
+            <div class="col-sm-4" >
+              <input type="text" class="form-control" value="NewYork">
+            </div>
+          <label class="col-sm-2 control-label">Email </label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" placeholder="" value="french@gmail.com">
+            </div>
+          </div>
+            <div class="form-group">
+            <label class="col-sm-2 control-label">ZipCode</label>
+            <div class="col-sm-4" >
+               <input type="text" class="form-control" value="OH3534">
+            </div>
+          </div>
+			</div>	
+		</div>
+	</div>	
+	<!-- inner Fields -->
+				<div class="col-xs-12 col-sm-12">
+					<div class="form-panel">
+						
+						<div class="box-content">
+								<div class="form-group">
+									<label class="col-sm-2 control-label">Receipt Date</label>
+									<div class="col-sm-4">
+                        <input type="text" class="form-control" id="receiptDate" placeholder="Date picker" value="08/22/2015">
+									</div>
+                  <label class="col-sm-2 control-label">Request Corrective Action (Y/N)</label>
+            <div class="col-sm-4">
+              <div class="toggle-switch toggle-switch-primary">
+              <label>
+                <input type="checkbox" checked>
+                <div class="toggle-switch-inner"></div>
+                <div class="toggle-switch-switch"><i class="fa fa-check"></i></div>
+              </label>
+            </div>
+            </div>
+					 </div>
+
+						<div class="form-group">
+									<label class="col-sm-2 control-label">Type of Problem</label>
+									<div class="col-sm-4">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" id="noProblem" onchange="typeofProblemCheck();"> No Problem 
+                          <i class="fa fa-square-o small"></i>
+                        </label>
+                      </div>
+                    <div class="checkbox-inline">
+                        <label>
+                          <input type="checkbox" id="quality" onchange="typeofProblemCheck();" checked>Quality
+                          <i class="fa fa-square-o small"></i>
+                        </label>
+                    </div>
+                     <div class="checkbox-inline">
+                        <label>
+                          <input type="checkbox" id="delivery" onchange="typeofProblemCheck();" checked>Delivery 
+                          <i class="fa fa-square-o small"></i>
+                        </label>
+                    </div>
+                     <div class="checkbox-inline">
+                        <label>
+                          <input type="checkbox" id="customerService" onchange="typeofProblemCheck();" checked>Customer Service
+                          <i class="fa fa-square-o small"></i>
+                        </label>
+                    </div>
+                  </div>
+                   <label class="col-sm-2 control-label">Deduction for Issue</label>
+                    <div class="col-sm-4" >
+                       <input type="text" class="form-control" id="deductionIssue" disabled>
+                    </div>
+						</div>
+
+								<div class="form-group">
+                   <label class="col-sm-2 control-label">Quality</label>
+                    <div class="col-sm-4" >
+                       <select class="form-control" id="qualityDrop" onChange="calculateDeductionIssue()">
+                        <option value="20">Critical</option>
+                        <option value="10" selected>Moderate</option>
+                        <option value="5">Minor</option>
+                      </select> 
+                    </div>
+									<label class="col-sm-2 control-label">Recorded by</label>
+									<div class="col-sm-4">
+										<input type="text" class="form-control" value="Jhonson">
+									</div>
+							</div>
+              <div class="form-group">
+                  <label class="col-sm-2 control-label">Delivery</label>
+                  <div class="col-sm-4">
+                    <select name="delivery" class="form-control" id="deliveryDrop" onChange="calculateDeductionIssue()" >
+                      <option  value="10">Late 1 day</option>
+                      <option value="20" selected>Late 2+ day</option>
+                       <option value="5">Early 2+ days</option>
+                    </select>
+                  </div>
+                  <label class="col-sm-2 control-label">Recording Date</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="recordingDate" value="09/10/2015">
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label class="col-sm-2 control-label">Customer Service</label>
+                  <div class="col-sm-4">
+                      <select class="form-control" id="customerServiceDrop" onChange="calculateDeductionIssue()">
+                       <option  value="15">Critical Issue</option>
+                       <option value="10">Moderate Issue</option>
+                       <option value="5" selected>Minor Issue</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-6"></div>
+              </div>
+              
+              <div class="form-group">
+                  <label class="col-sm-2 control-label">Problem Details</label>
+                  <div class="col-sm-4">
+                      <textarea class="form-control" rows="3">Problem Details</textarea>
+                  </div>
+                  <div class="col-sm-6"></div>
+              </div>
+              <div class="form-group">
+                  <label class="col-sm-2 control-label">Problem Found at</label>
+                  <div class="col-sm-4">
+                       <select name= "problem_found_at" id="problemFoundaAt" class="form-control" onChange="calculateDeductionIssue()">
+                             <option  value="1">Receiving</option>
+                             <option  value="1.5">In-process</option>
+                             <option  value="2" selected>Customer</option>
+                       </select>
+                  </div>
+                  <div class="col-sm-6"></div>
+              </div>
+							<div class="form-group">
+									<div class="col-sm-10"></div>
+									<div class="col-sm-2">	
+											<button type="submit" class="btn btn-theme">Submit</button>	
+											<a href="../SupplierPerformance/viewSupplierPerformance.html" class="btn btn-default">Cancel</a>
+									</div>
+							</div>			
+						</div>
+					</div>
+				</div>
+      </form>  				
+</div>	
+</section>
+      </section>
+
+      <!--main content end-->
+      <!--footer start-->
+      <footer class="site-footer">
+          <div class="text-center">
+              2015 - Deemsys Inc
+              <a href="#" class="go-top">
+                  <i class="fa fa-angle-up"></i>
+              </a>
+          </div>
+      </footer>
+      <!--footer end-->
+  </section>           
+              
+      <!-- js placed at the end of the document so the pages load faster -->
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script class="include" type="text/javascript" src="../assets/js/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="../assets/js/jquery.scrollTo.min.js"></script>
+   
+
+
+    <!--common script for all pages-->
+    <script src="../assets/js/common-scripts.js"></script>
+
+    <!--script for this page-->
+    <script src="../assets/js/jquery-ui-1.9.2.custom.min.js"></script>
+
+	<!--custom switch-->
+	<script src="../assets/js/bootstrap-switch.js"></script>
+	
+	<!--custom tagsinput-->
+	<script src="../assets/js/jquery.tagsinput.js"></script>
+	
+	<script type="text/javascript" src="../assets/js/datetimepicker/moment.js"></script>
+	<script type="text/javascript" src="../assets/js/datetimepicker/datetimepicker.js"></script>
+	
+	<script type="text/javascript" src="../assets/js/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
+	
+	
+	<script src="../assets/js/form-component.js"></script>  
+
+ <script type="text/javascript">
+ $(document).ready(function(){
+calculateDeductionIssue();
+ });
+  $('#receiptDate').datetimepicker({
+  pickTime : false
+});
+  $('#recordingDate').datetimepicker({
+  pickTime : false
+});
+
+ function typeofProblemCheck(){
+  var noProblem = document.getElementById("noProblem").checked;
+  var quality = document.getElementById("quality").checked;
+  var delivery = document.getElementById("delivery").checked;
+  var customerService = document.getElementById("customerService").checked;
+  document.getElementById("noProblem").disabled = false;
+  document.getElementById("qualityDrop").disabled = true;
+  document.getElementById("deliveryDrop").disabled = true;
+  document.getElementById("customerServiceDrop").disabled= true;
+   document.getElementById("problemFoundaAt").disabled = true;
+  document.getElementById("deductionIssue").value="";
+  if (noProblem) {
+    document.getElementById("quality").disabled = true;
+    document.getElementById("delivery").disabled = true;
+    document.getElementById("customerService").disabled= true;
+    document.getElementById("deductionIssue").value="N/A";
+  }
+  else if (quality || delivery || customerService){
+    document.getElementById("problemFoundaAt").disabled = false;
+    document.getElementById("noProblem").disabled = true;
+    if (quality) {
+       document.getElementById("qualityDrop").disabled = false;
+    };
+    if (delivery) {
+      document.getElementById("deliveryDrop").disabled = false;
+    };
+    if(customerService){
+      document.getElementById("customerServiceDrop").disabled= false;
+    }
+    calculateDeductionIssue();
+  }
+  else{
+    document.getElementById("quality").disabled = false;
+    document.getElementById("delivery").disabled = false;
+    document.getElementById("customerService").disabled= false;
+     
+
+  }
+ }
+
+ function calculateDeductionIssue(){
+  var problemquality = document.getElementById("quality").checked;
+  var problemdelivery = document.getElementById("delivery").checked;
+  var problemcustomerservice = document.getElementById("customerService").checked;
+  var noProblem = document.getElementById("noProblem").checked;
+  var deductionIssue = document.getElementById('deductionIssue');
+  var problemFoundaAt = document.getElementById("problemFoundaAt");
+  if(problemquality && problemdelivery && problemcustomerservice)
+    {
+    calc.deductionIssue.value = ((calc.problemFoundaAt.value)*(calc.qualityDrop.value)) + parseInt(calc.deliveryDrop.value) + parseInt(calc.customerServiceDrop.value);
+    }
+  else if(problemquality && problemdelivery){
+    calc.deductionIssue.value = ((calc.problemFoundaAt.value)*(calc.qualityDrop.value))+ parseInt(calc.deliveryDrop.value);
+    }
+  else if(problemquality && problemcustomerservice){
+    calc.deductionIssue.value = ((calc.problemFoundaAt.value)*(calc.qualityDrop.value))+ parseInt(calc.customerServiceDrop.value);
+    }
+  else if(problemdelivery && problemcustomerservice){
+    calc.deductionIssue.value = parseInt(calc.deliveryDrop.value)+parseInt(calc.customerServiceDrop.value);
+    }
+  else if(problemquality)
+    {
+    calc.deductionIssue.value = (calc.problemFoundaAt.value)*(calc.qualityDrop.value);
+    }
+  else if(problemdelivery)
+    {
+    calc.deductionIssue.value =parseInt(calc.deliveryDrop.value);
+    }
+  else if(problemcustomerservice)
+    {
+    calc.deductionIssue.value = parseInt(calc.customerServiceDrop.value);
+    }
+  else if(noProblem){
+    calc.deductionIssue.value ="N/A";
+  }
+  else{
+    calc.deductionIssue.value =""; 
+  }
+ }
+ </script>

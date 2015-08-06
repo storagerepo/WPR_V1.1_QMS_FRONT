@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+
+  <title>Deemsys QMS</title>
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <!--external css-->
+    <link href="../assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+        
+    <!-- Custom styles for this template -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <link href="../assets/css/style-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+  <section id="container" >
+      <!-- **********************************************************************************************************************************************************
+      TOP BAR CONTENT & NOTIFICATIONS
+      *********************************************************************************************************************************************************** -->
+      <!--header start-->
+<header class="header black-bg">
+              <div class="sidebar-toggle-box">
+                  <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+              </div>
+            <!--logo start-->
+            <a href="index.html" class="logo"><b>Quality Managment System</b></a>
+            <!--logo end-->
+            <div class="top-menu">
+              <ul class="nav pull-right top-menu">
+                    <li><a class="logout" href="../login.html">Logout</a></li>
+              </ul>
+            </div>
+        </header>
+      <!--header end-->
+      
+      <!-- **********************************************************************************************************************************************************
+      MAIN SIDEBAR MENU
+      *********************************************************************************************************************************************************** -->
+      <!--sidebar start-->
+      <aside>
+          <div id="sidebar"  class="nav-collapse ">
+              <!-- sidebar menu start-->
+              <ul class="sidebar-menu" id="nav-accordion">
+                  <!-- <li class="mt">
+                      <a class="active" href="index.html">
+                          <i class="fa fa-dashboard"></i>
+                          <span>Dashboard</span>
+                      </a>
+                  </li> -->
+
+                  <li class="sub-menu">
+                      <a  class="active" href="#" >
+                          <i class="fa fa-cogs"></i>
+                          <span>Maintenance & Calibration</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a href="../Maintenance/addMaintenance.html">Enter/Modify Equipment</a></li>
+                          <li><a  href="../Maintenance/viewMaintenanceEquipment.html">View Equipment</a></li>
+                          <li class="active"><a href="../Maintenance/viewMaintenanceDetails.html">View Maintenance</a></li>
+                          <li><a href="../Maintenance/maintenanceReport.html">Reports</a></li>
+                      </ul>
+                  </li>
+
+                  <li class="sub-menu">
+                      <a href="#" >
+                          <i class="fa fa-exclamation-circle"></i>
+                          <span>Non Conformance</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="../NonConformance/addnonConformance.html">Add NonConformance</a></li>
+                          <li><a  href="../NonConformance/viewNonConformanceDetails.html">View NonConformance</a></li>
+                          <li><a  href="../NonConformance/nonConformanceReport.html">Reports</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                         <i class="fa fa-users"></i>
+                          <span>Customers</span>
+                      </a>
+                      <ul class="sub">
+                        <li><a  href="../Customers/addCustomer.html">Add Customers</a></li>
+                         <li><a  href="../Customers/viewCustomer.html">View Customers</a></li>
+                         <li><a  href="../Customers/customerReport.html">Feedback Report</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                        <i class="fa fa-user"></i>
+                          <span>HR and Training</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="../HRandTraining/addHR.html">Add HR and Training</a></li>
+                          <li><a  href="../HRandTraining/viewHR.html">View HR and Training</a></li>
+                          <li><a  href="../HRandTraining/hrReport.html">Reports</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                         <i class="fa fa-book"></i>
+                         <span>Document Control</span>
+                      </a>
+                      <ul class="sub">
+                         <li class="sub-menu-sub">
+                            <a href="javascript:;" >
+                               <i class="fa fa-plus-square"></i>
+                               <span>Document</span>
+                            </a>
+                             <ul class="sub">
+                              <li><a href="../document/addDocument.html">Add Document</a></li>
+                              <li><a href="../document/viewDocumentRevision.html">View Revision</a></li>
+                              <li><a href="../document/viewDocumentDetails.html">View Documents</a></li>
+                             </ul>
+                        </li>
+                        <li class="sub-menu-sub">
+                            <a href="javascript:;" >
+                               <i class="fa fa-plus-square"></i>
+                               <span>Forms/Records</span>
+                            </a>
+                             <ul class="sub">
+                              <li><a href="../forms/addForm.html">Add Form</a></li>
+                              <li><a href="../forms/viewFormRevision.html">View Revision</a></li>
+                              <li><a href="../forms/viewFormDetails.html">View Forms</a></li>
+                             </ul>
+                        </li>
+                         <li><a href="../document/documentReport.html">Document Reports</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                         <i class="fa fa-map-marker"></i>
+                         <span>Internal Audits</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a href="../InternalAudit/addInternalAudit.html">Add Internal Audit</a></li>
+                           <li><a  href="../InternalAudit/viewInternalAudit.html">View Internal Audits</a></li>
+                           <li><a  href="../InternalAudit/internalAuditReport.html">Reports</a></li>
+
+                      </ul>
+                  </li>
+                 <li class="sub-menu">
+                      <a href="javascript:;" >
+                           <i class="fa fa-wrench"></i>
+                           <span>Corrective and Preventive Actions</span>
+                      </a>
+                      <ul class="sub">
+                       <li><a  href="../CorrectivePreventiveActions/addCorrectiveActions.html">Add Corrective and Preventive Actions</a></li>
+                        <li><a  href="../CorrectivePreventiveActions/viewCorrectiveActions.html">View Corrective and Preventive Actions</a></li>
+                        <li><a  href="../CorrectivePreventiveActions/correctiveActionsReport.html">Reports</a></li>
+                      </ul>
+                  </li>
+                   <li class="sub-menu">
+                      <a href="javascript:;" >
+                            <i class="fa fa-truck"></i>
+                            <span>Supplier Performance</span>
+                      </a>
+                      <ul class="sub">
+                       <li><a  href="../SupplierPerformance/addSupplierPerformance.html">Add Supplier Performance</a></li>
+                        <li><a  href="../SupplierPerformance/viewSupplier.html">View Supplier</a></li>
+                        <li><a  href="../SupplierPerformance/viewSupplierPerformance.html">View Supplier Performance</a></li>
+                        <li><a  href="../SupplierPerformance/supplierPerformanceReport.html">Reports</a></li>
+                      </ul>
+                  </li>
+                   <li class="sub-menu">
+                      <a href="javascript:;" >
+                             <i class="fa fa-qrcode"></i>
+                             <span>Management Review</span>
+                      </a>
+                      <ul class="sub">
+                        <li><a  href="../ManagementReview/addManagementReview.html">Add Management Review</a></li>
+                        <li><a  href="../ManagementReview/viewManagementReview.html">View Management Review</a></li>
+                        <li><a  href="../ManagementReview/managementReviewReport.html">Reports</a></li>
+                      </ul>
+                  </li>
+              </ul>
+              <!-- sidebar menu end-->
+          </div>
+      </aside>
+      <!--sidebar end-->
+      
+      <!-- **********************************************************************************************************************************************************
+      MAIN CONTENT
+      *********************************************************************************************************************************************************** -->
+      <!--main content start-->
+      <section id="main-content">
+          <section class="wrapper">
+<div class="row">
+  <div id="breadcrumb" class="col-md-12">
+    <ol class="breadcrumb">
+      <li><a href="../index.html">QMS</a></li>
+      <li><a href="#">Maintenance and Calibration</a></li>
+      <li><a href="#">View Maintenance and Calibration</a></li>
+    </ol>
+  </div>
+</div>
+<div class="row">
+	<div class="col-xs-12">
+		<div class="form-panel">
+			<div class="box-header">
+				<div class="box-name">
+					<i class="fa fa-cogs"></i>
+					<span>Search Maintenance and Calibration Details</span>
+				</div>
+			</div>
+			<div class="box-content no-padding table-responsive">
+				<table class="table table-bordered table-striped table-hover table-heading table-datatable" id="example">
+          <tfoot class="tColor">
+            <tr>
+              <th>Equipment ID</th>
+              <th>Equipment Name</th>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th></th>
+              
+            </tr>
+          </tfoot>
+          <thead>
+            <tr>
+              <th>Equipment ID</th>
+              <th>Equipment Name</th>
+              <th>Type of Maintennace</th>
+              <th>Equipment Model</th>
+              <th>Acquired Date</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+					<tbody>
+						<tr>
+							<td><a href="../Maintenance/listMaintenanceRevision.html">EHR-111</a></td>
+							<td>title1</td>
+               <td>Predictive</td>
+							<td>DocTyle</td>
+							<td>Sample Process2</td>
+							<td><a href="../Maintenance/editMaintenance.html" onclick="editDocument();" title="Edit Maintenance" data-toggle="tooltip" data-placement="left"><i class="fa fa-edit btn-lg txt-edit"></i></a>
+              </td>
+						</tr>
+						<tr>
+							<td><a  href="../Maintenance/listMaintenanceRevision.html">QMS-5555</a></td>
+							<td>title2</td>
+               <td>Predictive</td>
+							<td>PaperMake</td>
+							<td>Sample Process2</td>
+							<td><a href="../Maintenance/editMaintenance.html" onclick="editDocument();" title="Edit Maintenance" data-toggle="tooltip"  data-placement="left"><i class="fa fa-edit btn-lg txt-edit"></i></a></td>
+						</tr>
+						<tr>
+							<td><a  href="../Maintenance/listMaintenanceRevision.html">GRT-326</a></td>
+							<td>title2</td>
+							<td>ReportingDirector</td>
+               <td>Predictive</td>
+							<td>Sample Process23</td>
+							<td><a href="../Maintenance/editMaintenance.html" onclick="editDocument();" title="Edit Maintenance" data-toggle="tooltip"  data-placement="left"><i class="fa fa-edit btn-lg txt-edit"></i></a></td>
+						</tr>
+						<tr>
+							<td><a  href="../Maintenance/listMaintenanceRevision.html">GRT-328</a></td>
+							<td>title4</td>
+               <td>Predictive</td>
+							<td>DocTyle</td>
+							<td>Process2</td>
+							<td><a href="../Maintenance/editMaintenance.html" onclick="editDocument();" title="Edit Maintenance" data-toggle="modal"  data-placement="left"><i class="fa fa-edit btn-lg txt-edit"></i></a></td>
+						</tr>
+						<tr>
+							<td><a  href="../Maintenance/listMaintenanceRevision.html">BMS-325</a></td>
+							<td>title2</td>
+               <td>Preventive</td>
+               <td>PaperMake</td>
+							<td>Process make</td>
+						
+							<td><a href="../Maintenance/editMaintenance.html" onclick="editDocument();" title="Edit Maintenance" data-toggle="modal"  data-placement="left"><i class="fa fa-edit btn-lg txt-edit"></i></a></td>
+						</tr>
+						<tr>
+							<td><a  href="../Maintenance/listMaintenanceRevision.html">KHR-123</a></td>
+							<td>title6</td>
+              <td>Preventive</td>
+							<td>DocTyle</td>
+							<td>Sample</td>
+						
+							<td><a href="../Maintenance/editMaintenance.html" onclick="editDocument();" title="Edit Maintenance" data-toggle="modal"  data-placement="left"><i class="fa fa-edit btn-lg txt-edit"></i></a></td>
+						</tr>
+						<tr>
+							<td><a  href="../Maintenance/listMaintenanceRevision.html">JRT-6</a></td>
+							<td>title1</td>
+              <td>Preventive</td>
+							<td>PaperMake</td>
+							<td>Sampess2</td>
+				
+							<td><a href="../Maintenance/editMaintenance.html" onclick="editDocument();" title="Edit Maintenance" data-toggle="modal"  data-placement="left"><i class="fa fa-edit btn-lg txt-edit"></i></a></td>
+						</tr>
+						<tr>
+							<td><a  href="../Maintenance/listMaintenanceRevision.html">KJJ-678</a></td>
+							<td>title89</td>
+              <td>Preventive</td>
+							<td>Health</td>
+							<td>Sample Process2</td>
+						
+							<td><a href="../Maintenance/editMaintenance.html" onclick="editDocument();" title="Edit Maintenance" data-toggle="modal"  data-placement="left"><i class="fa fa-edit btn-lg txt-edit"></i></a</td>
+						</tr>
+						<tr>
+							<td><a  href="../Maintenance/listMaintenanceRevision.html">III-456</a></td>
+							<td>Doc Type</td>
+              <td>Preventive</td>
+							<td>Doc Name</td>
+							<td>Sample 345</td>
+						
+							<td><a href="../Maintenance/editMaintenance.html" onclick="editDocument();" title="Edit Maintenance" data-toggle="modal"  data-placement="left"><i class="fa fa-edit btn-lg txt-edit"></i></a></td>
+						</tr>
+						<tr>
+							<td><a  href="../Maintenance/listMaintenanceRevision.html">DHR-902</a></td>
+							<td>titles</td>
+              <td>Preventive</td>
+							<td>DocTyle</td>
+							<td>Sample Process2</td>
+						
+							<td><a href="../Maintenance/editMaintenance.html" onclick="editDocument();" title="Edit Maintenance" data-toggle="modal"  data-placement="left"><i class="fa fa-edit btn-lg txt-edit"></i></a></td>
+						</tr>
+						<tr>
+						<td><a  href="../Maintenance/listMaintenanceRevision.html">QMS-690</a></td>
+							<td>Home</td>
+              <td>Preventive</td>
+							<td>PaperMake</td>
+							<td></td>
+						
+							<td><a href="../Maintenance/editMaintenance.html" onclick="editDocument();" title="Edit Maintenance" data-toggle="modal"  data-placement="left"><i class="fa fa-edit btn-lg txt-edit"></i></a></td>
+						</tr>
+						<tr>
+							<td><a  href="../Maintenance/listMaintenanceRevision.html">EHR-5668</a></td>
+							<td>title6</td>
+              <td>Preventive</td>
+							<td>Manual</td>
+							<td>Sample Process2</td>
+						
+							<td><a href="../Maintenance/editMaintenance.html" onclick="editDocument();" title="Edit Maintenance" data-toggle="modal"  data-placement="left"><i class="fa fa-edit btn-lg txt-edit"></i></a></td>
+						</tr>
+						<tr>
+							<td><a  href="../Maintenance/listMaintenanceRevision.html">QMS-6</a></td>
+							<td>title1</td>
+              <td>Preventive</td>
+							<td>PaperMake</td>
+							<td>Sample Process2</td>
+					
+							<td><a href="../Maintenance/editMaintenance.html" onclick="editDocument();" title="Edit Maintenance" data-toggle="modal"  data-placement="left"><i class="fa fa-edit btn-lg txt-edit"></i></a></td>
+						</tr>
+						<tr>
+							<td><a  href="../Maintenance/listMaintenanceRevision.html">EHR-878</a></td>
+							<td>title6</td>
+              <td>Preventive</td>
+							<td>DocTyle</td>
+							<td>Sample Process2</td>
+						
+							<td><a href="../Maintenance/editMaintenance.html" onclick="editDocument();" title="Edit Maintenance" data-toggle="modal"  data-placement="left"><i class="fa fa-edit btn-lg txt-edit"></i></a></td>
+						</tr>
+						<tr>
+							<td><a  href="../Maintenance/listMaintenanceRevision.html">QMS-6</a></td>
+							<td>title1</td>
+              <td>Preventive</td>
+							<td>PaperMake</td>
+							<td>Sample Process2</td>
+						
+							<td><a href="../Maintenance/editMaintenance.html" onclick="editDocument();" title="Edit Maintenance" data-toggle="modal"  data-placement="left"><i class="fa fa-edit btn-lg txt-edit"></i></a></td>
+						</tr>
+						<tr>
+						<td><a  href="../Maintenance/listMaintenanceRevision.html">EHR-1232</a></td>
+							<td>titian</td>
+              <td>Preventive</td>
+							<td>DocTyle</td>
+							<td>Sample Process2</td>
+						
+							<td><a href="../Maintenance/editMaintenance.html" onclick="editDocument();" title="Edit Maintenance" data-toggle="modal"  data-placement="left"><i class="fa fa-edit btn-lg txt-edit"></i></a></td>
+						</tr>
+						<tr>
+							<td><a  href="../Maintenance/listMaintenanceRevision.html">QMS-6</a></td>
+							<td>Jeen</td>
+              <td>Preventive</td>
+							<td>PaperMake</td>
+							<td>Sample Process2</td>
+						
+							<td><a href="../Maintenance/editMaintenance.html" onclick="editDocument();" title="Edit Maintenance" data-toggle="modal"  data-placement="left"><i class="fa fa-edit btn-lg txt-edit"></i></a></td>
+						</tr>
+						<tr>
+							<td><a  href="../Maintenance/listMaintenanceRevision.html">OPI-1233</a></td>
+							<td>title6</td>
+              <td>Preventive</td>
+							<td>DocTyle</td>
+							<td>Sample Process2</td>
+						
+							<td><a href="../Maintenance/editMaintenance.html" onclick="editDocument();" title="Edit Maintenance" data-toggle="modal"  data-placement="left"><i class="fa fa-edit btn-lg txt-edit"></i></a></td>
+						</tr>
+						<tr>
+						<td><a  href="../Maintenance/listMaintenanceRevision.html">LLD-6</a></td>
+							<td>title1</td>
+              <td>Preventive</td>
+							<td>PaperMake</td>
+							<td>Sample Process2</td>
+						
+							<td><a href="../Maintenance/editMaintenance.html" onclick="editDocument();" title="Edit Maintenance" data-toggle="modal"  data-placement="left"><i class="fa fa-edit btn-lg txt-edit"></i></a></td>
+						</tr>
+						<tr>
+							<td><a  href="../Maintenance/listMaintenanceRevision.html">AQS-5668</a></td>
+							<td>title78</td>
+              <td>Preventive</td>
+							<td>DocTyle</td>
+							<td>Sample </td>
+						
+							<td><a href="../Maintenance/editMaintenance.html" onclick="editDocument();" title="Edit Maintenance" data-toggle="modal"  data-placement="left"><i class="fa fa-edit btn-lg txt-edit"></i></a></td>
+						</tr>
+						<tr>
+							<td><a  href="../Maintenance/listMaintenanceRevision.html">QMS-126</a></td>
+							<td>title1</td>
+              <td>Preventive</td>
+							<td>PaperMake</td>
+							<td>Sample Process2</td>
+					
+							<td><a href="../Maintenance/editMaintenance.html" onclick="editDocument();" title="Edit Maintenance" data-toggle="modal"  data-placement="left"><i class="fa fa-edit btn-lg txt-edit"></i></a></td>
+						</tr>
+						<tr>
+							<td><a  href="../Maintenance/listMaintenanceRevision.html">KKD-5668</a></td>
+							<td>title6</td>
+              <td>Preventive</td>
+							<td>DocTyle</td>
+							<td>Sample Process2</td>
+						
+							<td><a href="../Maintenance/editMaintenance.html" onclick="editDocument();" title="Edit Maintenance" data-toggle="modal"  data-placement="left"><i class="fa fa-edit btn-lg txt-edit"></i></a></td>
+						</tr>
+						<tr>
+							<td><a  href="../Maintenance/listMaintenanceRevision.html">QMS-617</a></td>
+							<td>title1</td>
+              <td>Preventive</td>
+							<td>PaperMake</td>
+							<td>Sample Process2</td>
+						
+							<td><a href="../Maintenance/editMaintenance.html" onclick="editDocument();" title="Edit Maintenance" data-toggle="modal"  data-placement="left"><i class="fa fa-edit btn-lg txt-edit"></i></a></td>
+						</tr>
+						<tr>
+							<td><a  href="../Maintenance/listMaintenanceRevision.html">ASD-112</a></td>
+							<td>title634</td>
+              <td>Preventive</td>
+							<td>DocTyle</td>
+							<td>Sample Process2</td>
+						
+							<td><a href="../Maintenance/editMaintenance.html" onclick="editDocument();" title="Edit Maintenance" data-toggle="modal"  data-placement="left"><i class="fa fa-edit btn-lg txt-edit"></i></a></td>
+						</tr>
+						<tr>
+							<td><a  href="../Maintenance/listMaintenanceRevision.html">QMS-6</a></td>
+							<td>title1</td>
+              <td>Preventive</td>
+							<td>PaperMake</td>
+							<td>Sample Process2</td>
+							
+							<td><a href="../Maintenance/editMaintenance.html" onclick="editDocument();" title="Edit Maintenance" data-toggle="modal"  data-placement="left"><i class="fa fa-edit btn-lg txt-edit"></i></a></td>
+						</tr>
+						<tr>
+							<td><a  href="../Maintenance/listMaintenanceRevision.html">EHR-568</a></td>
+							<td>title6</td>
+              <td>Preventive</td>
+							<td>DocTyle</td>
+							<td>Sample Process2</td>
+					
+							<td><a href="../Maintenance/editMaintenance.html" onclick="editDocument();" title="Edit Maintenance" data-toggle="modal"  data-placement="left"><i class="fa fa-edit btn-lg txt-edit"></i></a</td>
+						</tr>
+						<tr>
+							<td><a  href="../Maintenance/listMaintenanceRevision.html">QMS-688</a></td>
+							<td>title1</td>
+              <td>Preventive</td>
+							<td>PaperMake</td>
+							<td>Sample Process2</td>
+					
+							<td><a href="../Maintenance/editMaintenance.html" onclick="editDocument();" title="Edit Maintenance" data-toggle="tooltip"  data-placement="left"><i class="fa fa-edit btn-lg txt-edit"></i></a></td>
+						</tr>
+						<tr>
+							<td><a  href="../Maintenance/listMaintenanceRevision.html">EHR-368</a></td>
+							<td>titl</td>
+              <td>Preventive</td>
+							<td>DocTyle</td>
+							<td>Sample Process2</td>
+					
+							<td><a href="../Maintenance/editMaintenance.html" onclick="editDocument();" title="Edit Maintenance" data-toggle="tooltip"  data-placement="left"><i class="fa fa-edit btn-lg txt-edit"></i></a></td>
+						</tr>
+						<tr>
+							<td><a  href="../Maintenance/listMaintenanceRevision.html">QJK-6</a></td>
+							<td>title1</td>
+              <td>Preventive</td>
+							<td>PaperMake</td>
+							<td>Sample Process2</td>
+					
+							<td><a href="../Maintenance/editMaintenance.html" onclick="editDocument();" title="Edit Maintenance" data-toggle="tooltip"  data-placement="left"><i class="fa fa-edit btn-lg txt-edit"></i></a></td>
+						</tr>
+					</tbody>
+					
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- revision Modal -->
+
+</section>
+</section>
+<!--main content end-->
+      <!--footer start-->
+      <footer class="site-footer">
+          <div class="text-center">
+              2015 - Deemsys Inc
+              <a href="#" class="go-top">
+                  <i class="fa fa-angle-up"></i>
+              </a>
+          </div>
+      </footer>
+      <!--footer end-->
+  </section>
+
+      <!-- js placed at the end of the document so the pages load faster -->
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script class="include" type="text/javascript" src="../assets/js/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="../assets/js/jquery.scrollTo.min.js"></script>
+   
+
+
+    <!--common script for all pages-->
+    <script src="../assets/js/common-scripts.js"></script>
+
+    <!--script for this page-->
+    <script src="../assets/js/jquery-ui-1.9.2.custom.min.js"></script>
+
+	<!--custom switch-->
+	<script src="../assets/js/bootstrap-switch.js"></script>
+	
+	<!--custom tagsinput-->
+	<script src="../assets/js/jquery.tagsinput.js"></script>
+	
+	<script type="text/javascript" src="../assets/js/datetimepicker/moment.js"></script>
+	<script type="text/javascript" src="../assets/js/datetimepicker/datetimepicker.js"></script>
+	
+	<script type="text/javascript" src="../assets/js/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
+	<script type="text/javascript" src="../assets/datatables/jquery.dataTables.js"></script>
+  <script type="text/javascript" src="../assets/datatables/dataTables.bootstrap.js"></script>
+	<script src="../assets/js/form-component.js"></script>  
+<script type="text/javascript">
+$(document).ready(function() {
+	dataTable();
+});
+
+function dataTable(){
+
+
+$('#example').dataTable({
+     "aaSorting": [[2,'asc']],
+      "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
+       "dom": '<"top">rt<"bottom"filp><"clear">',
+      "language": {
+            "emptyTable": "No records found"
+          },
+      "bProcessing": false,
+        "bServerSide": false,
+        "bLengthChange": true,
+        "sort": "position",
+        //bStateSave variable you can use to save state on client cookies: set value "true" 
+        "bStateSave": false,
+        //Default: Page display length
+        "iDisplayLength": 10,
+        //We will use below variable to track page number on server side(For more information visit: http://legacy.datatables.net/usage/options#iDisplayStart)
+        "iDisplayStart": 0,
+        "columns":[
+        {"width": "16%"},
+        null,
+        null,
+        null,
+        null,
+        null
+       ]
+    } );
+ // Setup - add a text input to each footer cell
+    $('#example tfoot th').not(":eq(2),:eq(3),:eq(4),:eq(5)").each( function () {
+        var title = $('#example tfoot th').eq( $(this).index() ).text();
+        $(this).html( "<div class='input-group searchpanel-input-group'><span class='input-group-addon whiteaddon tooltipsclass'  title='"+title+"' data-placement='right'><i class='fa fa-search'></i> </span> <input type='text' class='column_filter' placeholder='"+title+"' id='"+title+"'></div>" );
+    } );
+ 
+    // DataTable
+    var table = $('#example').DataTable();
+ 
+   // Apply the search
+    table.columns().eq( 0 ).each( function ( colIdx ) {
+       if (colIdx == 2 || colIdx == 3 || colIdx == 4 || colIdx == 5) return;
+        $( 'input', table.column( colIdx ).footer() ).on( 'keyup change', function () {
+            
+            table
+                .column( colIdx )
+                .search( this.value )
+                .draw();
+        } );
+    } );
+    
+}
+</script>
+<style>
+@media screen and (min-width: 768px) {
+  
+  #revisionModal .modal-dialog  {width:1100px;}
+
+}
+tfoot {
+    display: table-header-group;
+}
+.dataTables_filter {
+   width: 50%;
+   float: right;
+   text-align: right;
+   display: none;
+}
+div.dataTables_paginate {
+    float:right;
+    margin: 0;
+}
+#revisionModal {
+top:5%;
+}
+</style>
+<script type="text/javascript">
+function viewRevisionHistory(){
+  $("#revisionModal").modal("show");
+}
+</script>
+<style>
+</body>
+</html>

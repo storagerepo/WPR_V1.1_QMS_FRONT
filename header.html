@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+
+    <title>Deemsys QMS</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <!--external css-->
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="assets/css/zabuto_calendar.css">
+    <link rel="stylesheet" type="text/css" href="assets/js/gritter/css/jquery.gritter.css" />
+    <link rel="stylesheet" type="text/css" href="assets/lineicons/style.css">    
+    
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/style-responsive.css" rel="stylesheet">
+
+    <script src="assets/js/chart-master/Chart.js"></script>
+    
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+  <section id="container" >
+      <!-- **********************************************************************************************************************************************************
+      TOP BAR CONTENT & NOTIFICATIONS
+      *********************************************************************************************************************************************************** -->
+      <!--header start-->
+      <header class="header black-bg">
+              <div class="sidebar-toggle-box">
+                  <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+              </div>
+            <!--logo start-->
+            <a href="index.html" class="logo"><b>Quality Managment System</b></a>
+            <!--logo end-->
+            <div class="top-menu">
+            	<ul class="nav pull-right top-menu">
+                    <li><a class="logout" href="login.html">Logout</a></li>
+            	</ul>
+            </div>
+        </header>
+      <!--header end-->
+      
+      <!-- **********************************************************************************************************************************************************
+      MAIN SIDEBAR MENU
+      *********************************************************************************************************************************************************** -->
+      <!--sidebar start-->
+      <aside>
+          <div id="sidebar"  class="nav-collapse ">
+              <!-- sidebar menu start-->
+              <ul class="sidebar-menu" id="nav-accordion">
+                  <!-- <li class="mt">
+                      <a class="active" href="index.html">
+                          <i class="fa fa-dashboard"></i>
+                          <span>Dashboard</span>
+                      </a>
+                  </li> -->
+
+                  <li class="sub-menu">
+                      <a href="#" >
+                          <i class="fa fa-cogs"></i>
+                          <span>Maintenance & Calibration</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="general.html">Enter/Modify Equipment</a></li>
+                          <li><a  href="buttons.html">View Equipment</a></li>
+                          <li><a  href="panels.html">View Maintenance and Calibration</a></li>
+                          <li><a  href="#">Reports</a></li>
+                      </ul>
+                  </li>
+
+                  <li class="sub-menu">
+                      <a href="#" >
+                          <i class="fa fa-exclamation-circle"></i>
+                          <span>Non Conformance</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="#">Add NonConformance</a></li>
+                          <li><a  href="#">View NonConformance</a></li>
+                          <li><a  href="#">Reports</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                         <i class="fa fa-users"></i>
+                          <span>Customers</span>
+                      </a>
+                      <ul class="sub">
+                         <li><a  href="#">Add Customers</a></li>
+                         <li><a  href="#">View Customers</a></li>
+                         <li><a  href="#">Feedback Report</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                        <i class="fa fa-user"></i>
+                          <span>HR and Training</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="#">Add HR and Training</a></li>
+                          <li><a  href="#">View HR and Training</a></li>
+                          <li><a  href="#">Reports</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                         <i class="fa fa-book"></i>
+                         <span>Document Control</span>
+                      </a>
+                      <ul class="sub">
+                         <li class="sub-menu-sub">
+                            <a href="javascript:;" >
+                               <i class="fa fa-plus-square"></i>
+                               <span>Document</span>
+                            </a>
+                             <ul class="sub">
+                              <li><a  href="document/addDocument.html">Add Document</a></li>
+                              <li><a href="document/viewDocumentRevision.html">View Revision</a></li>
+                              <li><a href="document/viewDocumentDetails.html">View Documents</a></li>
+                             </ul>
+                        </li>
+                        <li class="sub-menu-sub">
+                            <a href="javascript:;" >
+                               <i class="fa fa-plus-square"></i>
+                               <span>Forms/Records</span>
+                            </a>
+                             <ul class="sub">
+                              <li><a href="forms/addForm.html">Add Form</a></li>
+                              <li><a href="forms/viewFormRevision.html">View Revision</a></li>
+                              <li><a href="forms/viewFormDetails.html">View Forms</a></li>
+                             </ul>
+                        </li>
+                         <li><a href="document/documentReport.html">Document Reports</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                         <i class="fa fa-map-marker"></i>
+                         <span>Internal Audits</span>
+                      </a>
+                      <ul class="sub">
+                           <li><a  href="#">View Internal Audits</a></li>
+                           <li><a  href="#">Reports</a></li>
+                      </ul>
+                  </li>
+                 <li class="sub-menu">
+                      <a href="javascript:;" >
+                           <i class="fa fa-wrench"></i>
+                           <span>Corrective and Preventive Actions</span>
+                      </a>
+                      <ul class="sub">
+                        <li><a  href="#">Add Corrective and Preventive Actions</a></li>
+                        <li><a  href="#">View Corrective and Preventive Actions</a></li>
+                        <li><a  href="#">Reports</a></li>   
+                      </ul>
+                  </li>
+                   <li class="sub-menu">
+                      <a href="javascript:;" >
+                            <i class="fa fa-truck"></i>
+                            <span>Supplier Performance</span>
+                      </a>
+                      <ul class="sub">
+                        <li><a  href="#">Add Supplier Performance</a></li>
+                        <li><a  href="#">View Supplier</a></li>
+                        <li><a  href="#">View Supplier Performance</a></li>
+                        <li><a  href="#">Reports</a></li>
+                      </ul>
+                  </li>
+                   <li class="sub-menu">
+                      <a href="javascript:;" >
+                             <i class="fa fa-qrcode"></i>
+                             <span>Management Review</span>
+                      </a>
+                      <ul class="sub">
+                        <li><a  href="ManagementReview/addManagementReview.html">Add Management Review</a></li>
+                        <li><a  href="#">View Management Review</a></li>
+                        <li><a  href="#">Reports</a></li>
+                      </ul>
+                  </li>
+              </ul>
+              <!-- sidebar menu end-->
+          </div>
+      </aside>
+      <!--sidebar end-->

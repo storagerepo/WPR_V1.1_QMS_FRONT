@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+
+    <title>Deemsys QMS</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/css/datetimepicker.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <!--external css-->
+    <link href="../assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/zabuto_calendar.css">
+    <link rel="stylesheet" type="text/css" href="../assets/js/gritter/css/jquery.gritter.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/lineicons/style.css">    
+    <link href="../assets/css/vigo.datepicker.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <link href="../assets/css/style-responsive.css" rel="stylesheet">
+
+    <script src="../assets/js/chart-master/Chart.js"></script>
+    
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+  <section id="container" >
+      <!-- **********************************************************************************************************************************************************
+      TOP BAR CONTENT & NOTIFICATIONS
+      *********************************************************************************************************************************************************** -->
+      <!--header start-->
+      <header class="header black-bg">
+              <div class="sidebar-toggle-box">
+                  <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+              </div>
+            <!--logo start-->
+            <a href="../index.html" class="logo"><b>Quality Managment System</b></a>
+            <!--logo end-->
+            <div class="top-menu">
+            	<ul class="nav pull-right top-menu">
+                    <li><a class="logout" href="../login.html">Logout</a></li>
+            	</ul>
+            </div>
+        </header>
+      <!--header end-->
+      
+      <!-- **********************************************************************************************************************************************************
+      MAIN SIDEBAR MENU
+      *********************************************************************************************************************************************************** -->
+      <!--sidebar start-->
+      <aside>
+          <div id="sidebar"  class="nav-collapse ">
+              <!-- sidebar menu start-->
+              <ul class="sidebar-menu" id="nav-accordion">
+                  <!-- <li class="mt">
+                      <a class="active" href="index.html">
+                          <i class="fa fa-dashboard"></i>
+                          <span>Dashboard</span>
+                      </a>
+                  </li> -->
+
+                  <li class="sub-menu">
+                      <a href="#" >
+                          <i class="fa fa-cogs"></i>
+                          <span>Maintenance & Calibration</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="../Maintenance/addMaintenance.html">Enter/Modify Equipment</a></li>
+                          <li><a  href="../Maintenance/viewMaintenanceEquipment.html">View Equipment</a></li>
+                          <li><a  href="../Maintenance/viewMaintenanceDetails.html">View Maintenance and Calibration</a></li>
+                          <li><a  href="../Maintenance/maintenanceReport.html">Reports</a></li>
+                      </ul>
+                  </li>
+
+                  <li class="sub-menu">
+                      <a href="#" >
+                          <i class="fa fa-exclamation-circle"></i>
+                          <span>Non Conformance</span>
+                      </a>
+                      <ul class="sub">
+                         <li><a  href="../NonConformance/addnonConformance.html">Add NonConformance</a></li>
+                          <li><a  href="../NonConformance/viewNonConformanceDetails.html">View NonConformance</a></li>
+                          <li><a  href="../NonConformance/nonConformanceReport.html">Reports</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                         <i class="fa fa-users"></i>
+                          <span>Customers</span>
+                      </a>
+                      <ul class="sub">
+                        <li><a  href="../Customers/addCustomer.html">Add Customers</a></li>
+                         <li><a  href="../Customers/viewCustomer.html">View Customers</a></li>
+                         <li><a  href="../Customers/customerReport.html">Feedback Report</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                        <i class="fa fa-user"></i>
+                          <span>HR and Training</span>
+                      </a>
+                      <ul class="sub">
+                           <li><a  href="../HRandTraining/addHR.html">Add HR and Training</a></li>
+                          <li><a  href="../HRandTraining/viewHR.html">View HR and Training</a></li>
+                          <li><a  href="../HRandTraining/hrReport.html">Reports</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                         <i class="fa fa-book"></i>
+                         <span>Document Control</span>
+                      </a>
+                      <ul class="sub">
+                         <li class="sub-menu-sub">
+                            <a href="javascript:;" >
+                               <i class="fa fa-plus-square"></i>
+                               <span>Document</span>
+                            </a>
+                             <ul class="sub">
+                              <li><a href="../document/addDocument.html">Add Document</a></li>
+                              <li><a href="../document/viewDocumentRevision.html">View Revision</a></li>
+                              <li><a href="../document/viewDocumentDetails.html">View Documents</a></li>
+                             </ul>
+                        </li>
+                        <li class="sub-menu-sub">
+                            <a href="javascript:;" >
+                               <i class="fa fa-plus-square"></i>
+                               <span>Forms/Records</span>
+                            </a>
+                             <ul class="sub">
+                              <li><a href="../forms/addForm.html">Add Form</a></li>
+                              <li><a href="../forms/viewFormRevision.html">View Revision</a></li>
+                              <li><a href="../forms/viewFormDetails.html">View Forms</a></li>
+                             </ul>
+                        </li>
+                         <li><a href="../document/documentReport.html">Document Reports</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                         <i class="fa fa-map-marker"></i>
+                         <span>Internal Audits</span>
+                      </a>
+                      <ul class="sub">
+                           <li><a href="../InternalAudit/addInternalAudit.html">Add Internal Audit</a></li>
+                           <li><a  href="../InternalAudit/viewInternalAudit.html">View Internal Audits</a></li>
+                           <li><a  href="../InternalAudit/internalAuditReport.html">Reports</a></li>
+                      </ul>
+                  </li>
+                 <li class="sub-menu">
+                      <a class="active" href="javascript:;" >
+                           <i class="fa fa-wrench"></i>
+                           <span>Corrective and Preventive Actions</span>
+                      </a>
+                      <ul class="sub">
+                        <li class="active"><a  href="../CorrectivePreventiveActions/addCorrectiveActions.html">Add Corrective and Preventive Actions</a></li>
+                        <li><a  href="../CorrectivePreventiveActions/viewCorrectiveActions.html">View Corrective and Preventive Actions</a></li>
+                        <li><a  href="../CorrectivePreventiveActions/correctiveActionsReport.html">Reports</a></li>   
+                      </ul>
+                  </li>
+                   <li class="sub-menu">
+                      <a href="javascript:;" >
+                            <i class="fa fa-truck"></i>
+                            <span>Supplier Performance</span>
+                      </a>
+                      <ul class="sub">
+                        <li><a  href="../SupplierPerformance/addSupplierPerformance.html">Add Supplier Performance</a></li>
+                        <li><a  href="../SupplierPerformance/viewSupplier.html">View Supplier</a></li>
+                        <li><a  href="../SupplierPerformance/viewSupplierPerformance.html">View Supplier Performance</a></li>
+                        <li><a  href="../SupplierPerformance/supplierPerformanceReport.html">Reports</a></li>
+                      </ul>
+                  </li>
+                   <li class="sub-menu">
+                      <a href="javascript:;" >
+                             <i class="fa fa-qrcode"></i>
+                             <span>Management Review</span>
+                      </a>
+                      <ul class="sub">
+                       <li><a  href="../ManagementReview/addManagementReview.html">Add Management Review</a></li>
+                        <li><a  href="../ManagementReview/viewManagementReview.html">View Management Review</a></li>
+                        <li><a  href="../ManagementReview/managementReviewReport.html">Reports</a></li>
+                      </ul>
+                  </li>
+              </ul>
+              <!-- sidebar menu end-->
+          </div>
+      </aside>
+      <!--sidebar end-->
+      
+      <!-- **********************************************************************************************************************************************************
+      MAIN CONTENT
+      *********************************************************************************************************************************************************** -->
+      <!--main content start-->
+      <section id="main-content">
+          <section class="wrapper">
+<div class="row">
+	<div id="breadcrumb" class="col-md-12">
+		<ol class="breadcrumb">
+			<li><a href="../index.html">QMS</a></li>
+			<li><a href="#">Corrective and Preventive Actions</a></li>
+			<li><a href="#">Add Corrective and Preventive Actions Details</a></li>
+		</ol>
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-12 col-sm-12">
+		<div class="form-panel">
+			<div class="box-header">
+				<div class="box-name">
+					<i class="fa fa-wrench"></i>
+					<span>Add Corrective and Preventive Actions Details</span>
+				</div>
+			</div>
+			<div class="box-content">
+				<form class="form-horizontal" role="form">
+					<div class="form-group">
+						<label class="col-sm-2 control-label">CAPA ID </label>
+						<div class="col-sm-4">
+							<input type="text" readonly="true" class="form-control" value="CAPA1029" placeholder=""/>
+						</div>
+						<label class="col-sm-2 control-label">NonConformance ID</label>
+						<div class="col-sm-4">
+               <select class="form-control" id="attendeeList" onchange="showJobtitle(this.value);">
+                <option value="">- Select -</option>
+                <option value="1">NC1111</option>
+                <option value="2">NC1112</option>
+                <option value="3">NC1113</option>
+                <option value="4">NC1114</option>
+                <option value="5">NC1115</option>
+              </select>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">External ID</label>
+						<div class="col-sm-4">
+							<input class="form-control" type="text" id="externalID" disabled>
+						</div>
+						<label class="col-sm-2 control-label">Source of NC</label>
+						<div class="col-sm-4">
+							<input type="text" class="form-control" placeholder="" id="sourceofNC" disabled>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Date Found</label>
+						<div class="col-sm-4" >
+							 <select class="form-control" id="dateFound" disabled>
+                <option value="">- Select -</option>
+                <option value="1">08/05/2015</option>
+                <option value="2">07/08/2015</option>
+                <option value="3">02/08/2015</option>
+                <option value="4">09/09/2015</option>
+                <option value="5">01/23/2015</option>
+              </select>
+						</div>
+             <label class="col-sm-2 control-label">Type of NC</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" placeholder="" id="typeofNC" disabled>
+            </div>
+					</div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Temporary Action</label>
+            <div class="col-sm-4">
+              <input class="form-control" type="text" id="temporaryAction" disabled>
+            </div>
+            <label class="col-sm-2 control-label">Nature of NC</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" placeholder="" id="natureeofNC" disabled>
+            </div>
+          </div>
+           <div class="form-group">
+            <label class="col-sm-2 control-label">CAPA Requestor</label>
+            <div class="col-sm-4">
+              <input class="form-control" type="text" id="" >
+            </div>
+            <label class="col-sm-2 control-label">Use 5 Whys's in system (Y/N) (*Optional)</label>
+            <div class="col-sm-4">
+               <div class="toggle-switch toggle-switch-primary">
+                      <label>
+                        <input type="checkbox" onchange="checkedorNot();" id="useSystem">
+                        <div class="toggle-switch-inner"></div>
+                        <div class="toggle-switch-switch"><i class="fa fa-check"></i></div>
+                      </label>
+                </div>
+            </div>
+          </div>
+           <div class="form-group">
+            <label class="col-sm-2 control-label">Request Date</label>
+            <div class="col-sm-4">
+              <input class="form-control" type="text" id="requestDate"  placeholder="Date picker">
+            </div>
+            <label class="col-sm-2 control-label">Why's ?</label>
+            <div class="col-sm-4">
+              <div class="toggle-switch toggle-switch-primary">
+                      <label>
+                        <input type="checkbox"  id="why" disabled>
+                        <div class="toggle-switch-inner"></div>
+                        <div class="toggle-switch-switch"><i class="fa fa-check"></i></div>
+                      </label>
+                </div><br>
+              <textarea class="form-control"rows="3" id="whyTextarea" disabled></textarea>
+            </div>
+          </div>
+           <div class="form-group">
+            <label class="col-sm-2 control-label">CAPA Due Date</label>
+            <div class="col-sm-4">
+              <input class="form-control" type="text" id="capaDueDate"  placeholder="Date picker">
+            </div>
+            <label class="col-sm-2 control-label">Root Cause Statement</label>
+            <div class="col-sm-4">
+              <textarea  class="form-control" placeholder="" id="" rows="3"></textarea>
+            </div>
+          </div>
+           <div class="form-group">
+            <label class="col-sm-2 control-label">Assigned Team Leader</label>
+            <div class="col-sm-4">
+              <select class="form-control" id="">
+                <option value="">- Select -</option>
+                <option value="1">Name1</option>
+                <option value="2">Name2</option>
+                <option value="3">Name3</option>
+              </select>
+            </div>
+            <label class="col-sm-2 control-label">Upload External Analysis (Y/N)(*Optional)</label>
+            <div class="col-sm-4">
+               <div class="toggle-switch toggle-switch-primary">
+                      <label>
+                        <input type="checkbox" onchange="uploadChecked();" id="upload">
+                        <div class="toggle-switch-inner"></div>
+                        <div class="toggle-switch-switch"><i class="fa fa-check"></i></div>
+                      </label>
+                </div>
+            </div>
+          </div>
+           <div class="form-group">
+            <label class="col-sm-2 control-label">Team Member (s)</label>
+            <div class="col-sm-4">
+              <textare class="form-control" id="" rows="3"></textarea> 
+            </div>
+            <label class="col-sm-2 control-label">Root-Cause Analysis File</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" placeholder="" id="">
+            </div>
+          </div>
+           <div class="form-group">
+            <label class="col-sm-2 control-label">Upload</label>
+            <div class="col-sm-4">
+              <input type="file" id="uploadFile" disabled>
+            </div>
+          </div>
+					<div class="form-group" id="hidebutton">
+						<div class="col-sm-7"></div>
+						<div class="col-sm-3">					
+							<input type="button" value="Enter/Modify Preventive Action Details" onclick="showchildsection();"class=" btn btn-primary">
+						</div>
+						<div class="col-sm-2">	
+								<button type="submit" class="btn btn-theme">Submit</button>	
+								<button type="button" class="btn btn-default">Cancel</button>
+					 	</div>
+					</div>		
+
+				</form>	
+			</div>	
+		</div>
+	</div>	
+	<!-- inner Fields -->
+				<div class="col-xs-12 col-sm-12" id="childsection" style="display:none;">
+					<div class="form-panel">
+						
+						<div class="box-content">
+							<form class="form-horizontal" role="form">
+								<div class="form-group">
+									<label class="col-sm-2 control-label">Action </label>
+									<div class="col-sm-4">
+                     <input type="text" class="form-control" id="">
+									</div>
+									<label class="col-sm-2 control-label">Due Date</label>
+									<div class="col-sm-4">
+									 <input type="text" class="form-control" id="dueDate" placeholder="Date picker">
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-sm-2 control-label">Verified By </label>
+									<div class="col-sm-4">
+                      <input type="text" class="form-control">
+									</div>
+									<label class="col-sm-2 control-label">Responsibity </label>
+									<div class="col-sm-4">
+										 <select class="form-control" id="">
+                <option value="">- Select -</option>
+                <option value="1">Nellson</option>
+                <option value="2">Jackson</option>
+                <option value="3">Andewson</option>
+              </select>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-sm-2 control-label">Completion Date </label>
+									<div class="col-sm-4">
+										<input class="form-control" id="completionDate" placeholder="Date picker">
+									</div>
+                    <label class="col-sm-2 control-label">Verification Date</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="verficationDate" placeholder="Date picker">
+                  </div>
+							</div>
+							<div class="form-group" id="showbutton" style="display:none;">
+									<div class="col-sm-6"></div>
+									<div class="col-sm-4">
+										<input type="button" value="Hide Enter/Modify Preventive Action Details" onclick="hidechildsection();"class="btn btn-primary">
+									</div>
+									<div class="col-sm-2">	
+											<button type="submit" class="btn btn-theme">Submit</button>	
+											<button type="button" class="btn btn-default">Cancel</button>
+									</div>
+							</div>			
+							</form>	
+						</div>
+					</div>
+				</div>				
+</div>	
+</section>
+      </section>
+
+      <!--main content end-->
+      <!--footer start-->
+      <footer class="site-footer">
+          <div class="text-center">
+              2015 - Deemsys Inc
+              <a href="#" class="go-top">
+                  <i class="fa fa-angle-up"></i>
+              </a>
+          </div>
+      </footer>
+      <!--footer end-->
+  </section>
+              
+      <!-- js placed at the end of the document so the pages load faster -->
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script class="include" type="text/javascript" src="../assets/js/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="../assets/js/jquery.scrollTo.min.js"></script>
+   
+
+
+    <!--common script for all pages-->
+    <script src="../assets/js/common-scripts.js"></script>
+
+    <!--script for this page-->
+    <script src="../assets/js/jquery-ui-1.9.2.custom.min.js"></script>
+
+	<!--custom switch-->
+	<script src="../assets/js/bootstrap-switch.js"></script>
+	
+	<!--custom tagsinput-->
+	<script src="../assets/js/jquery.tagsinput.js"></script>
+	
+	<script type="text/javascript" src="../assets/js/datetimepicker/moment.js"></script>
+	<script type="text/javascript" src="../assets/js/datetimepicker/datetimepicker.js"></script>
+	
+	<script type="text/javascript" src="../assets/js/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
+	
+	
+	<script src="../assets/js/form-component.js"></script>  
+<script type="text/javascript">
+$(document).ready(function() {
+	// Load TimePicker plugin and callback all time and date pickers
+	LoadTimePickerScript(AllTimePickers);
+	// Create jQuery-UI tabs
+	$("#tabs").tabs();
+	// Sortable for elements
+	$(".sort").sortable({
+		items: "div.col-sm-2",
+		appendTo: 'div.box-content'
+	});
+	// Droppable for example of trash
+	$(".drop div.col-sm-2").draggable({containment: '.dropbox' });
+	$('#trash').droppable({
+		drop: function(event, ui) {
+			$(ui.draggable).remove();
+		}
+	});
+	var icons = {
+		header: "ui-icon-circle-arrow-e",
+		activeHeader: "ui-icon-circle-arrow-s"
+	};
+	// Make accordion feature of jQuery-UI
+	$("#accordion").accordion({icons: icons });
+	// Create UI spinner
+	$("#ui-spinner").spinner();
+	// Add Drag-n-Drop to boxes
+	/*WinMove();*/
+});
+</script>
+ <script type="text/javascript">
+  $('#requestDate').datetimepicker({
+  pickTime : false
+});
+  $('#dueDate').datetimepicker({
+  pickTime : false
+});
+  $('#completionDate').datetimepicker({
+  pickTime : false
+});
+    $('#verficationDate').datetimepicker({
+  pickTime : false
+});
+      $('#capaDueDate').datetimepicker({
+  pickTime : false
+});
+ function showchildsection()
+ {
+   document.getElementById('childsection').style.display="block";
+   document.getElementById('hidebutton').style.display="none";
+   document.getElementById('showbutton').style.display="block";
+ }
+ function hidechildsection()
+ {
+   document.getElementById('childsection').style.display="none";
+   document.getElementById('hidebutton').style.display="block";
+   document.getElementById('showbutton').style.display="none";
+ }
+
+ function showJobtitle(value)
+ {
+      if(value != ""){
+      document.getElementById('externalID').value = "Ex1234";
+      document.getElementById('sourceofNC').value = "Source NC";
+      document.getElementById('dateFound').disabled = false;
+      document.getElementById('typeofNC').value = "Type of NC";
+      document.getElementById('temporaryAction').value = "Temporary Action";
+      document.getElementById('natureeofNC').value = "Nature of NC";
+    }
+    else{
+        document.getElementById('externalID').value = "";
+      document.getElementById('sourceofNC').value = "";
+      document.getElementById('dateFound').disabled = true;
+      document.getElementById('dateFound').value = "";
+      document.getElementById('typeofNC').value = "";
+      document.getElementById('temporaryAction').value = "";
+      document.getElementById('natureeofNC').value = "";
+    }
+}
+function checkedorNot(){
+  var useSystem = document.getElementById("useSystem").checked;
+  if (useSystem) {
+    document.getElementById("why").disabled = false;
+    document.getElementById("whyTextarea").disabled = false;
+  }
+  else{
+     document.getElementById("why").disabled = true;
+     document.getElementById("why").checked = false;
+    document.getElementById("whyTextarea").disabled = true;
+    document.getElementById("whyTextarea").value = "";
+
+  }
+}
+
+function uploadChecked(){
+  var upload = document.getElementById("upload").checked ;
+  if (upload) {
+    document.getElementById("uploadFile").disabled = false;
+  }
+  else{
+    document.getElementById("uploadFile").disabled = true;
+    document.getElementById("uploadFile").value = "";
+  }
+}
+  </script>
+  <script type="text/javascript">
+function doRemoveattendee(){
+  $("#yesNoModal").modal("show");
+}
+function removeAttnedeeFromList(){
+  $("#yesNoModal").modal("hide");
+  $('#attendee_list').html("");
+}
+  </script>

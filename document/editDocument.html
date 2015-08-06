@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+
+    <title>Deemsys QMS</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/css/datetimepicker.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <!--external css-->
+    <link href="../assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/zabuto_calendar.css">
+    <link rel="stylesheet" type="text/css" href="../assets/js/gritter/css/jquery.gritter.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/lineicons/style.css">    
+    <link href="../assets/css/vigo.datepicker.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <link href="../assets/css/style-responsive.css" rel="stylesheet">
+
+    <script src="../assets/js/chart-master/Chart.js"></script>
+    
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+  <section id="container" >
+      <!-- **********************************************************************************************************************************************************
+      TOP BAR CONTENT & NOTIFICATIONS
+      *********************************************************************************************************************************************************** -->
+      <!--header start-->
+      <header class="header black-bg">
+              <div class="sidebar-toggle-box">
+                  <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+              </div>
+            <!--logo start-->
+            <a href="../index.html" class="logo"><b>Quality Managment System</b></a>
+            <!--logo end-->
+            <div class="top-menu">
+            	<ul class="nav pull-right top-menu">
+                    <li><a class="logout" href="../login.html">Logout</a></li>
+            	</ul>
+            </div>
+        </header>
+      <!--header end-->
+      
+      <!-- **********************************************************************************************************************************************************
+      MAIN SIDEBAR MENU
+      *********************************************************************************************************************************************************** -->
+      <!--sidebar start-->
+      <aside>
+          <div id="sidebar"  class="nav-collapse ">
+              <!-- sidebar menu start-->
+              <ul class="sidebar-menu" id="nav-accordion">
+                  <!-- <li class="mt">
+                      <a class="active" href="../index.html">
+                          <i class="fa fa-dashboard"></i>
+                          <span>Dashboard</span>
+                      </a>
+                  </li> -->
+
+                  <li class="sub-menu">
+                      <a href="#" >
+                          <i class="fa fa-cogs"></i>
+                          <span>Maintenance & Calibration</span>
+                      </a>
+                      <ul class="sub">
+                       <li><a  href="../Maintenance/addMaintenance.html">Enter/Modify Equipment</a></li>
+                          <li><a  href="../Maintenance/viewMaintenanceEquipment.html">View Equipment</a></li>
+                          <li><a  href="../Maintenance/viewMaintenanceDetails.html">View Maintenance</a></li>
+                          <li><a  href="../Maintenance/maintenanceReport.html">Reports</a></li>
+                      </ul>
+                  </li>
+
+                  <li class="sub-menu">
+                      <a href="#" >
+                          <i class="fa fa-exclamation-circle"></i>
+                          <span>Non Conformance</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="../NonConformance/addnonConformance.html">Add NonConformance</a></li>
+                          <li><a  href="../NonConformance/viewNonConformanceDetails.html">View NonConformance</a></li>
+                          <li><a  href="../NonConformance/nonConformanceReport.html">Reports</a></li>
+
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                         <i class="fa fa-users"></i>
+                          <span>Customers</span>
+                      </a>
+                      <ul class="sub">
+                        
+                         <li><a  href="../Customers/addCustomer.html">Add Customers</a></li>
+                         <li><a  href="../Customers/viewCustomer.html">View Customers</a></li>
+                         <li><a  href="../Customers/customerReport.html">Feedback Report</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                        <i class="fa fa-user"></i>
+                          <span>HR and Training</span>
+                      </a>
+                      <ul class="sub">
+                           <li><a  href="../HRandTraining/addHR.html">Add HR and Training</a></li>
+                          <li><a  href="../HRandTraining/viewHR.html">View HR and Training</a></li>
+                          <li><a  href="../HRandTraining/hrReport.html">Reports</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a  class="active" href="javascript:;" >
+                         <i class="fa fa-book"></i>
+                         <span>Document Control</span>
+                      </a>
+                      <ul class="sub">
+                         <li class="sub-menu-sub">
+                            <a  class="active" href="javascript:;" >
+                               <i class="fa fa-plus-square"></i>
+                               <span>Document</span>
+                            </a>
+                             <ul class="sub">
+                              <li><a href="../document/addDocument.html">Add Document</a></li>
+                              <li><a href="../document/viewDocumentRevision.html">View Revision</a></li>
+                              <li class="active"><a href="../document/viewDocumentDetails.html">View Documents</a></li>
+                             </ul>
+                        </li>
+                        <li class="sub-menu-sub">
+                            <a href="javascript:;" >
+                               <i class="fa fa-plus-square"></i>
+                               <span>Forms/Records</span>
+                            </a>
+                             <ul class="sub">
+                              <li><a href="../forms/addForm.html">Add Form</a></li>
+                              <li><a href="../forms/viewFormRevision.html">View Revision</a></li>
+                              <li><a href="../forms/viewFormDetails.html">View Forms</a></li>
+                             </ul>
+                        </li>
+                         <li><a href="../document/documentReport.html">Document Reports</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                         <i class="fa fa-map-marker"></i>
+                         <span>Internal Audits</span>
+                      </a>
+                      <ul class="sub">
+                            <li><a href="../InternalAudit/addInternalAudit.html">Add Internal Audit</a></li>
+                           <li><a  href="../InternalAudit/viewInternalAudit.html">View Internal Audits</a></li>
+                           <li><a  href="../InternalAudit/internalAuditReport.html">Reports</a></li>
+                      </ul>
+                  </li>
+                <li class="sub-menu">
+                      <a href="javascript:;" >
+                           <i class="fa fa-wrench"></i>
+                           <span>Corrective and Preventive Actions</span>
+                      </a>
+                      <ul class="sub">
+                         <li><a  href="../CorrectivePreventiveActions/addCorrectiveActions.html">Add Corrective and Preventive Actions</a></li>
+                        <li><a  href="../CorrectivePreventiveActions/viewCorrectiveActions.html">View Corrective and Preventive Actions</a></li>
+                        <li><a  href="../CorrectivePreventiveActions/correctiveActionsReport.html">Reports</a></li>  
+                      </ul>
+                  </li>
+                   <li class="sub-menu">
+                      <a href="javascript:;" >
+                            <i class="fa fa-truck"></i>
+                            <span>Supplier Performance</span>
+                      </a>
+                      <ul class="sub">
+                        <li><a  href="../SupplierPerformance/addSupplierPerformance.html">Add Supplier Performance</a></li>
+                        <li><a  href="../SupplierPerformance/viewSupplier.html">View Supplier</a></li>
+                        <li><a  href="../SupplierPerformance/viewSupplierPerformance.html">View Supplier Performance</a></li>
+                        <li><a  href="../SupplierPerformance/supplierPerformanceReport.html">Reports</a></li>
+                      </ul>
+                  </li>
+                   <li class="sub-menu">
+                      <a href="javascript:;" >
+                             <i class="fa fa-qrcode"></i>
+                             <span>Management Review</span>
+                      </a>
+                      <ul class="sub">
+                       <li><a  href="../ManagementReview/addManagementReview.html">Add Management Review</a></li>
+                        <li><a  href="../ManagementReview/viewManagementReview.html">View Management Review</a></li>
+                        <li><a  href="../ManagementReview/managementReviewReport.html">Reports</a></li>
+                      </ul>
+                  </li>
+              </ul>
+              <!-- sidebar menu end-->
+          </div>
+      </aside>
+      <!--sidebar end-->
+      
+      <!-- **********************************************************************************************************************************************************
+      MAIN CONTENT
+      *********************************************************************************************************************************************************** -->
+      <!--main content start-->
+      <section id="main-content">
+          <section class="wrapper">
+<div class="row">
+	<div id="breadcrumb" class="col-md-12">
+		<ol class="breadcrumb">
+			<li><a href="../index.html">QMS</a></li>
+			<li><a href="#">Document Control</a></li>
+			<li><a href="#">Documents</a></li>
+			<li><a href="../document/viewDocumentDetails.html">View Documents</a></li>
+			<li><a href="#">Edit Document</a></li>
+		</ol>
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-12 col-sm-12">
+		<div class="form-panel">
+			<div class="box-header">
+				<div class="box-name">
+					<i class="fa fa-book"></i>
+					<span>Update Document Details</span>
+				</div>
+			</div>
+			<div class="box-content">
+				<form class="form-horizontal" role="form">
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Document ID </label>
+						<div class="col-sm-4">
+							QMS-566
+						</div>
+						
+						<label class="col-sm-2 control-label">Media Type </label>
+						<div class="col-sm-4">
+							<div class="radio-inline">
+							<label>
+								<input type="radio" name="radio-inline" value="hardcopy"  checked disabled> Hard Copy
+								<i class="fa fa-circle-o small"></i>
+							</label>
+						</div>
+						<div class="radio-inline">
+							<label>
+								<input type="radio" name="radio-inline" value="electronic" disabled> Electronic  
+								<i class="fa fa-circle-o small"></i>
+							</label>
+						</div>
+						<div class="radio-inline">
+							<label>
+								<input type="radio" name="radio-inline" value="both" disabled> Both
+								<i class="fa fa-circle-o small"></i>
+							</label>
+						</div>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Document Title</label>
+						<div class="col-sm-4">
+							<input type="text" class="form-control" placeholder="" value="Document Title" data-toggle="tooltip" data-placement="bottom" title="Tooltip for name" disabled>
+						</div>
+						<label class="col-sm-2 control-label">Process</label>
+						<div class="col-sm-4">
+							<select class="form-control" disabled>
+								<option>- select -</option>
+								<option>Account</option>
+								<option>Adopter</option>
+								<option selected>Manager</option>
+								<option>Owner</option>
+								<option>Sample Process1</option>
+							</select>
+						</div>
+						
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Document Type</label>
+						<div class="col-sm-4">
+							<select class="form-control" disabled>
+								<option>- select -</option>
+								<option>Account</option>
+								<option selected>Adopter</option>
+								<option>Manager</option>
+								<option>Owner</option>
+								<option>Sample Process1</option>
+							</select>
+						</div>
+						<label class="col-sm-2 control-label">External Document ? (Y/N)</label>
+						<div class="col-sm-4">
+							<div class="toggle-switch toggle-switch-primary">
+							<label>
+								<input type="checkbox" checked disabled>
+								<div class="toggle-switch-inner"></div>
+								<div class="toggle-switch-switch"><i class="fa fa-check"></i></div>
+							</label>
+						</div>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-sm-6"></div>
+							<label class="col-sm-2 control-label">Location</label>
+							<div class="col-sm-4">
+								<select class="form-control" disabled>
+									<option>- select -</option>
+									<option selected>Industry</option>
+									<option>Home</option>
+									<option>Location</option>
+									<option>Lab</option>
+									<option>Shop</option>
+								</select>
+							</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-sm-6"></div>
+							<label class="col-sm-2 control-label">Upload File</label>
+							<div class="col-sm-4">
+								 <input name="attachments"  id="id_file" type="file" disabled/> 
+							</div>
+					</div>		
+
+				</form>	
+			</div>	
+		</div>
+	</div>	
+	<!-- inner Fields -->
+				<div class="col-xs-12 col-sm-12" id="childsection">
+					<div class="form-panel">
+						<div class="box-header">
+				<div class="box-name">
+					<i class="fa fa-book"></i>
+					<span>Update Revision Details</span>
+				</div>
+			</div>
+						<div class="box-content">
+							<form class="form-horizontal" role="form">
+								<div class="form-group">
+									<div class="col-sm-2">					
+										<button type="button" class="btn btn-primary btn-label-left btn-xs"><span><i class="fa fa-plus-circle"></i></span> Enter New Revision</button>
+									</div>
+									<div class="col-sm-9"></div>
+								</div>	
+								<div class="form-group">
+									<label class="col-sm-2 control-label">Revision No. (optional)</label>
+									<div class="col-sm-4">
+										<span id="valueTempe">0.1</span>
+										<button id="plus" href="#" class="btn btn-primary btn-xs" value="">+</button>
+										<input type="hidden" name="revision_id" id="revisionid" value="0.1" class="form-control">
+									</div>
+									<label class="col-sm-2 control-label">Date</label>
+									<div class="col-sm-4">
+										<input type="text" class="form-control" id="date_example" value="07/21/2015" placeholder="Date picker">
+									</div>
+								</div>
+
+								<div class="form-group">
+						<label class="col-sm-2 control-label">Issuer</label>
+						<div class="col-sm-3">
+							<select class="form-control">
+								  <option value="-">--Select--</option>
+				              	  <option value="ABCD">A-D</option>
+					              <option value="EFGH">E-H</option>
+					              <option value="IJKL">I-L</option>
+					              <option value="MNO">M-O</option>
+					              <option value="PQR">P-R</option>
+					              <option value="STUV">S-V</option>
+					              <option value="WXYZ">W-Z</option>
+					              <option selected>Issuer</option>
+							</select>
+						</div>
+						<div class="col-sm-1">
+							<button type="button" class="btn btn-primary btn-xs">Change</button>
+						</div>
+						<label class="col-sm-2 control-label">Approved by Process owner</label>
+						<div class="col-sm-3">
+							<select class="form-control">
+								  <option value="-">--Select--</option>
+				              	  <option value="ABCD">A-D</option>
+					              <option value="EFGH">E-H</option>
+					              <option value="IJKL">I-L</option>
+					              <option value="MNO">M-O</option>
+					              <option value="PQR">P-R</option>
+					              <option value="STUV">S-V</option>
+					              <option value="WXYZ">W-Z</option>
+					               <option selected>Approver</option>
+							</select>
+						</div>
+						<div class="col-sm-1">
+							<button type="button" class="btn btn-primary btn-xs">Change</button>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Revision Level</label>
+						<div class="col-sm-4">
+							<input type="text" class="form-control" placeholder="" value="0" data-toggle="tooltip" data-placement="bottom" title="Tooltip for name">
+						</div>
+						<label class="col-sm-2 control-label">Approved by Documents Control Admins</label>
+						<div class="col-sm-4">
+							<select class="form-control">
+								<option>Industry</option>
+								<option>Home</option>
+								<option>Location</option>
+								<option>Lab</option>
+								<option>Shop</option>
+								 <option selected>document Admin</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Comments</label>
+						<div class="col-sm-4">
+							<textarea class="form-control" rows="3">Nothing</textarea>
+						</div>
+						<label class="col-sm-2 control-label">Approved by QMS Manager</label>
+						<div class="col-sm-4">
+							<select class="form-control">
+								<option>Industry</option>
+								<option>Home</option>
+								<option>Location</option>
+								<option>Lab</option>
+								<option>Shop</option>
+								 <option selected>Qms Manager</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-sm-6"></div>
+						<label class="col-sm-2 control-label">Status</label>
+						<div class="col-sm-4">
+							<select class="form-control">
+								<option>Draft</option>
+								<option selected>Active</option>
+								<option>Absolute</option>
+
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-10"></div>
+						<div class="col-sm-2">	
+								<button type="submit" class="btn btn-theme">Submit</button>	
+								<a href="../document/viewDocumentDetails.html" class="btn btn-default">Cancel</a>
+						</div>
+					</div>			
+							</form>	
+						</div>
+					</div>
+				</div>				
+</div>	
+ </section>
+      </section>
+
+      <!--main content end-->
+      <!--footer start-->
+      <footer class="site-footer">
+          <div class="text-center">
+              2015 - Deemsys Inc
+              <a href="#" class="go-top">
+                  <i class="fa fa-angle-up"></i>
+              </a>
+          </div>
+      </footer>
+      <!--footer end-->
+  </section>
+
+      <!-- js placed at the end of the document so the pages load faster -->
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script class="include" type="text/javascript" src="../assets/js/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="../assets/js/jquery.scrollTo.min.js"></script>
+   
+
+
+    <!--common script for all pages-->
+    <script src="../assets/js/common-scripts.js"></script>
+
+    <!--script for this page-->
+    <script src="../assets/js/jquery-ui-1.9.2.custom.min.js"></script>
+
+	<!--custom switch-->
+	<script src="../assets/js/bootstrap-switch.js"></script>
+	
+	<!--custom tagsinput-->
+	<script src="../assets/js/jquery.tagsinput.js"></script>
+	
+	<script type="text/javascript" src="../assets/js/datetimepicker/moment.js"></script>
+	<script type="text/javascript" src="../assets/js/datetimepicker/datetimepicker.js"></script>
+	
+	<script type="text/javascript" src="../assets/js/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
+	
+	
+	<script src="../assets/js/form-component.js"></script>  
+<script type="text/javascript">
+$(document).ready(function() {
+	// Load TimePicker plugin and callback all time and date pickers
+	LoadTimePickerScript(AllTimePickers);
+	// Create jQuery-UI tabs
+	$("#tabs").tabs();
+	// Sortable for elements
+	$(".sort").sortable({
+		items: "div.col-sm-2",
+		appendTo: 'div.box-content'
+	});
+	// Droppable for example of trash
+	$(".drop div.col-sm-2").draggable({containment: '.dropbox' });
+	$('#trash').droppable({
+		drop: function(event, ui) {
+			$(ui.draggable).remove();
+		}
+	});
+	var icons = {
+		header: "ui-icon-circle-arrow-e",
+		activeHeader: "ui-icon-circle-arrow-s"
+	};
+	// Make accordion feature of jQuery-UI
+	$("#accordion").accordion({icons: icons });
+	// Create UI spinner
+	$("#ui-spinner").spinner();
+	// Add Drag-n-Drop to boxes
+	WinMove();
+});
+</script>
+ <script type="text/javascript">
+ function showchildsection()
+ {
+   document.getElementById('childsection').style.display="block";
+   document.getElementById('hidebutton').style.display="none";
+   document.getElementById('showbutton').style.display="block";
+ }
+ function hidechildsection()
+ {
+   document.getElementById('childsection').style.display="none";
+   document.getElementById('hidebutton').style.display="block";
+   document.getElementById('showbutton').style.display="none";
+ }
+  </script>
+   <script type="text/javascript">
+  function toggle1(value){
+  	if (value == "hardcopy") {
+  		$("#hardcopychecked").show('slow');
+  		$("#electronicchecked").hide();	
+  	}
+  	else if (value == "electronic") {
+  		$("#electronicchecked").show('slow');
+  		$("#hardcopychecked").hide();
+  	}
+  	else{
+  		$("#hardcopychecked").show('slow');
+  		$("#electronicchecked").show('slow');
+  	}
+  }
+  </script>
+  <script type="text/javascript">
+   $('#date_example').datetimepicker({
+  pickTime : false
+});
+function reset_form()
+	{
+		
+		
+		document.getElementById('revisionid').value="0";
+		document.getElementById('datepicker').value="";
+		document.getElementById('issuer').value="";
+		document.getElementById('comments').value="";
+		document.getElementById('revisionlevel').value="";
+		document.getElementById('approver').value="";
+		document.getElementById('approver2').value="";
+		document.getElementById('approver3').value="";
+		document.getElementById('status').value="";
+	 
+	}
+
+
+	var valueElement = $('#valueTempe');
+	var intgert = /^[0-9].[0-9]$/;
+	var intalpha = /^[0-9].[a-z]$/;
+	var alphaint =  /^[a-z].[0-9]$/;
+	var alphaalpha = /^[a-z].[a-z]$/;
+	var intgrt = /^[0-9]$/;
+	var alphab = /^[a-z]$/;
+
+	
+
+	function incrementValue(e){
+		if(intgert.test(valueElement.text()))
+			{
+		if(valueElement.text() < 100){
+			var value = valueElement.text(Math.max(parseFloat(valueElement.text()) + e.data.increment).toFixed(1)); 
+			var id = document.getElementById('revisionid');
+			
+			id.value = Math.max(parseFloat(valueElement.text()).toFixed(1));
+			
+		}
+			}
+		if(intalpha.test(valueElement.text()))
+			{
+			var alpha =  ["0","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]; 
+			var print = ["0"];
+			var i,j;
+
+			for(i=0;i<=26;i++)
+			{
+			  for(j=1;j<=26;j++)
+			  {
+				print.push(i + "." + alpha[j]);
+			  }
+			}
+			var c=document.getElementById("valueTempe").innerHTML;
+			 a=print.indexOf(c);
+			
+			 b=a+1;
+			
+			 document.getElementById("valueTempe").innerHTML = print[b];
+			 var id = document.getElementById('revisionid');
+			 
+			 id.value = print[b];
+			
+			}
+		if(alphaint.test(valueElement.text()))
+			{
+			
+			
+			var number =  ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]; 
+			var display1 =["a"];
+			var i,j;
+
+			for(i=0;i<=9;i++)
+			{
+			  for(j=0;j<=9;j++)
+			  {
+				display1.push(number[i] + "." + j);
+			  }
+			}
+			var c=document.getElementById("valueTempe").innerHTML;
+			
+			 a=display1.indexOf(c);
+			
+			 b=a+1;
+			 document.getElementById("valueTempe").innerHTML = display1[b];
+			 var id = document.getElementById('revisionid');
+			 
+			 id.value = display1[b];
+			
+			}
+		if(alphaalpha.test(valueElement.text()))
+			{
+			var number =  ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]; 
+			var display1 =["a"];
+			var i,j;
+
+			for(i=0;i<=25;i++)
+			{
+			  for(j=0;j<=25;j++)
+			  {
+				display1.push(number[i] + "." + number[j]);
+			  }
+			}
+			var c=document.getElementById("valueTempe").innerHTML;
+			
+			 a=display1.indexOf(c);
+			
+			 b=a+1;
+			 document.getElementById("valueTempe").innerHTML = display1[b];
+			 var id = document.getElementById('revisionid');
+			 
+			 id.value = display1[b];
+			
+			
+			}
+		if(intgrt.test(valueElement.text()))
+			{
+			
+			
+			var value=valueElement.text();
+			var id = document.getElementById('revisionid');
+			var inc = parseFloat('1');
+			
+			  id.value = parseInt(value)+parseFloat(inc);
+					  var value1 = valueElement.text(id.value); 
+			
+			}
+		if(alphab.test(valueElement.text()))
+			{
+			
+			var alpha =  ["0","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]; 
+			var print = ["0"];
+			var i,j;
+
+			
+			  for(j=1;j<=26;j++)
+			  {
+				print.push(alpha[j]);
+			  }
+			
+			var c=document.getElementById("valueTempe").innerHTML;
+			 a=print.indexOf(c);
+			
+			 b=a+1;
+			
+			 document.getElementById("valueTempe").innerHTML = print[b];
+			 var id = document.getElementById('revisionid');
+			 
+			 id.value = print[b];
+			
+			}
+		
+	    return false;
+	}
+
+
+	$('#plus').bind('click', {increment: 0.1}, incrementValue);	
+  </script>

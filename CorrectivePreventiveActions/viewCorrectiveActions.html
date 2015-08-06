@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+
+    <title>Deemsys QMS</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/css/datetimepicker.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <!--external css-->
+    <link href="../assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/zabuto_calendar.css">
+    <link rel="stylesheet" type="text/css" href="../assets/js/gritter/css/jquery.gritter.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/lineicons/style.css">    
+    <link href="../assets/css/vigo.datepicker.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <link href="../assets/css/style-responsive.css" rel="stylesheet">
+
+    <script src="../assets/js/chart-master/Chart.js"></script>
+    
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+  <section id="container" >
+      <!-- **********************************************************************************************************************************************************
+      TOP BAR CONTENT & NOTIFICATIONS
+      *********************************************************************************************************************************************************** -->
+      <!--header start-->
+      <header class="header black-bg">
+              <div class="sidebar-toggle-box">
+                  <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+              </div>
+            <!--logo start-->
+            <a href="../index.html" class="logo"><b>Quality Managment System</b></a>
+            <!--logo end-->
+            <div class="top-menu">
+            	<ul class="nav pull-right top-menu">
+                    <li><a class="logout" href="../login.html">Logout</a></li>
+            	</ul>
+            </div>
+        </header>
+      <!--header end-->
+      
+      <!-- **********************************************************************************************************************************************************
+      MAIN SIDEBAR MENU
+      *********************************************************************************************************************************************************** -->
+      <!--sidebar start-->
+      <aside>
+          <div id="sidebar"  class="nav-collapse ">
+              <!-- sidebar menu start-->
+              <ul class="sidebar-menu" id="nav-accordion">
+                  <!-- <li class="mt">
+                      <a class="active" href="index.html">
+                          <i class="fa fa-dashboard"></i>
+                          <span>Dashboard</span>
+                      </a>
+                  </li> -->
+
+              <li class="sub-menu">
+                      <a href="#" >
+                          <i class="fa fa-cogs"></i>
+                          <span>Maintenance & Calibration</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="../Maintenance/addMaintenance.html">Enter/Modify Equipment</a></li>
+                          <li><a  href="../Maintenance/viewMaintenanceEquipment.html">View Equipment</a></li>
+                          <li><a  href="../Maintenance/viewMaintenanceDetails.html">View Maintenance and Calibration</a></li>
+                          <li><a  href="../Maintenance/maintenanceReport.html">Reports</a></li>
+                      </ul>
+                  </li>
+
+                  <li class="sub-menu">
+                      <a href="#" >
+                          <i class="fa fa-exclamation-circle"></i>
+                          <span>Non Conformance</span>
+                      </a>
+                      <ul class="sub">
+                         <li><a  href="../NonConformance/addnonConformance.html">Add NonConformance</a></li>
+                          <li><a  href="../NonConformance/viewNonConformanceDetails.html">View NonConformance</a></li>
+                          <li><a  href="../NonConformance/nonConformanceReport.html">Reports</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                         <i class="fa fa-users"></i>
+                          <span>Customers</span>
+                      </a>
+                      <ul class="sub">
+                        <li><a  href="../Customers/addCustomer.html">Add Customers</a></li>
+                         <li><a  href="../Customers/viewCustomer.html">View Customers</a></li>
+                         <li><a  href="../Customers/customerReport.html">Feedback Report</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                        <i class="fa fa-user"></i>
+                          <span>HR and Training</span>
+                      </a>
+                      <ul class="sub">
+                           <li><a  href="../HRandTraining/addHR.html">Add HR and Training</a></li>
+                          <li><a  href="../HRandTraining/viewHR.html">View HR and Training</a></li>
+                          <li><a  href="../HRandTraining/hrReport.html">Reports</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                         <i class="fa fa-book"></i>
+                         <span>Document Control</span>
+                      </a>
+                      <ul class="sub">
+                         <li class="sub-menu-sub">
+                            <a href="javascript:;" >
+                               <i class="fa fa-plus-square"></i>
+                               <span>Document</span>
+                            </a>
+                             <ul class="sub">
+                              <li><a href="../document/addDocument.html">Add Document</a></li>
+                              <li><a href="../document/viewDocumentRevision.html">View Revision</a></li>
+                              <li><a href="../document/viewDocumentDetails.html">View Documents</a></li>
+                             </ul>
+                        </li>
+                        <li class="sub-menu-sub">
+                            <a href="javascript:;" >
+                               <i class="fa fa-plus-square"></i>
+                               <span>Forms/Records</span>
+                            </a>
+                             <ul class="sub">
+                              <li><a href="../forms/addForm.html">Add Form</a></li>
+                              <li><a href="../forms/viewFormRevision.html">View Revision</a></li>
+                              <li><a href="../forms/viewFormDetails.html">View Forms</a></li>
+                             </ul>
+                        </li>
+                         <li><a href="../document/documentReport.html">Document Reports</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                         <i class="fa fa-map-marker"></i>
+                         <span>Internal Audits</span>
+                      </a>
+                      <ul class="sub">
+                           <li><a href="../InternalAudit/addInternalAudit.html">Add Internal Audit</a></li>
+                           <li><a  href="../InternalAudit/viewInternalAudit.html">View Internal Audits</a></li>
+                           <li><a  href="../InternalAudit/internalAuditReport.html">Reports</a></li>
+                      </ul>
+                  </li>
+                 <li class="sub-menu">
+                      <a  class="active" href="javascript:;" >
+                           <i class="fa fa-wrench"></i>
+                           <span>Corrective and Preventive Actions</span>
+                      </a>
+                      <ul class="sub">
+                        <li><a  href="../CorrectivePreventiveActions/addCorrectiveActions.html">Add Corrective and Preventive Actions</a></li>
+                        <li class="active"><a  href="../CorrectivePreventiveActions/viewCorrectiveActions.html">View Corrective and Preventive Actions</a></li>
+                        <li><a  href="../CorrectivePreventiveActions/correctiveActionsReport.html">Reports</a></li> 
+                      </ul>
+                  </li>
+                   <li class="sub-menu">
+                      <a href="javascript:;" >
+                            <i class="fa fa-truck"></i>
+                            <span>Supplier Performance</span>
+                      </a>
+                      <ul class="sub">
+                     <li><a  href="../SupplierPerformance/addSupplierPerformance.html">Add Supplier Performance</a></li>
+                        <li><a  href="../SupplierPerformance/viewSupplier.html">View Supplier</a></li>
+                        <li><a  href="../SupplierPerformance/viewSupplierPerformance.html">View Supplier Performance</a></li>
+                        <li><a  href="../SupplierPerformance/supplierPerformanceReport.html">Reports</a></li>
+                      </ul>
+                  </li>
+                   <li class="sub-menu">
+                      <a href="javascript:;" >
+                             <i class="fa fa-qrcode"></i>
+                             <span>Management Review</span>
+                      </a>
+                      <ul class="sub">
+                       <li><a  href="../ManagementReview/addManagementReview.html">Add Management Review</a></li>
+                        <li><a  href="../ManagementReview/viewManagementReview.html">View Management Review</a></li>
+                        <li><a  href="../ManagementReview/managementReviewReport.html">Reports</a></li>
+                      </ul>
+                  </li>
+              </ul>
+              <!-- sidebar menu end-->
+          </div>
+      </aside>
+      <!--sidebar end-->
+      
+      <!-- **********************************************************************************************************************************************************
+      MAIN CONTENT
+      *********************************************************************************************************************************************************** -->
+      <!--main content start-->
+      <section id="main-content">
+          <section class="wrapper">
+            <div class="row">
+  <div id="breadcrumb" class="col-md-12">
+    <ol class="breadcrumb">
+      <li><a href="index.html">QMS</a></li>
+      <li><a href="#">Corrective and Preventive Actions</a></li>
+      <li><a href="#">View Managment Corrective and Preventive Action Details</a></li>
+    </ol>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="form-panel">
+      <div class="box-header">
+        <div class="box-name">
+          <i class="fa fa-qrcode"></i>
+          <span>View Corrective and Preventive Action Details</span>
+        </div>
+      </div>
+      <div class="box-content no-padding table-responsive">
+        <table class="table table-bordered table-striped table-hover table-heading table-datatable" id="example">
+            <tfoot class="tColor">
+            <tr>
+              <th></th>
+              <th>NC ID</th>
+              <th>Request Date</th>
+              <th>Actions</th>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+          </tfoot>
+          <thead >
+            <tr>
+              <th>CAPA ID</th>
+              <th>NC ID</th>
+              <th>Request Date</th>
+              <th>Actions</th>
+              <th>CAPA Requester</th>
+              <th>CAPA Due Date</th>
+              <th>File</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="../CorrectivePreventiveActions/listCorrectiveActions.html">CA1111</a></td>
+              <td>NC1115</td>
+              <td>04/23/2015</td>
+              <td>human resources</td>
+              <td>Sample Process2</td>
+              <td>07/24/2015</td>
+              <td>No Document</td>
+              <td><a href="../CorrectivePreventiveActions/editCorrectiveActions.html" title="Edit Corrective Actions" data-toggle="tooltip" data-placement="left"><i class="fa fa-edit btn-lg txt-edit"></i></a>&nbsp;
+              </td>
+            </tr>
+             <tr>
+              <td><a href="../CorrectivePreventiveActions/listCorrectiveActions.html">CA1112</a></td>
+              <td>NC1112</td>
+              <td>04/13/2015</td>
+              <td>resources</td>
+              <td>Process2</td>
+              <td>06/24/2015</td>
+              <td><a href="#">Download</a></td>
+              <td><a href="../CorrectivePreventiveActions/editCorrectiveActions.html" title="Edit Corrective Actions" data-toggle="tooltip" data-placement="left"><i class="fa fa-edit btn-lg txt-edit"></i></a>&nbsp;
+              </td>
+            </tr>
+             <tr>
+              <td><a href="../CorrectivePreventiveActions/listCorrectiveActions.html">CA1113</a></td>
+              <td>NC1125</td>
+              <td>04/30/2015</td>
+              <td>Human</td>
+              <td>Process1</td>
+              <td>09/24/2015</td>
+              <td>No Document</td>
+              <td><a href="../CorrectivePreventiveActions/editCorrectiveActions.html" title="Edit Corrective Actions" data-toggle="tooltip" data-placement="left"><i class="fa fa-edit btn-lg txt-edit"></i></a>&nbsp;
+              </td>
+            </tr>
+             <tr>
+              <td><a href="../CorrectivePreventiveActions/listCorrectiveActions.html">CA1114</a></td>
+              <td>NC1115</td>
+              <td>11/23/2015</td>
+              <td>Appended</td>
+              <td>Samplss2</td>
+              <td>07/14/2015</td>
+              <td><a href="#">Download</a></td>
+              <td><a href="../CorrectivePreventiveActions/editCorrectiveActions.html" title="Edit Corrective Actions" data-toggle="tooltip" data-placement="left"><i class="fa fa-edit btn-lg txt-edit"></i></a>&nbsp;
+              </td>
+            </tr>
+             <tr>
+              <td><a href="../CorrectivePreventiveActions/listCorrectiveActions.html">CA1115</a></td>
+              <td>NC1117</td>
+              <td>01/13/2015</td>
+              <td>human resources</td>
+              <td>Sample Process2</td>
+              <td>07/04/2015</td>
+              <td>No Document</td>
+              <td><a href="../CorrectivePreventiveActions/editCorrectiveActions.html" title="Edit Corrective Actions" data-toggle="tooltip" data-placement="left"><i class="fa fa-edit btn-lg txt-edit"></i></a>&nbsp;
+              </td>
+            </tr>
+             <tr>
+              <td><a href="../CorrectivePreventiveActions/listCorrectiveActions.html">CA1116</a></td>
+              <td>NC1115</td>
+              <td>02/22/2015</td>
+              <td>Management</td>
+              <td> Process2</td>
+              <td>07/20/2015</td>
+              <td><a href="#">Download</a></td>
+              <td><a href="../CorrectivePreventiveActions/editCorrectiveActions.html" title="Edit Corrective Actions" data-toggle="tooltip" data-placement="left"><i class="fa fa-edit btn-lg txt-edit"></i></a>&nbsp;
+              </td>
+            </tr>
+             <tr>
+              <td><a href="../CorrectivePreventiveActions/listCorrectiveActions.html">CA1117</a></td>
+              <td>NC1024</td>
+              <td>04/11/2015</td>
+              <td>human</td>
+              <td>Sample</td>
+              <td>04/04/2015</td>
+              <td>No Document</td>
+              <td><a href="../CorrectivePreventiveActions/editCorrectiveActions.html" title="Edit Corrective Actions" data-toggle="tooltip" data-placement="left"><i class="fa fa-edit btn-lg txt-edit"></i></a>&nbsp;
+              </td>
+            </tr>
+             <tr>
+              <td><a href="../CorrectivePreventiveActions/listCorrectiveActions.html">CA1118</a></td>
+              <td>NC1115</td>
+              <td>14/13/2015</td>
+              <td>sources</td>
+              <td> Process</td>
+              <td>07/21/2015</td>
+              <td><a href="#">Download</a></td>
+              <td><a href="../CorrectivePreventiveActions/editCorrectiveActions.html" title="Edit Corrective Actions" data-toggle="tooltip" data-placement="left"><i class="fa fa-edit btn-lg txt-edit"></i></a>&nbsp;
+              </td>
+            </tr>
+
+             <tr>
+              <td><a href="../CorrectivePreventiveActions/listCorrectiveActions.html">CA1119</a></td>
+              <td>NC1115</td>
+              <td>04/13/2015</td>
+              <td> ress</td>
+              <td>rocess2</td>
+              <td>07/24/2015</td>
+              <td>No Document</td>
+              <td><a href="../CorrectivePreventiveActions/editCorrectiveActions.html" title="Edit Corrective Actions" data-toggle="tooltip" data-placement="left"><i class="fa fa-edit btn-lg txt-edit"></i></a>&nbsp;
+              </td>
+            </tr>
+             <tr>
+              <td><a href="../CorrectivePreventiveActions/listCorrectiveActions.html">CA1120</a></td>
+              <td>NC1215</td>
+              <td>04/30/2015</td>
+              <td>sources122</td>
+              <td>Sampl-2Process2</td>
+              <td>07/20/2015</td>
+              <td><a href="#">Download</a></td>
+              <td><a href="../CorrectivePreventiveActions/editCorrectiveActions.html" title="Edit Corrective Actions" data-toggle="tooltip" data-placement="left"><i class="fa fa-edit btn-lg txt-edit"></i></a>&nbsp;
+              </td>
+            </tr>
+             <tr>
+              <td><a href="../CorrectivePreventiveActions/listCorrectiveActions.html">CA1121</a></td>
+              <td>NC1125</td>
+              <td>04/23/2015</td>
+              <td>human resources</td>
+              <td>Sample Process2</td>
+              <td>07/24/2015</td>
+              <td>No Document</td>
+              <td><a href="../CorrectivePreventiveActions/editCorrectiveActions.html" title="Edit Corrective Actions" data-toggle="tooltip" data-placement="left"><i class="fa fa-edit btn-lg txt-edit"></i></a>&nbsp;
+              </td>
+            </tr>
+             <tr>
+              <td><a href="../CorrectivePreventiveActions/listCorrectiveActions.html">CA1122</a></td>
+              <td>NC1715</td>
+              <td>04/23/2015</td>
+              <td>human resources</td>
+              <td>Sample Process2</td>
+              <td>07/24/2015</td>
+              <td>No Document</td>
+              <td><a href="../CorrectivePreventiveActions/editCorrectiveActions.html" title="Edit Corrective Actions" data-toggle="tooltip" data-placement="left"><i class="fa fa-edit btn-lg txt-edit"></i></a>&nbsp;
+              </td>
+            </tr> <tr>
+              <td><a href="../CorrectivePreventiveActions/listCorrectiveActions.html">CA0111</a></td>
+              <td>NC1515</td>
+              <td>04/01/2015</td>
+              <td>human resources</td>
+              <td>Sample Process2</td>
+              <td>07/24/2015</td>
+              <td>No Document</td>
+              <td><a href="../CorrectivePreventiveActions/editCorrectiveActions.html" title="Edit Corrective Actions" data-toggle="tooltip" data-placement="left"><i class="fa fa-edit btn-lg txt-edit"></i></a>&nbsp;
+              </td>
+            </tr>
+             <tr>
+              <td><a href="../CorrectivePreventiveActions/listCorrectiveActions.html">CA1101</a></td>
+              <td>NC1115</td>
+              <td>02/03/2015</td>
+              <td>Runner</td>
+              <td>Sample123</td>
+              <td>10/14/2015</td>
+              <td>No Document</td>
+              <td><a href="../CorrectivePreventiveActions/editCorrectiveActions.html" title="Edit Corrective Actions" data-toggle="tooltip" data-placement="left"><i class="fa fa-edit btn-lg txt-edit"></i></a>&nbsp;
+              </td>
+            </tr>
+             <tr>
+              <td><a href="../CorrectivePreventiveActions/listCorrectiveActions.html">CA2111</a></td>
+              <td>NC1145</td>
+              <td>04/21/2015</td>
+              <td>human resources</td>
+              <td>Sample Process2</td>
+              <td>07/24/2015</td>
+              <td>No Document</td>
+              <td><a href="../CorrectivePreventiveActions/editCorrectiveActions.html" title="Edit Corrective Actions" data-toggle="tooltip" data-placement="left"><i class="fa fa-edit btn-lg txt-edit"></i></a>&nbsp;
+              </td>
+            </tr>
+            </tbody>
+        
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+</section>
+</section>
+<!--main content end-->
+      <!--footer start-->
+      <footer class="site-footer">
+          <div class="text-center">
+              2015 - Deemsys Inc
+              <a href="#" class="go-top">
+                  <i class="fa fa-angle-up"></i>
+              </a>
+          </div>
+      </footer>
+      <!--footer end-->
+  </section>
+
+      <!-- js placed at the end of the document so the pages load faster -->
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script class="include" type="text/javascript" src="../assets/js/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="../assets/js/jquery.scrollTo.min.js"></script>
+   
+
+
+    <!--common script for all pages-->
+    <script src="../assets/js/common-scripts.js"></script>
+
+    <!--script for this page-->
+    <script src="../assets/js/jquery-ui-1.9.2.custom.min.js"></script>
+
+  <!--custom switch-->
+  <script src="../assets/js/bootstrap-switch.js"></script>
+  
+  <!--custom tagsinput-->
+  <script src="../assets/js/jquery.tagsinput.js"></script>
+  
+  <script type="text/javascript" src="../assets/js/datetimepicker/moment.js"></script>
+  <script type="text/javascript" src="../assets/js/datetimepicker/datetimepicker.js"></script>
+  <script type="text/javascript" src="../assets/js/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
+  <script type="text/javascript" src="../assets/datatables/jquery.dataTables.js"></script>
+  <script type="text/javascript" src="../assets/datatables/dataTables.bootstrap.js"></script>
+  <script src="../assets/js/form-component.js"></script>  
+<script type="text/javascript">
+// Function for table, located in element with id = datatable-2
+//
+function TestTable2(){
+  
+$('#example').dataTable({
+     "aaSorting": [[1,'asc']],
+      "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
+       "dom": '<"top">rt<"bottom"filp><"clear">',
+      "language": {
+            "emptyTable": "No records found"
+          },
+      "bProcessing": false,
+        "bServerSide": false,
+        "bLengthChange": true,
+        "sort": "position",
+        //bStateSave variable you can use to save state on client cookies: set value "true" 
+        "bStateSave": false,
+        //Default: Page display length
+        "iDisplayLength": 10,
+        //We will use below variable to track page number on server side(For more information visit: http://legacy.datatables.net/usage/options#iDisplayStart)
+        "iDisplayStart": 0,
+            "columns":[
+             null,
+        {"width":"10%"},
+        {"width":"16%"},
+        {"width":"12%"},
+        null,
+        null,
+        null,
+        null
+        ]
+       
+    } );
+ // Setup - add a text input to each footer cell
+    $('#example tfoot th').not(":eq(0),:eq(4),:eq(5),:eq(6),:eq(7),:eq(8)").each( function () {
+        var title = $('#example tfoot th').eq( $(this).index() ).text();
+         if(title == "Request Date")
+            {
+            $(this).html("<div class='input-group searchpanel-input-group'><span class='input-group-addon whiteaddon tooltipsclass' title='"
+            + title
+            + "' data-placement='right'><i  class='fa fa-search'></i> </span> <input type='text' onclick='requestDate();' placeholder='"+title+"' class='column_filter' id='requestDate'></div>");
+            }
+          else
+        $(this).html( "<div class='input-group searchpanel-input-group'><span class='input-group-addon whiteaddon tooltipsclass'  title='"+title+"' data-placement='right'><i class='fa fa-search'></i> </span> <input type='text' class='column_filter' placeholder='"+title+"' id='"+title+"'></div>" );
+    } );
+ 
+    // DataTable
+    var table = $('#example').DataTable();
+ 
+   // Apply the search
+    table.columns().eq( 0 ).each( function ( colIdx ) {
+       if (colIdx == 0 || colIdx == 4|| colIdx == 5 || colIdx == 6 || colIdx == 7 || colIdx == 8) return;
+        if(colIdx == 2){
+             $( 'input', table.column( colIdx ).footer() ).on( 'keyup click change', function (){
+               $('#requestDate').datetimepicker({
+                  pickTime : false,
+                });
+               table
+                    .column( colIdx )
+                    .search( this.value )
+                    .draw();
+             } );
+          }
+      else{
+        $( 'input', table.column( colIdx ).footer() ).on( 'keyup change', function () {
+            
+            table
+                .column( colIdx )
+                .search( this.value )
+                .draw();
+        } );
+      }
+    } );
+
+}
+$(document).ready(function() {
+  TestTable2();
+});
+</script>
+<style>
+@media screen and (min-width: 768px) {
+  
+  #revisionModal .modal-dialog  {width:1100px;}
+
+}
+tfoot input {
+        width: 100%;
+        padding: 3px;
+        box-sizing: border-box;
+    }
+tfoot {
+    display: table-header-group;
+}
+.dataTables_filter {
+   width: 50%;
+   float: right;
+   text-align: right;
+   display: none;
+}
+div.dataTables_paginate {
+    float:right;
+    margin: 0;
+}
+tr.group,
+tr.group:hover {
+    background-color: red !important;
+}
+
+#revisionModal {
+top:5%;
+}
+</style>
+<script type="text/javascript">
+function viewRevisionHistory(){
+  $("#revisionModal").modal("show");
+}
+
+function requestDate(){
+  $('#requestDate').datetimepicker({
+    pickTime : false,
+  });
+}
+</script>
+<style>
+</body>
+</html>
