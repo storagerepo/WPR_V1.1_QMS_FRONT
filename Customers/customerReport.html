@@ -297,31 +297,31 @@
 							<div class="col-sm-7">
 								<div class="checkbox-inline">
 									<label>
-										<input type="checkbox"> One
+										<input type="checkbox" class="checkbox1"> One
 										<i class="fa fa-square-o"></i>
 									</label>
 								</div>
 								<div class="checkbox-inline">
 									<label>
-										<input type="checkbox"> Two
+										<input type="checkbox" class="checkbox1"> Two
 										<i class="fa fa-square-o"></i>
 									</label>
 								</div>
 								<div class="checkbox-inline">
 									<label>
-										<input type="checkbox"> Three
+										<input type="checkbox" class="checkbox1"> Three
 										<i class="fa fa-square-o"></i>
 									</label>
 								</div>
 								<div class="checkbox-inline">
 									<label>
-										<input type="checkbox"> Four
+										<input type="checkbox" class="checkbox1"> Four
 										<i class="fa fa-square-o"></i>
 									</label>
 								</div>
 								<div class="checkbox-inline">
 									<label>
-										<input type="checkbox"> Five
+										<input type="checkbox" class="checkbox1"> Five
 										<i class="fa fa-square-o"></i>
 									</label>
 								</div>
@@ -333,31 +333,31 @@
 							<div class="col-sm-7">
 								<div class="checkbox-inline">
 									<label>
-										<input type="checkbox"> Six
+										<input type="checkbox" class="checkbox1"> Six
 										<i class="fa fa-square-o"></i>
 									</label>
 								</div>
 								<div class="checkbox-inline">
 									<label>
-										<input type="checkbox"> Seven
+										<input type="checkbox" class="checkbox1"> Seven
 										<i class="fa fa-square-o"></i>
 									</label>
 								</div>
 								<div class="checkbox-inline">
 									<label>
-										<input type="checkbox"> Eight
+										<input type="checkbox" class="checkbox1"> Eight
 										<i class="fa fa-square-o"></i>
 									</label>
 								</div>
 								<div class="checkbox-inline">
 									<label>
-										<input type="checkbox"> Nine
+										<input type="checkbox" class="checkbox1"> Nine
 										<i class="fa fa-square-o"></i>
 									</label>
 								</div>
 								<div class="checkbox-inline">
 									<label>
-										<input type="checkbox"> ten
+										<input type="checkbox" class="checkbox1"> ten
 										<i class="fa fa-square-o"></i>
 									</label>
 								</div>
@@ -449,15 +449,18 @@ function toggelReport(value){
 	};
 }
 
-$('#select_all').change(function() {
-    var checkboxes = $(this).closest('form').find(':checkbox');
-    if($(this).is(':checked')) {
-        checkboxes.attr('checked','checked');
-    } else {
-        checkboxes.removeAttr('checked');
-    }
-   
-});
+
+    $('#select_all').click(function(event) {  //on click 
+        if(this.checked) { // check select status
+            $('.checkbox1').each(function() { //loop through each checkbox
+                this.checked = true;  //select all checkboxes with class "checkbox1"               
+            });
+        }else{
+            $('.checkbox1').each(function() { //loop through each checkbox
+                this.checked = false; //deselect all checkboxes with class "checkbox1"                       
+            });         
+        }
+    });
 </script>
 <script type="text/javascript">
     $(function () {
