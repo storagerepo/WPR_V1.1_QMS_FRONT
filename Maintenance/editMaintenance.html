@@ -125,7 +125,7 @@
                                <i class="fa fa-plus-square"></i>
                                <span>Document</span>
                             </a>
-                             <ul class="sub">
+                             <ul class="sub sub-sub">
                               <li><a href="../document/addDocument.html">Add Document</a></li>
                               <li><a href="../document/viewDocumentRevision.html">View Revision</a></li>
                               <li><a href="../document/viewDocumentDetails.html">View Documents</a></li>
@@ -136,7 +136,7 @@
                                <i class="fa fa-plus-square"></i>
                                <span>Forms/Records</span>
                             </a>
-                             <ul class="sub">
+                             <ul class="sub sub-sub">
                               <li><a href="../forms/addForm.html">Add Form</a></li>
                               <li><a href="../forms/viewFormRevision.html">View Revision</a></li>
                               <li><a href="../forms/viewFormDetails.html">View Forms</a></li>
@@ -225,22 +225,22 @@
         <form class="form-horizontal style-form" role="form">
           <div class="form-group">
             <label class="col-sm-2 control-label">Equipment  ID </label>
-            <div class="col-sm-4">  
+            <div class="col-sm-3">  
               <input type="text" class="form-control" value="EQU989" placeholder="" disabled>
             </div>
-            <label class="col-sm-2 control-label">Date Acquired </label>
-            <div class="col-sm-4">
-              <input type="text" id="dateAcquired" value="08/02/2015" class="form-control" disabled>
+            <div class="col-sm-1"></div><label class="col-sm-2 control-label">Date Acquired </label>
+            <div class="col-sm-3">
+              <input type="text" id="dateAcquired" value="08/02/2015" class="form-control" placeholder="Select Date" disabled>
             </div>
           </div>
 
           <div class="form-group">
             <label class="col-sm-2 control-label">Equipment Name</label>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
               <input type="text" class="form-control" placeholder="" value="Mobile Phone" disabled>
             </div>
-            <label class="col-sm-2 control-label">Equipment Status</label>
-            <div class="col-sm-4">
+            <div class="col-sm-1"></div><label class="col-sm-2 control-label">Equipment Status</label>
+            <div class="col-sm-3">
               <select class="form-control" disabled>
                 <option>- Select -</option>
                 <option selected>Active</option>
@@ -252,11 +252,11 @@
 
           <div class="form-group">
             <label class="col-sm-2 control-label">Equipment Model </label>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
             <input type="text" class="form-control" value="Zenfone 5" disabled>
             </div>
-            <label class="col-sm-2 control-label">Frequency of Maintenance</label>
-            <div class="col-sm-2">
+            <div class="col-sm-1"></div><label class="col-sm-2 control-label">Frequency of Maintenance</label>
+            <div class="col-sm-1">
             <div class="checkbox">
               <label>
                 <input type="checkbox" checked disabled> Weekly 
@@ -288,11 +288,11 @@
           </div>
           <div class="form-group">
             <label class="col-sm-2 control-label" >Serial Number </label>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
             <input type="text" class="form-control" value="KD3DDFR666" disabled>
             </div>
-              <div class="col-sm-2"></div>
-              <div class="col-sm-4">
+              <div class="col-sm-3"></div>
+              <div class="col-sm-3">
             <div class="checkbox">
               <label>
                 <input type="checkbox" checked disabled> Annually
@@ -304,12 +304,12 @@
 
           <div class="form-group">
               <label class="col-sm-2 control-label">Instructions / Reference (optional)</label>
-              <div class="col-sm-4">
+              <div class="col-sm-3">
                  Sample.txt <br>
                   <textarea class="form-control" rows="3" disabled>Need to access</textarea>
              </div>
-             <label class="col-sm-2 control-label">External Document ? (Y/N)</label>
-            <div class="col-sm-4">
+             <div class="col-sm-1"></div><label class="col-sm-2 control-label">External Document ? (Y/N)</label>
+            <div class="col-sm-3">
               <div class="toggle-switch toggle-switch-primary">
               <label>
                 <input type="checkbox" checked disabled>
@@ -317,6 +317,8 @@
                 <div class="toggle-switch-switch"><i class="fa fa-check"></i></div>
               </label>
             </div>
+
+            
             </div>
           </div> 
 
@@ -331,32 +333,32 @@
               <form class="form-horizontal" role="form">
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Equipment ID</label>
-                  <div class="col-sm-4">
+                  <div class="col-sm-3">
                     <input type="text" class="form-control" placeholder="" readonly="true" value="EQU989" data-toggle="tooltip" data-placement="bottom" title="Tooltip for name">
                   </div>
-                  <label class="col-sm-2 control-label">Due Date</label>
-                  <div class="col-sm-4">
-                            <input type='text'  class="form-control" value="08/22/2015" id="dueDate" />
+                  <div class="col-sm-1"></div><label class="col-sm-2 control-label">Due Date</label>
+                  <div class="col-sm-3">
+                            <input type='text'  class="form-control" value="08/22/2015" id="dueDate" placeholder="Select Date"/>
                   </div>
                 </div> 
                 <div class="form-group">
             <label class="col-sm-2 control-label">Type of Maintenance</label>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
               <select class="form-control">
                           <option value="0">Preventive</option>
                         <option value="1" selected>Corrective</option>
                         <option value="2">Predictive</option>
               </select>
             </div>
-            <label class="col-sm-2 control-label">Completion Date</label>
-            <div class="col-sm-4">
-                 <input type='text'  class="form-control" value="09/20/2015" id="completionDate" />
+            <div class="col-sm-1"></div><label class="col-sm-2 control-label">Completion Date</label>
+            <div class="col-sm-3">
+                 <input type='text'  class="form-control" value="09/20/2015" id="completionDate" placeholder="Select Date"/>
             </div>
           </div>
 
           <div class="form-group">
             <label class="col-sm-2 control-label">Frequency of Maintenance</label>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
                 <select class="form-control">
                     <option> -Select-</option>
                 <option>Weekly</option>
@@ -366,8 +368,8 @@
                 <option>Annually</option>
               </select>
             </div>
-            <label class="col-sm-2 control-label">Completed By</label>
-            <div class="col-sm-4">
+            <div class="col-sm-1"></div><label class="col-sm-2 control-label">Completed By</label>
+            <div class="col-sm-3">
               <select class="form-control">
                   <option> -Select-</option>
                 <option>Jhon Smith</option>
@@ -380,13 +382,13 @@
 
           <div class="form-group">
             <label class="col-sm-2 control-label">Notes </label>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
               <textarea class="form-control" rows="3">No commnets</textarea>
             </div>
           </div>
 
           <div class="form-group" id="showbutton">
-            <div class="col-sm-10 "></div>
+            <div class="col-sm-9 "></div>
             <div class="col-sm-2">  
                 <button type="submit" class="btn btn-theme">Submit</button> 
                 <button type="button" class="btn btn-default">Cancel</button>

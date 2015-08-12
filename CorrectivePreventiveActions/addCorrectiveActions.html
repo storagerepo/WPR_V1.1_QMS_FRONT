@@ -125,7 +125,7 @@
                                <i class="fa fa-plus-square"></i>
                                <span>Document</span>
                             </a>
-                             <ul class="sub">
+                             <ul class="sub sub-sub">
                               <li><a href="../document/addDocument.html">Add Document</a></li>
                               <li><a href="../document/viewDocumentRevision.html">View Revision</a></li>
                               <li><a href="../document/viewDocumentDetails.html">View Documents</a></li>
@@ -136,7 +136,7 @@
                                <i class="fa fa-plus-square"></i>
                                <span>Forms/Records</span>
                             </a>
-                             <ul class="sub">
+                             <ul class="sub sub-sub">
                               <li><a href="../forms/addForm.html">Add Form</a></li>
                               <li><a href="../forms/viewFormRevision.html">View Revision</a></li>
                               <li><a href="../forms/viewFormDetails.html">View Forms</a></li>
@@ -224,11 +224,11 @@
 				<form class="form-horizontal" role="form">
 					<div class="form-group">
 						<label class="col-sm-2 control-label">CAPA ID </label>
-						<div class="col-sm-4">
+						<div class="col-sm-3">
 							<input type="text" readonly="true" class="form-control" value="CAPA1029" placeholder=""/>
 						</div>
-						<label class="col-sm-2 control-label">NonConformance ID</label>
-						<div class="col-sm-4">
+						<div class="col-sm-1"></div><label class="col-sm-2 control-label">NonConformance ID</label>
+						<div class="col-sm-3">
                <select class="form-control" id="attendeeList" onchange="showJobtitle(this.value);">
                 <option value="">- Select -</option>
                 <option value="1">NC1111</option>
@@ -242,19 +242,19 @@
 
 					<div class="form-group">
 						<label class="col-sm-2 control-label">External ID</label>
-						<div class="col-sm-4">
-							<input class="form-control" type="text" id="externalID" disabled>
+						<div class="col-sm-3">
+							<input class="form-control" type="text" id="externalID" placeholder="- Select -" disabled>
 						</div>
-						<label class="col-sm-2 control-label">Source of NC</label>
-						<div class="col-sm-4">
-							<input type="text" class="form-control" placeholder="" id="sourceofNC" disabled>
+						<div class="col-sm-1"></div><label class="col-sm-2 control-label">Source of NC</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control" id="sourceofNC" placeholder="- Select -" disabled>
 						</div>
 					</div>
 
 					<div class="form-group">
 						<label class="col-sm-2 control-label">Date Found</label>
-						<div class="col-sm-4" >
-							 <select class="form-control" id="dateFound" disabled>
+						<div class="col-sm-3" >
+							 <select class="form-control" id="dateFound"  disabled>
                 <option value="">- Select -</option>
                 <option value="1">08/05/2015</option>
                 <option value="2">07/08/2015</option>
@@ -263,49 +263,68 @@
                 <option value="5">01/23/2015</option>
               </select>
 						</div>
-             <label class="col-sm-2 control-label">Type of NC</label>
-            <div class="col-sm-4">
-              <input type="text" class="form-control" placeholder="" id="typeofNC" disabled>
+             <div class="col-sm-1"></div><label class="col-sm-2 control-label">Type of NC</label>
+            <div class="col-sm-3">
+              <input type="text" class="form-control" id="typeofNC" placeholder="- Select -" disabled>
             </div>
 					</div>
           <div class="form-group">
             <label class="col-sm-2 control-label">Temporary Action</label>
-            <div class="col-sm-4">
-              <input class="form-control" type="text" id="temporaryAction" disabled>
+            <div class="col-sm-3">
+              <input class="form-control" type="text" id="temporaryAction" placeholder="- Select -" disabled>
             </div>
-            <label class="col-sm-2 control-label">Nature of NC</label>
-            <div class="col-sm-4">
-              <input type="text" class="form-control" placeholder="" id="natureeofNC" disabled>
+            <div class="col-sm-1"></div><label class="col-sm-2 control-label">Nature of NC</label>
+            <div class="col-sm-3">
+              <input type="text" class="form-control" id="natureeofNC" placeholder="- Select -" disabled>
             </div>
           </div>
            <div class="form-group">
             <label class="col-sm-2 control-label">CAPA Requestor</label>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
               <input class="form-control" type="text" id="" >
             </div>
-            <label class="col-sm-2 control-label">Use 5 Whys's in system (Y/N) (*Optional)</label>
-            <div class="col-sm-4">
-               <div class="toggle-switch toggle-switch-primary">
+            <div class="col-sm-1"></div><label class="col-sm-2 control-label">Use 5 Whys's in system (Y/N) (*Optional)</label>
+            <div class="col-sm-3">
+               <!-- <div class="toggle-switch toggle-switch-primary">
                       <label>
-                        <input type="checkbox" onchange="checkedorNot();" id="useSystem">
+                        <input type="checkbox" onchange="checkedorNot(); checkForIcon(this.id);" id="useSystem">
                         <div class="toggle-switch-inner"></div>
                         <div class="toggle-switch-switch"><i class="fa fa-check"></i></div>
                       </label>
+                </div> -->
+                 <div class="toggle-switch toggle-switch-primary">
+                <label>
+                <input type="checkbox" id="useSystem" onchange="checkedorNot();  checkForIcon(this.id);">
+                <div class="toggle-switch-inner"></div>
+                <div class="toggle-switch-switch">
+                  <span id="useSystem_check"><i class="fa fa-times"></i></span>
+                  <span id="useSystem_times" style="display:none;"><i class="fa fa-check"></i></span>
                 </div>
+                 </label>
+              </div>
             </div>
+
+                  
+
+
+
           </div>
            <div class="form-group">
             <label class="col-sm-2 control-label">Request Date</label>
-            <div class="col-sm-4">
-              <input class="form-control" type="text" id="requestDate"  placeholder="Date picker">
+            <div class="col-sm-3">
+              <input class="form-control" type="text" id="requestDate"  placeholder="Select Date">
             </div>
-            <label class="col-sm-2 control-label">Why's ?</label>
-            <div class="col-sm-4">
+            <div class="col-sm-1"></div><label class="col-sm-2 control-label">Why's ?</label>
+            <div class="col-sm-3">
               <div class="toggle-switch toggle-switch-primary">
                       <label>
-                        <input type="checkbox"  id="why" disabled>
-                        <div class="toggle-switch-inner"></div>
-                        <div class="toggle-switch-switch"><i class="fa fa-check"></i></div>
+                  <input type="checkbox" id="why" onchange="checkForIcon(this.id);" disabled>
+                <div class="toggle-switch-inner"></div>
+                <div class="toggle-switch-switch">
+                  <span id="why_check"><i class="fa fa-times"></i></span>
+                  <span id="why_times" style="display:none;"><i class="fa fa-check"></i></span>
+                </div>
+
                       </label>
                 </div><br>
               <textarea class="form-control"rows="3" id="whyTextarea" disabled></textarea>
@@ -313,17 +332,17 @@
           </div>
            <div class="form-group">
             <label class="col-sm-2 control-label">CAPA Due Date</label>
-            <div class="col-sm-4">
-              <input class="form-control" type="text" id="capaDueDate"  placeholder="Date picker">
+            <div class="col-sm-3">
+              <input class="form-control" type="text" id="capaDueDate"  placeholder="Select Date">
             </div>
-            <label class="col-sm-2 control-label">Root Cause Statement</label>
-            <div class="col-sm-4">
+            <div class="col-sm-1"></div><label class="col-sm-2 control-label">Root Cause Statement</label>
+            <div class="col-sm-3">
               <textarea  class="form-control" placeholder="" id="" rows="3"></textarea>
             </div>
           </div>
            <div class="form-group">
             <label class="col-sm-2 control-label">Assigned Team Leader</label>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
               <select class="form-control" id="">
                 <option value="">- Select -</option>
                 <option value="1">Name1</option>
@@ -331,39 +350,47 @@
                 <option value="3">Name3</option>
               </select>
             </div>
-            <label class="col-sm-2 control-label">Upload External Analysis (Y/N)(*Optional)</label>
-            <div class="col-sm-4">
-               <div class="toggle-switch toggle-switch-primary">
-                      <label>
-                        <input type="checkbox" onchange="uploadChecked();" id="upload">
-                        <div class="toggle-switch-inner"></div>
-                        <div class="toggle-switch-switch"><i class="fa fa-check"></i></div>
-                      </label>
+            <div class="col-sm-1"></div><label class="col-sm-2 control-label">Upload External Analysis (Y/N)(*Optional)</label>
+            <div class="col-sm-3">
+                 <div class="toggle-switch toggle-switch-primary">
+                <label>
+                <input type="checkbox" id="upload" onchange="uploadChecked(); checkForIcon(this.id);">
+                <div class="toggle-switch-inner"></div>
+                <div class="toggle-switch-switch">
+                  <span id="upload_check"><i class="fa fa-times"></i></span>
+                  <span id="upload_times" style="display:none;"><i class="fa fa-check"></i></span>
                 </div>
+                 </label>
+              </div>
             </div>
           </div>
            <div class="form-group">
             <label class="col-sm-2 control-label">Team Member (s)</label>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
               <textare class="form-control" id="" rows="3"></textarea> 
             </div>
-            <label class="col-sm-2 control-label">Root-Cause Analysis File</label>
-            <div class="col-sm-4">
+            <div class="col-sm-1"></div><label class="col-sm-2 control-label">Root-Cause Analysis File</label>
+            <div class="col-sm-3">
               <input type="text" class="form-control" placeholder="" id="">
             </div>
           </div>
            <div class="form-group">
             <label class="col-sm-2 control-label">Upload</label>
-            <div class="col-sm-4">
-              <input type="file" id="uploadFile" disabled>
-            </div>
+            <div class="col-sm-3 input-group">
+                <span class="input-group-btn">
+                <button type="button" class="btn btn-primary btn-sm btn-file" id="browse" disabled>
+                        Browse&hellip;
+                 <input name="attachments"  id="uploadFile" type="file" multiple disabled/> 
+                </button></span>
+                 <input type="text" class="form-control uploadInput" readonly>
+             </div>
           </div>
 					<div class="form-group" id="hidebutton">
-						<div class="col-sm-7"></div>
-						<div class="col-sm-3">					
+						<div class="col-sm-5"></div>
+						<div class="col-sm-4">					
 							<input type="button" value="Enter/Modify Preventive Action Details" onclick="showchildsection();"class=" btn btn-primary">
 						</div>
-						<div class="col-sm-2">	
+						<div class="col-sm-3">	
 								<button type="submit" class="btn btn-theme">Submit</button>	
 								<button type="button" class="btn btn-default">Cancel</button>
 					 	</div>
@@ -381,22 +408,22 @@
 							<form class="form-horizontal" role="form">
 								<div class="form-group">
 									<label class="col-sm-2 control-label">Action </label>
-									<div class="col-sm-4">
+									<div class="col-sm-3">
                      <input type="text" class="form-control" id="">
 									</div>
-									<label class="col-sm-2 control-label">Due Date</label>
-									<div class="col-sm-4">
-									 <input type="text" class="form-control" id="dueDate" placeholder="Date picker">
+									<div class="col-sm-1"></div><label class="col-sm-2 control-label">Due Date</label>
+									<div class="col-sm-3">
+									 <input type="text" class="form-control" id="dueDate" placeholder="Select Date">
 									</div>
 								</div>
 
 								<div class="form-group">
 									<label class="col-sm-2 control-label">Verified By </label>
-									<div class="col-sm-4">
+									<div class="col-sm-3">
                       <input type="text" class="form-control">
 									</div>
-									<label class="col-sm-2 control-label">Responsibity </label>
-									<div class="col-sm-4">
+									<div class="col-sm-1"></div><label class="col-sm-2 control-label">Responsibity </label>
+									<div class="col-sm-3">
 										 <select class="form-control" id="">
                 <option value="">- Select -</option>
                 <option value="1">Nellson</option>
@@ -408,16 +435,16 @@
 
 								<div class="form-group">
 									<label class="col-sm-2 control-label">Completion Date </label>
-									<div class="col-sm-4">
-										<input class="form-control" id="completionDate" placeholder="Date picker">
+									<div class="col-sm-3">
+										<input class="form-control" id="completionDate" placeholder="Select Date">
 									</div>
-                    <label class="col-sm-2 control-label">Verification Date</label>
-                  <div class="col-sm-4">
-                    <input type="text" class="form-control" id="verficationDate" placeholder="Date picker">
+                    <div class="col-sm-1"></div><label class="col-sm-2 control-label">Verification Date</label>
+                  <div class="col-sm-3">
+                    <input type="text" class="form-control" id="verficationDate" placeholder="Select Date">
                   </div>
 							</div>
 							<div class="form-group" id="showbutton" style="display:none;">
-									<div class="col-sm-6"></div>
+									<div class="col-sm-5"></div>
 									<div class="col-sm-4">
 										<input type="button" value="Hide Enter/Modify Preventive Action Details" onclick="hidechildsection();"class="btn btn-primary">
 									</div>
@@ -562,6 +589,7 @@ function checkedorNot(){
   else{
      document.getElementById("why").disabled = true;
      document.getElementById("why").checked = false;
+     checkForIcon("why");
     document.getElementById("whyTextarea").disabled = true;
     document.getElementById("whyTextarea").value = "";
 
@@ -572,9 +600,11 @@ function uploadChecked(){
   var upload = document.getElementById("upload").checked ;
   if (upload) {
     document.getElementById("uploadFile").disabled = false;
+     document.getElementById("browse").disabled = false;
   }
   else{
     document.getElementById("uploadFile").disabled = true;
+    document.getElementById("browse").disabled = true;
     document.getElementById("uploadFile").value = "";
   }
 }

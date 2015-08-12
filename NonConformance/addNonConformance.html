@@ -125,7 +125,7 @@
                                <i class="fa fa-plus-square"></i>
                                <span>Document</span>
                             </a>
-                             <ul class="sub">
+                             <ul class="sub sub-sub">
                               <li><a href="../document/addDocument.html">Add Document</a></li>
                               <li><a href="../document/viewDocumentRevision.html">View Revision</a></li>
                               <li><a href="../document/viewDocumentDetails.html">View Documents</a></li>
@@ -136,7 +136,7 @@
                                <i class="fa fa-plus-square"></i>
                                <span>Forms/Records</span>
                             </a>
-                             <ul class="sub">
+                             <ul class="sub sub-sub">
                               <li><a href="../forms/addForm.html">Add Form</a></li>
                               <li><a href="../forms/viewFormRevision.html">View Revision</a></li>
                               <li><a href="../forms/viewFormDetails.html">View Forms</a></li>
@@ -224,11 +224,11 @@
 				<form class="form-horizontal" role="form">
 					<div class="form-group">
 						<label class="col-sm-2 control-label">NonConformance (NC) ID</label>
-						<div class="col-sm-4">
+						<div class="col-sm-3">
 							<input type="text" readonly="true" value="NC1234" class="form-control" value="1029" placeholder=""/>
 						</div>
-						<label class="col-sm-2 control-label">Product ID</label>
-						<div class="col-sm-4">
+						<div class="col-sm-1"></div><label class="col-sm-2 control-label">Product ID</label>
+						<div class="col-sm-3">
              <select class="form-control">
                 <option value="">- Select -</option>
                 <option value="Name 1">ID 1</option>
@@ -242,7 +242,7 @@
 
 					<div class="form-group">
 						<label class="col-sm-2 control-label">Source of NC </label>
-						<div class="col-sm-4">
+						<div class="col-sm-3">
 							 <select class="form-control" id="sourceofNC" onchange="showExternalID(this.value);">
                 <option value="">- Select -</option>
                 <option value="1">Internal Audit</option>
@@ -255,15 +255,15 @@
                 <option value="8">Member Audit</option> 
               </select>
 						</div>
-						<label class="col-sm-2 control-label">External ID</label>
-						<div class="col-sm-4">
-							<input type="text" class="form-control" id="externalID" disabled placeholder="">
+						<div class="col-sm-1"></div><label class="col-sm-2 control-label">External ID</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control" id="externalID" value="- Select -" disabled placeholder="">
 						</div>
 					</div>
 
 					<div class="form-group">
 						<label class="col-sm-2 control-label">Type Of NC </label>
-						<div class="col-sm-4" >
+						<div class="col-sm-3">
 							 <select class="form-control" id="typeofNC">
                 <option value="">- Select -</option>
                 <option value="1">Product Quality</option>
@@ -273,103 +273,112 @@
                 <option value="5">Type NC</option>
               </select>
 						</div>
-            <label class="col-sm-2 control-label">Quantity Suspect</label>
-            <div class="col-sm-4">
+            <div class="col-sm-1"></div><label class="col-sm-2 control-label">Quantity Suspect</label>
+            <div class="col-sm-3">
               <input type="text" class="form-control" placeholder="">
             </div>
 					</div>
 				<div class="form-group">
 									<label class="col-sm-2 control-label">Nature of NC</label>
-									<div class="col-sm-4">
+									<div class="col-sm-3">
                      <textarea class="form-control" rows="3"></textarea>
 									</div>
-									<label class="col-sm-2 control-label">Disposition Required (Y/N) ?</label>
-								<div class="col-sm-4">
+									<div class="col-sm-1"></div><label class="col-sm-2 control-label">Disposition Required (Y/N) ?</label>
+								<div class="col-sm-3">
                   <div class="toggle-switch toggle-switch-primary">
-                  <label>
-                    <input type="checkbox">
-                    <div class="toggle-switch-inner"></div>
-                    <div class="toggle-switch-switch"><i class="fa fa-check"></i></div>
-                  </label>
+                <label>
+                <input type="checkbox" id="dispostionRequiredYN" onchange="checkForIcon(this.id);">
+                <div class="toggle-switch-inner"></div>
+                <div class="toggle-switch-switch">
+                  <span id="dispostionRequiredYN_check"><i class="fa fa-times"></i></span>
+                  <span id="dispostionRequiredYN_times" style="display:none;"><i class="fa fa-check"></i></span>
                 </div>
+                 </label>
+              </div>
                 </div>
 								</div>
 
 								<div class="form-group">
 									<label class="col-sm-2 control-label">Date Found </label>
-									<div class="col-sm-4">
-                      <input type='text' class="form-control" id="dateFound" />
+									<div class="col-sm-3">
+                      <input type='text' class="form-control" id="dateFound" placeholder="Select Date" />
 									</div>
-									<label class="col-sm-2 control-label">Disposition</label>
+									<div class="col-sm-1"></div><label class="col-sm-2 control-label">Disposition</label>
 									<div class="col-sm-2">
-										 <select class="form-control" id="typeofNC">
+										 <select class="form-control" id="typeofNC1" onchange="checkTypeofNC(this.id);">
                         <option value="">- Select -</option>
                         <option value="1">Repair</option>
                         <option value="2">Discard</option>
                         <option value="3">Keep as it</option>
                     </select>
 									</div>
+                  <div id="typeofNC1Checked" style="display:none;">
                   <div class="col-sm-1">
                     <input type="text" class="form-control">
                   </div>
                    <div class="col-sm-1">
                    No's
                   </div>
+                </div>
 								</div>
                 <div class="form-group">
                   <div class="col-md-2 col-md-offset-8">
-                     <select class="form-control" id="typeofNC">
+                     <select class="form-control" id="typeofNC2" onchange="checkTypeofNC(this.id);">
                         <option value="">- Select -</option>
                         <option value="1">Repair</option>
                         <option value="2">Discard</option>
                         <option value="3">Keep as it</option>
                     </select>
                   </div>
+                  <div id="typeofNC2Checked" style="display:none;">
                   <div class="col-sm-1">
                     <input type="text" class="form-control">
                   </div>
                    <div class="col-sm-1">
                    No's
                   </div>
+                </div>
                   </div>
                   <div class="form-group">
                   <div class="col-md-2 col-md-offset-8">
-                     <select class="form-control" id="typeofNC">
+                     <select class="form-control" id="typeofNC3" onchange="checkTypeofNC(this.id);">
                         <option value="">- Select -</option>
                         <option value="1">Repair</option>
                         <option value="2">Discard</option>
                         <option value="3">Keep as it</option>
                     </select>
                   </div>
+                  <div id="typeofNC3Checked" style="display:none;">
                   <div class="col-sm-1">
                     <input type="text" class="form-control">
                   </div>
                    <div class="col-sm-1">
                    No's
                   </div>
+                 </div> 
                   </div>
 								<div class="form-group">
 									<label class="col-sm-2 control-label">Reported By</label>
-									<div class="col-sm-4">
-										<select class="form-control" id="typeofNC">
+									<div class="col-sm-3">
+										<select class="form-control">
                       <option value="">- Select -</option>
                       <option value="1">Johnson</option>
                       <option value="2">Nellson</option>
                       <option value="3">Andewson</option>
                     </select>
 									</div>
-                    <label class="col-sm-2 control-label">Disposition Complete Date</label>
-                  <div class="col-sm-4">
-                    <input type="text" class="form-control" id="completionDate" placeholder="Date picker">
+                    <div class="col-sm-1"></div><label class="col-sm-2 control-label">Disposition Complete Date</label>
+                  <div class="col-sm-3">
+                    <input type="text" class="form-control" id="completionDate" placeholder="Select Date">
                   </div>
 							</div>
               <div class="form-group">
                   <label class="col-sm-2 control-label">Temporary Action</label>
-                  <div class="col-sm-4">
+                  <div class="col-sm-3">
                     <textarea rows="3" class="form-control"></textarea>
                   </div>
-                  <label class="col-sm-2 control-label">Disposition Responsibility </label>
-                  <div class="col-sm-4">
+                  <div class="col-sm-1"></div><label class="col-sm-2 control-label">Disposition Responsibility </label>
+                  <div class="col-sm-3">
                    <select class="form-control" id="typeofNC">
                       <option value="">- Select -</option>
                       <option value="1">Johnson</option>
@@ -380,17 +389,20 @@
               </div>
               <div class="form-group">
                   <label class="col-sm-2 control-label">Corrective Action Required (Y/N) ?</label>
-                  <div class="col-sm-4">
-                    <div class="toggle-switch toggle-switch-primary">
-                      <label>
-                        <input type="checkbox" checked>
+                  <div class="col-sm-3">
+                     <div class="toggle-switch toggle-switch-primary">
+                        <label>
+                        <input type="checkbox" id="correctiveActionYN" onchange="checkForIcon(this.id);">
                         <div class="toggle-switch-inner"></div>
-                        <div class="toggle-switch-switch"><i class="fa fa-check"></i></div>
-                      </label>
-                    </div>
+                        <div class="toggle-switch-switch">
+                          <span id="correctiveActionYN_check"><i class="fa fa-times"></i></span>
+                          <span id="correctiveActionYN_times"style="display:none;"><i class="fa fa-check"></i></span>
+                        </div>
+                         </label>
+              </div>
                   </div>
-                  <label class="col-sm-2 control-label">Cost of NC </label>
-                  <div class="col-sm-4">
+                  <div class="col-sm-1"></div><label class="col-sm-2 control-label">Cost of NC </label>
+                  <div class="col-sm-3">
                     <input type="text" class="form-control">
                   </div>
               </div>
@@ -549,5 +561,15 @@ function doRemoveattendee(){
 function removeAttnedeeFromList(){
   $("#yesNoModal").modal("hide");
   $('#attendee_list').html("");
+}
+function checkTypeofNC(id){
+  var isSelected = document.getElementById(id).value;
+  if (isSelected != "") {
+  document.getElementById(id+"Checked").style.display="block";
+  }
+  else{
+   document.getElementById(id+"Checked").style.display="none"; 
+  }
+
 }
   </script>

@@ -125,7 +125,7 @@
                                <i class="fa fa-plus-square"></i>
                                <span>Document</span>
                             </a>
-                             <ul class="sub">
+                             <ul class="sub sub-sub">
                               <li><a href="../document/addDocument.html">Add Document</a></li>
                               <li><a href="../document/viewDocumentRevision.html">View Revision</a></li>
                               <li><a href="../document/viewDocumentDetails.html">View Documents</a></li>
@@ -136,7 +136,7 @@
                                <i class="fa fa-plus-square"></i>
                                <span>Forms/Records</span>
                             </a>
-                             <ul class="sub">
+                             <ul class="sub sub-sub">
                               <li><a href="../forms/addForm.html">Add Form</a></li>
                               <li><a href="../forms/viewFormRevision.html">View Revision</a></li>
                               <li><a href="../forms/viewFormDetails.html">View Forms</a></li>
@@ -225,18 +225,18 @@
       <div class="box-content">
           <div class="form-group">
             <label class="col-sm-2 control-label">ID </label>
-            <div class="col-sm-4">  
+            <div class="col-sm-3">  
               <input type="text" class="form-control" placeholder="" readonly=true value="EMP0027">
             </div>
-            <label class="col-sm-2 control-label">Name</label>
-            <div class="col-sm-4">
+            <div class="col-sm-1"></div><label class="col-sm-2 control-label">Name</label>
+            <div class="col-sm-3">
               <input type="text" id="name" class="form-control" onblur="nameChildUpdate(this.value);" value="Willamson">
             </div>
           </div>
 
           <div class="form-group">
             <label class="col-sm-2 control-label">Job Title</label>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
                <select class="form-control" id="jobTitle" onchange="jobChildUpdate(this.value);">
                 <option>- Select -</option>
                 <option value="Job Title 1" selected>Job Title 1</option>
@@ -244,9 +244,9 @@
                 <option value="Job Title 3">Job Title 3 </option>
               </select>
             </div>
-            <label class="col-sm-2 control-label">Date Hired</label>
-            <div class="col-sm-4">
-              <input type="text" class="form-control" id="dateHired" onchange="dateChildUpdate(this.value);"  placeholder="date picker" value="09/16/2015">
+            <div class="col-sm-1"></div><label class="col-sm-2 control-label">Date Hired</label>
+            <div class="col-sm-3">
+              <input type="text" class="form-control" id="dateHired" onchange="dateChildUpdate(this.value);"  placeholder="Select Date" value="09/16/2015">
             </div>
             
           </div>
@@ -254,8 +254,16 @@
           <div class="form-group">
             <label class="col-sm-2 control-label">Attachments</label>
             <div class="col-sm-3">
-            <input type="file" name="files[0]"  data-toggle="tooltip" data-placement="bottom" title="Here you can scan or attach documents such as resume, diploma, certificates, etc">myResume.doc
+              <div class="input-group">
+                <span class="input-group-btn">
+                <button type="button" class="btn btn-primary btn-sm btn-file" id="browse" >
+                        Browse&hellip;
+                
+            <input type="file" name="files[0]"  data-toggle="tooltip" data-placement="bottom" title="Here you can scan or attach documents such as resume, diploma, certificates, etc">   </button></span>
+                 <input type="text" class="form-control uploadInput" value="resume.doc" readonly>
+
             </div>
+          </div>
             <div class="col-sm-2">
               <!--  <input class="btn btn-primary" type="button" value="Click to Add more Attachments" /> -->
               <button type="button" id="addFile" class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="Add Attachment">Add More <i class="fa fa-paperclip"></i></button>
@@ -267,9 +275,9 @@
           </div>
           <div class="form-group">
              <div class="col-sm-2"></div>
-           <div class="col-sm-4" id="fileTable">
+           <div class="col-sm-3" id="fileTable">
             </div> 
-               <label class="col-sm-2 control-label">Working As</label>
+               <div class="col-sm-1"></div><label class="col-sm-2 control-label">Working As</label>
             <div class="col-sm-4">
               <div class="checkbox-inline">
                 <label>
@@ -300,22 +308,22 @@
             <div class="box-content">
                <div class="form-group">
             <label class="col-sm-2 control-label">Name</label>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
               <input type="text" class="form-control" readonly=true id="nameChild" value="Willamson" >
             </div>
-             <label class="col-sm-2 control-label">Date Hired </label>
-            <div class="col-sm-4">  
+             <div class="col-sm-1"></div><label class="col-sm-2 control-label">Date Hired </label>
+            <div class="col-sm-3">  
               <input type="text" class="form-control" placeholder="" readonly=true id="dateHiredChild" value="09/16/2013">
             </div>
           </div>
 
           <div class="form-group">
             <label class="col-sm-2 control-label">Job Title</label>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
               <input type="text" class="form-control" placeholder="" readonly=true id="jobTitleChild" value="job Title 1">
             </div>
-            <label class="col-sm-2 control-label">List of functions needes</label>
-            <div class="col-sm-4">
+            <div class="col-sm-1"></div><label class="col-sm-2 control-label">List of functions needes</label>
+            <div class="col-sm-3">
              <div class="checkbox-inline">
                 <label>
                   <input type="checkbox" checked>Calibration 
@@ -339,11 +347,11 @@
 
           <div class="form-group">
             <label class="col-sm-2 control-label">Documented In</label>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
                <input class="form-control" type="text" value="Documented In">
             </div>
-            <label class="col-sm-2 control-label">Qualified By</label>
-            <div class="col-sm-4">
+            <div class="col-sm-1"></div><label class="col-sm-2 control-label">Qualified By</label>
+            <div class="col-sm-3">
               <select class="form-control" id="qualified" onchange="qualifiedBy(this.value);">
                   <option value=""> -Select-</option>
                 <option value="1">Education</option>
@@ -355,44 +363,44 @@
 
           <div class="form-group">
             <label class="col-sm-2 control-label">Type of Training</label>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
                 <select class="form-control" id="typeofTraining" >
                   <option value=""> -Select-</option>
                 <option value="1">Classroom</option>
                 <option value="2" selected>Hands on</option>
               </select>
             </div>
-             <label class="col-sm-2 control-label">Trainer</label>
-            <div class="col-sm-4">
+             <div class="col-sm-1"></div><label class="col-sm-2 control-label">Trainer</label>
+            <div class="col-sm-3">
                <input class="form-control" type="text" id="trainer" value="Nelisis">
             </div>
           </div>
             <div class="form-group">
             <label class="col-sm-2 control-label">Training Due Date</label>
-            <div class="col-sm-4">
-              <input type="text" class="form-control" placeholder="date picker" value="10/20/2015"  id="trainingDueDate" >
+            <div class="col-sm-3">
+              <input type="text" class="form-control" placeholder="Select Date" value="10/20/2015"  id="trainingDueDate" >
             </div>
-             <label class="col-sm-2 control-label">Training Completion Date</label>
-            <div class="col-sm-4">  
-              <input type="text" class="form-control" placeholder="date picker" id="trainingCompletionDate"  value="11/20/2015">
+             <div class="col-sm-1"></div><label class="col-sm-2 control-label">Training Completion Date</label>
+            <div class="col-sm-3">  
+              <input type="text" class="form-control" placeholder="Select Date" id="trainingCompletionDate"  value="11/20/2015">
             </div>
           </div>
             <div class="form-group">
             <label class="col-sm-2 control-label">Training Effectiveness Notes</label>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
               <input type="text" class="form-control" id="trainingEffectiveNotes" value="training effective notes">
             </div>
-             <label class="col-sm-2 control-label">Training Effectivenesss Review Due Date</label>
-            <div class="col-sm-4">  
-              <input type="text" class="form-control" id="effectiveReviewDueDate"  placeholder="date picker"  value="10/03/2015">
+             <div class="col-sm-1"></div><label class="col-sm-2 control-label">Training Effectivenesss Review Due Date</label>
+            <div class="col-sm-3">  
+              <input type="text" class="form-control" id="effectiveReviewDueDate"  placeholder="Select Date"  value="10/03/2015">
             </div>
           </div>
   
           <div class="form-group" id="showbutton">
-            <div class="col-sm-10"></div>
+            <div class="col-sm-9"></div>
             <div class="col-sm-2">  
                 <button type="submit" class="btn btn-theme">Submit</button> 
-                <a  href="../HRandTraining/viewHR.html" class="btn btn-default">Cancel</button>
+                <a  href="../HRandTraining/viewHR.html" class="btn btn-default">Cancel</a>
             </div>
           </div>      
             </div>
@@ -455,14 +463,23 @@
                         $('#addFile')
                                 .click(
                                         function() {
-                                          
+                                           if (count < 3) {
                                             var fileIndex = ++count;
                                            
                                             var id = "file"+fileIndex;
                                             $('#fileTable')
                                                     .append(
-                                                            '   <span id="'+id+'"><input  type="file" name="files['+ fileIndex +']" /><br></span>'
+                                                            ' <span id="'+id+'"> <div class="input-group">  <span class="input-group-btn">'+
+                                                                    '<button type="button" class="browse btn btn-primary btn-sm btn-files" >'+
+                                                                      'Browse&hellip;'+
+                                                                     '<input   name="files['+ fileIndex +']"id="files'+ fileIndex +'"  class="file" type="file" multiple />'+
+                                                                   '</button></span>'+
+                                                                    '<input type="text" class="form-control uploadInput" id="inputPath'+fileIndex+'" readonly></div><br></span>'
                                                                     );
+                                                      }
+                                                   else{
+                                                    alert("Exceeds");
+                                                   } 
                                         });
                          
                           $('#removeFile')
@@ -535,7 +552,36 @@ $('#effectiveReviewDueDate').datetimepicker({
   
   }
  }
+
+ $(document).on('change', '.file', function(){
+   var input = $(this),
+  name = input.attr('id');
+      numFiles = input.get(0).files ? input.get(0).files.length : 1,
+      label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+      if (name == "files1") {document.getElementById('inputPath1').value=label;};
+      if (name == "files2") {document.getElementById('inputPath2').value=label;};
+      if (name == "files3") {document.getElementById('inputPath3').value=label;};
+});
   </script>
- 
+  <style type="text/css">
+.btn-files {
+  position: relative;
+  overflow: hidden;
+}
+.btn-files input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 80%;
+  min-height: 100%;
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  background: red;
+  cursor: inherit;
+  display: block;
+}
+  </style>
   </body>
 </html>

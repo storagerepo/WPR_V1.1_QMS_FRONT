@@ -160,7 +160,7 @@
     content: '';
     display: inline-block;
     border-left: 7px solid transparent;
-    border-bottom: 7px solid #000061;
+    border-bottom: 7px solid #49C0F0;
     border-top-color: rgba(0,0,0,.2);
     position: absolute;
     bottom: 4px;
@@ -168,7 +168,7 @@
 }
 
 .bootstrap-datetimepicker-widget td.active,.bootstrap-datetimepicker-widget td.active:hover {
-    background-color: #000061;
+    background-color: #49C0F0;
     color: #fff;
     text-shadow: 0 -1px 0 rgba(0,0,0,.25);
 }
@@ -198,7 +198,7 @@
 }
 
 .bootstrap-datetimepicker-widget td span.active {
-    background-color: #000061;
+    background-color: #49C0F0;
     color: #fff;
     text-shadow: 0 -1px 0 rgba(0,0,0,.25);
 }
@@ -230,7 +230,7 @@
     -moz-background-clip: padding;
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
-    background-color: #000061;
+    background-color: #49C0F0;
     -moz-box-shadow: 0 1px 1px rgba(0,0,0,.2);
     -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.2);
     box-shadow: 0 1px 1px rgba(0,0,0,.2);
@@ -260,7 +260,7 @@
 }
 
 .bootstrap-datetimepicker-widget thead tr:first-child th:hover {
-    background: #000061;
+    background: #49C0F0;
 }
 
 .input-group.date .input-group-addon span {

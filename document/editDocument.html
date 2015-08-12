@@ -127,7 +127,7 @@
                                <i class="fa fa-plus-square"></i>
                                <span>Document</span>
                             </a>
-                             <ul class="sub">
+                             <ul class="sub sub-sub">
                               <li><a href="../document/addDocument.html">Add Document</a></li>
                               <li><a href="../document/viewDocumentRevision.html">View Revision</a></li>
                               <li class="active"><a href="../document/viewDocumentDetails.html">View Documents</a></li>
@@ -138,7 +138,7 @@
                                <i class="fa fa-plus-square"></i>
                                <span>Forms/Records</span>
                             </a>
-                             <ul class="sub">
+                             <ul class="sub sub-sub">
                               <li><a href="../forms/addForm.html">Add Form</a></li>
                               <li><a href="../forms/viewFormRevision.html">View Revision</a></li>
                               <li><a href="../forms/viewFormDetails.html">View Forms</a></li>
@@ -228,11 +228,11 @@
 				<form class="form-horizontal" role="form">
 					<div class="form-group">
 						<label class="col-sm-2 control-label">Document ID </label>
-						<div class="col-sm-4">
+						<div class="col-sm-3">
 							QMS-566
 						</div>
 						
-						<label class="col-sm-2 control-label">Media Type </label>
+						<div class="col-sm-1"></div><label class="col-sm-2 control-label">Media Type </label>
 						<div class="col-sm-4">
 							<div class="radio-inline">
 							<label>
@@ -257,13 +257,13 @@
 
 					<div class="form-group">
 						<label class="col-sm-2 control-label">Document Title</label>
-						<div class="col-sm-4">
+						<div class="col-sm-3">
 							<input type="text" class="form-control" placeholder="" value="Document Title" data-toggle="tooltip" data-placement="bottom" title="Tooltip for name" disabled>
 						</div>
-						<label class="col-sm-2 control-label">Process</label>
-						<div class="col-sm-4">
+						<div class="col-sm-1"></div><label class="col-sm-2 control-label">Process</label>
+						<div class="col-sm-3">
 							<select class="form-control" disabled>
-								<option>- select -</option>
+								<option>- Select -</option>
 								<option>Account</option>
 								<option>Adopter</option>
 								<option selected>Manager</option>
@@ -276,9 +276,9 @@
 
 					<div class="form-group">
 						<label class="col-sm-2 control-label">Document Type</label>
-						<div class="col-sm-4">
+						<div class="col-sm-3">
 							<select class="form-control" disabled>
-								<option>- select -</option>
+								<option>- Select -</option>
 								<option>Account</option>
 								<option selected>Adopter</option>
 								<option>Manager</option>
@@ -286,22 +286,25 @@
 								<option>Sample Process1</option>
 							</select>
 						</div>
-						<label class="col-sm-2 control-label">External Document ? (Y/N)</label>
-						<div class="col-sm-4">
-							<div class="toggle-switch toggle-switch-primary">
-							<label>
-								<input type="checkbox" checked disabled>
-								<div class="toggle-switch-inner"></div>
-								<div class="toggle-switch-switch"><i class="fa fa-check"></i></div>
-							</label>
-						</div>
+						<div class="col-sm-1"></div><label class="col-sm-2 control-label">External Document ? (Y/N)</label>
+						<div class="col-sm-3">
+						 <div class="toggle-switch toggle-switch-primary">
+                <label>
+                <input type="checkbox" id="externalDocumentYN" onchange="checkForIcon(this.id);">
+                <div class="toggle-switch-inner"></div>
+                <div class="toggle-switch-switch">
+                  <span id="externalDocumentYN_check"><i class="fa fa-times"></i></span>
+                  <span id="externalDocumentYN_times" style="display:none;"><i class="fa fa-check"></i></span>
+                </div>
+                 </label>
+              </div>
 						</div>
 					</div>
 
 					<div class="form-group">
-						<div class="col-sm-6"></div>
-							<label class="col-sm-2 control-label">Location</label>
-							<div class="col-sm-4">
+						<div class="col-sm-5"></div>
+							<div class="col-sm-1"></div><label class="col-sm-2 control-label">Location</label>
+							<div class="col-sm-3">
 								<select class="form-control" disabled>
 									<option>- select -</option>
 									<option selected>Industry</option>
@@ -314,10 +317,15 @@
 					</div>
 
 					<div class="form-group">
-						<div class="col-sm-6"></div>
-							<label class="col-sm-2 control-label">Upload File</label>
-							<div class="col-sm-4">
-								 <input name="attachments"  id="id_file" type="file" disabled/> 
+						<div class="col-sm-5"></div>
+							<div class="col-sm-1"></div><label class="col-sm-2 control-label">Upload File</label>
+							<div class="col-sm-3 input-group">
+							 <span class="input-group-btn">
+                <button type="button" class="btn btn-primary btn-sm btn-file" id="browse" disabled>
+                        Browse&hellip;
+                 <input name="attachments"  id="electronicchecked" type="file" multiple disabled/> 
+                </button></span>
+                 <input type="text" class="form-control uploadInput" value="sample.txt" readonly>
 							</div>
 					</div>		
 
@@ -344,22 +352,22 @@
 								</div>	
 								<div class="form-group">
 									<label class="col-sm-2 control-label">Revision No. (optional)</label>
-									<div class="col-sm-4">
+									<div class="col-sm-3">
 										<span id="valueTempe">0.1</span>
 										<button id="plus" href="#" class="btn btn-primary btn-xs" value="">+</button>
 										<input type="hidden" name="revision_id" id="revisionid" value="0.1" class="form-control">
 									</div>
-									<label class="col-sm-2 control-label">Date</label>
-									<div class="col-sm-4">
-										<input type="text" class="form-control" id="date_example" value="07/21/2015" placeholder="Date picker">
+									<div class="col-sm-1"></div><label class="col-sm-2 control-label">Date</label>
+									<div class="col-sm-3">
+										<input type="text" class="form-control" id="date_example" value="07/21/2015" placeholder="Select Date">
 									</div>
 								</div>
 
 								<div class="form-group">
 						<label class="col-sm-2 control-label">Issuer</label>
-						<div class="col-sm-3">
+						<div class="col-sm-2">
 							<select class="form-control">
-								  <option value="-">--Select--</option>
+								  <option value="-">- Select -</option>
 				              	  <option value="ABCD">A-D</option>
 					              <option value="EFGH">E-H</option>
 					              <option value="IJKL">I-L</option>
@@ -373,10 +381,10 @@
 						<div class="col-sm-1">
 							<button type="button" class="btn btn-primary btn-xs">Change</button>
 						</div>
-						<label class="col-sm-2 control-label">Approved by Process owner</label>
-						<div class="col-sm-3">
+						<div class="col-sm-1"></div><label class="col-sm-2 control-label">Approved by Process owner</label>
+						<div class="col-sm-2">
 							<select class="form-control">
-								  <option value="-">--Select--</option>
+								  <option value="-">- Select -</option>
 				              	  <option value="ABCD">A-D</option>
 					              <option value="EFGH">E-H</option>
 					              <option value="IJKL">I-L</option>
@@ -394,11 +402,11 @@
 
 					<div class="form-group">
 						<label class="col-sm-2 control-label">Revision Level</label>
-						<div class="col-sm-4">
+						<div class="col-sm-3">
 							<input type="text" class="form-control" placeholder="" value="0" data-toggle="tooltip" data-placement="bottom" title="Tooltip for name">
 						</div>
-						<label class="col-sm-2 control-label">Approved by Documents Control Admins</label>
-						<div class="col-sm-4">
+						<div class="col-sm-1"></div><label class="col-sm-2 control-label">Approved by Documents Control Admins</label>
+						<div class="col-sm-2">
 							<select class="form-control">
 								<option>Industry</option>
 								<option>Home</option>
@@ -412,11 +420,11 @@
 
 					<div class="form-group">
 						<label class="col-sm-2 control-label">Comments</label>
-						<div class="col-sm-4">
+						<div class="col-sm-3">
 							<textarea class="form-control" rows="3">Nothing</textarea>
 						</div>
-						<label class="col-sm-2 control-label">Approved by QMS Manager</label>
-						<div class="col-sm-4">
+						<div class="col-sm-1"></div><label class="col-sm-2 control-label">Approved by QMS Manager</label>
+						<div class="col-sm-3">
 							<select class="form-control">
 								<option>Industry</option>
 								<option>Home</option>
@@ -429,9 +437,9 @@
 					</div>
 
 					<div class="form-group">
-						<div class="col-sm-6"></div>
-						<label class="col-sm-2 control-label">Status</label>
-						<div class="col-sm-4">
+						<div class="col-sm-5"></div>
+						<div class="col-sm-1"></div><label class="col-sm-2 control-label">Status</label>
+						<div class="col-sm-3">
 							<select class="form-control">
 								<option>Draft</option>
 								<option selected>Active</option>
@@ -441,7 +449,7 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<div class="col-sm-10"></div>
+						<div class="col-sm-9"></div>
 						<div class="col-sm-2">	
 								<button type="submit" class="btn btn-theme">Submit</button>	
 								<a href="../document/viewDocumentDetails.html" class="btn btn-default">Cancel</a>

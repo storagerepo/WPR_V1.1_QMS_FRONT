@@ -126,7 +126,7 @@
                                <i class="fa fa-plus-square"></i>
                                <span>Document</span>
                             </a>
-                             <ul class="sub">
+                             <ul class="sub sub-sub">
                               <li><a href="../document/addDocument.html">Add Document</a></li>
                               <li><a href="../document/viewDocumentRevision.html">View Revision</a></li>
                               <li><a href="../document/viewDocumentDetails.html">View Documents</a></li>
@@ -137,7 +137,7 @@
                                <i class="fa fa-plus-square"></i>
                                <span>Forms/Records</span>
                             </a>
-                             <ul class="sub">
+                             <ul class="sub sub-sub">
                               <li class="active"><a href="../forms/addForm.html">Add Form</a></li>
                               <li><a href="../forms/viewFormRevision.html">View Revision</a></li>
                               <li><a href="../forms/viewFormDetails.html">View Forms</a></li>
@@ -235,10 +235,10 @@
 							<option>OOP</option>
 							</select>
 						</div>
-						<div class="col-sm-2">	
+						<div class="col-sm-1">	
 							<input type="text" class="form-control" placeholder="" data-toggle="tooltip" data-placement="bottom" title="Tooltip for name">
 						</div>
-						<label class="col-sm-2 control-label">Media Type </label>
+						<div class="col-sm-1"></div><label class="col-sm-2 control-label">Media Type </label>
 						<div class="col-sm-4">
 							<div class="radio-inline">
 							<label>
@@ -263,11 +263,11 @@
 
 					<div class="form-group">
 						<label class="col-sm-2 control-label">Form/Rec Title</label>
-						<div class="col-sm-4">
+						<div class="col-sm-3">
 							<input type="text" class="form-control" placeholder="" data-toggle="tooltip" data-placement="bottom" title="Tooltip for name">
 						</div>
-						<label class="col-sm-2 control-label">Responsibility </label>
-						<div class="col-sm-4">
+						<div class="col-sm-1"></div><label class="col-sm-2 control-label">Responsibility </label>
+						<div class="col-sm-3">
 							<input type="text" class="form-control" placeholder="" data-toggle="tooltip" data-placement="bottom" title="Tooltip for name">
 						</div>
 						
@@ -275,9 +275,9 @@
 
 					<div class="form-group">
 						<label class="col-sm-2 control-label">Process</label>
-						<div class="col-sm-4">
+						<div class="col-sm-3">
 							<select class="form-control">
-								<option>- select -</option>
+								<option>- Select -</option>
 								<option>Account</option>
 								<option>Adopter</option>
 								<option>Manager</option>
@@ -285,33 +285,35 @@
 								<option>Sample Process1</option>
 							</select>
 						</div>
-						<label class="col-sm-2 control-label">Is this a Form ? (Y/N)</label>
-						<div class="col-sm-4">
-							<div class="toggle-switch toggle-switch-primary">
-							<label>
-								<input type="checkbox" checked>
-								<div class="toggle-switch-inner"></div>
-								<div class="toggle-switch-switch"><i class="fa fa-check"></i></div>
-							</label>
-						</div>
+						<div class="col-sm-1"></div><label class="col-sm-2 control-label">Is this a Form ? (Y/N)</label>
+						<div class="col-sm-3">
+							 <div class="toggle-switch toggle-switch-primary">
+                <label>
+                <input type="checkbox" id="isFormYN" onchange="checkForIcon(this.id);">
+                <div class="toggle-switch-inner"></div>
+                <div class="toggle-switch-switch">
+                  <span id="isFormYN_check"><i class="fa fa-times"></i></span>
+                  <span id="isFormYN_times"><i class="fa fa-check"></i></span>
+                </div>
+                 </label>
+              </div>
 						</div>
 					</div>
 
 					<div class="form-group">
 						<label class="col-sm-2 control-label">Retention Time</label>
-						<div class="col-sm-4">
+						<div class="col-sm-3">
 							<select class="form-control">
-								<option>- select -</option>
+								<option>- Select -</option>
 								<option>1Week</option>
 								<option>1Month</option>
 								<option>1Year</option>
 							</select>
 						</div>
-						<div id="hardcopychecked">
-							<label class="col-sm-2 control-label">Location</label>
-							<div class="col-sm-4">
-								<select class="form-control">
-									<option>- select -</option>
+							<div class="col-sm-1"></div><label class="col-sm-2 control-label">Location</label>
+							<div class="col-sm-3">
+								<select class="form-control" id="hardcopychecked">
+									<option>- Select -</option>
 									<option>Industry</option>
 									<option>Home</option>
 									<option>Location</option>
@@ -319,20 +321,22 @@
 									<option>Shop</option>
 								</select>
 							</div>
-						</div>
 					</div>
 
 					<div class="form-group">
-						<div class="col-sm-6"></div>
-						<div id="electronicchecked" style="display:none;">
-							<label class="col-sm-2 control-label">Upload File</label>
-							<div class="col-sm-4">
-								 <input name="attachments"  id="id_file" type="file" /> 
-							</div>
-						</div>
+						<div class="col-sm-5"></div>
+							<div class="col-sm-1"></div><label class="col-sm-2 control-label">Upload File</label>
+              <div class="col-sm-3 input-group">
+                <span class="input-group-btn">
+                <button type="button" class="btn btn-primary btn-sm btn-file" id="browse" disabled>
+                        Browse&hellip;
+                 <input name="attachments"  id="electronicchecked" type="file" multiple disabled/> 
+                </button></span>
+                 <input type="text" class="form-control uploadInput" readonly>
+             </div>
 					</div>
 					<div class="form-group" id="hidebutton">
-						<div class="col-sm-7"></div>
+						<div class="col-sm-6"></div>
 						<div class="col-sm-3">					
 							<input type="button" value="Enter/Modify Revision Details" onclick="showchildsection();"class=" btn btn-primary">
 						</div>
@@ -354,13 +358,13 @@
 							<form class="form-horizontal" role="form">
 								<div class="form-group">
 									<label class="col-sm-2 control-label">Form/Rec ID</label>
-									<div class="col-sm-4">
+									<div class="col-sm-3">
 										<input type="text" class="form-control" placeholder="" data-toggle="tooltip" data-placement="bottom" title="Tooltip for name">
 									</div>
-									<label class="col-sm-2 control-label">Approved by Process owner</label>
-									<div class="col-sm-3">
+									<div class="col-sm-1"></div><label class="col-sm-2 control-label">Approved by Process owner</label>
+									<div class="col-sm-2">
 										<select class="form-control">
-											  <option value="-">--Select--</option>
+											  <option value="-">- Select -</option>
 							              	  <option value="ABCD">A-D</option>
 								              <option value="EFGH">E-H</option>
 								              <option value="IJKL">I-L</option>
@@ -377,20 +381,20 @@
 
 								<div class="form-group">
 									<label class="col-sm-2 control-label">Date</label>
-									<div class="col-sm-4">
-										<input type="text" class="form-control" id="date_example" placeholder="Date picker">
+									<div class="col-sm-3">
+										<input type="text" class="form-control" id="date_example" placeholder="Select Date">
 									</div>
-									<label class="col-sm-2 control-label">Comments</label>
-									<div class="col-sm-4">
+									<div class="col-sm-1"></div><label class="col-sm-2 control-label">Comments</label>
+									<div class="col-sm-3">
 										<textarea class="form-control" rows="3"></textarea>
 									</div>
 								</div>
 
 								<div class="form-group">
 									<label class="col-sm-2 control-label">Issuer</label>
-									<div class="col-sm-3">
+									<div class="col-sm-2">
 										<select class="form-control">
-											  <option value="-">--Select--</option>
+											  <option value="-">- Select -</option>
 							              	  <option value="ABCD">A-D</option>
 								              <option value="EFGH">E-H</option>
 								              <option value="IJKL">I-L</option>
@@ -406,7 +410,7 @@
 						
 								</div>
 								<div class="form-group" id="showbutton" style="display:none;">
-									<div class="col-sm-7"></div>
+									<div class="col-sm-6"></div>
 									<div class="col-sm-3">
 										<input type="button" value="Hide Enter/Modify Revision Details" onclick="hidechildsection();"class="btn btn-primary">
 									</div>
@@ -513,16 +517,19 @@ $(document).ready(function() {
    <script type="text/javascript">
   function toggle1(value){
   	if (value == "hardcopy") {
-  		$("#hardcopychecked").show();
-  		$("#electronicchecked").hide();	
+  		 document.getElementById("hardcopychecked").disabled = false;
+  		 document.getElementById("electronicchecked").disabled = true;
+       document.getElementById("browse").disabled = true;	
   	}
   	else if (value == "electronic") {
-  		$("#electronicchecked").show();
-  		$("#hardcopychecked").hide();
+  		 document.getElementById("electronicchecked").disabled = false;
+        document.getElementById("browse").disabled = false;
+  		 document.getElementById("hardcopychecked").disabled = true;
   	}
   	else{
-  		$("#hardcopychecked").show();
-  		$("#electronicchecked").show();
+  		 document.getElementById("hardcopychecked").disabled = false;
+  		 document.getElementById("electronicchecked").disabled = false;
+        document.getElementById("browse").disabled = false;
   	}
   }
   </script>

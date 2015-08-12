@@ -125,7 +125,7 @@
                                <i class="fa fa-plus-square"></i>
                                <span>Document</span>
                             </a>
-                             <ul class="sub">
+                             <ul class="sub sub-sub">
                               <li class="active"><a href="../document/addDocument.html">Add Document</a></li>
                               <li><a href="../document/viewDocumentRevision.html">View Revision</a></li>
                               <li><a href="../document/viewDocumentDetails.html">View Documents</a></li>
@@ -136,7 +136,7 @@
                                <i class="fa fa-plus-square"></i>
                                <span>Forms/Records</span>
                             </a>
-                             <ul class="sub">
+                             <ul class="sub sub-sub">
                               <li><a href="../forms/addForm.html">Add Form</a></li>
                               <li><a href="../forms/viewFormRevision.html">View Revision</a></li>
                               <li><a href="../forms/viewFormDetails.html">View Forms</a></li>
@@ -218,7 +218,7 @@
 			<div class="box-header">
 				<div class="box-name">
 					<i class="fa fa-book"></i>
-					<span>Add Document Details New</span>
+					<span>Add Document Details</span>
 				</div>
 			</div>
 			<div class="box-content">
@@ -234,10 +234,10 @@
 							<option>MeeGo</option>
 							</select>
 						</div>
-						<div class="col-sm-2">	
+						<div class="col-sm-1">	
 							<input type="text" name="docId" class="form-control" data-mask="int" id="docId">
 						</div>
-						<label class="col-sm-2 control-label">Media Type </label>
+						<div class="col-sm-1"></div><label class="col-sm-2 control-label">Media Type </label>
 						<div class="col-sm-4">
 							<div class="radio-inline">
 							<label>
@@ -262,13 +262,13 @@
 
 					<div class="form-group">
 						<label class="col-sm-2 control-label">Document Title</label>
-						<div class="col-sm-4">
+						<div class="col-sm-3">
 							<input type="text" class="form-control" data-mask="alphanumspace" placeholder="" data-toggle="tooltip" data-placement="bottom" title="Tooltip for name">
 						</div>
-						<label class="col-sm-2 control-label">Process</label>
-						<div class="col-sm-4">
+						<div class="col-sm-1"></div><label class="col-sm-2 control-label">Process</label>
+						<div class="col-sm-3">
 							<select class="form-control">
-								<option>- select -</option>
+								<option>- Select -</option>
 								<option>Account</option>
 								<option>Adopter</option>
 								<option>Manager</option>
@@ -281,9 +281,9 @@
 
 					<div class="form-group">
 						<label class="col-sm-2 control-label">Document Type</label>
-						<div class="col-sm-4">
+						<div class="col-sm-3">
 							<select class="form-control">
-								<option>- select -</option>
+								<option>- Select -</option>
 								<option>Account</option>
 								<option>Adopter</option>
 								<option>Manager</option>
@@ -291,23 +291,26 @@
 								<option>Sample Process1</option>
 							</select>
 						</div>
-						<label class="col-sm-2 control-label">External Document ? (Y/N)</label>
-						<div class="col-sm-4">
-							<div class="toggle-switch toggle-switch-primary">
-              <label>
-                <input type="checkbox" checked>
+						<div class="col-sm-1"></div><label class="col-sm-2 control-label">External Document ? (Y/N)</label>
+						<div class="col-sm-3">
+							 <div class="toggle-switch toggle-switch-primary">
+                <label>
+                <input type="checkbox" id="externalDocumentYN" onchange="checkForIcon(this.id);">
                 <div class="toggle-switch-inner"></div>
-                <div class="toggle-switch-switch"><i class="fa fa-check"></i></div>
-              </label>
-            </div>
+                <div class="toggle-switch-switch">
+                  <span id="externalDocumentYN_check"><i class="fa fa-times"></i></span>
+                  <span id="externalDocumentYN_times" style="display:none;"><i class="fa fa-check"></i></span>
+                </div>
+                 </label>
+              </div>
 						</div>
 					</div>
 
 					<div class="form-group" >
 							<label class="col-sm-2 control-label">Location</label>
-							<div class="col-sm-4">
+							<div class="col-sm-3">
 								<select class="form-control" id="hardcopychecked">
-									<option>- select -</option>
+									<option>- Select -</option>
 									<option>Industry</option>
 									<option>Home</option>
 									<option>Location</option>
@@ -315,13 +318,19 @@
 									<option>Shop</option>
 								</select>
 							</div>
-							<label class="col-sm-2 control-label">Upload File</label>
-							<div class="col-sm-4">
-								 <input name="attachments"  id="electronicchecked" type="file" disabled /> 
+							<div class="col-sm-1"></div>
+              <label class="col-sm-2 control-label">Upload File</label>
+							<div class="col-sm-3 input-group">
+                <span class="input-group-btn">
+                <button type="button" class="btn btn-primary btn-sm btn-file" id="browse" disabled>
+                        Browse&hellip;
+								 <input name="attachments"  id="electronicchecked" type="file" multiple disabled/> 
+                </button></span>
+                 <input type="text" class="form-control uploadInput" readonly>
 						 </div>
 					</div>
 					<div class="form-group" id="hidebutton">
-						<div class="col-sm-7"></div>
+						<div class="col-sm-6"></div>
 						<div class="col-sm-3">					
 							<input type="button" value="Enter/Modify Revision Details" onclick="showchildsection();" class=" btn btn-primary ">
 						</div>
@@ -342,12 +351,12 @@
 							<form class="form-horizontal" role="form">
 								<div class="form-group">
 									<label class="col-sm-2 control-label">Document ID</label>
-									<div class="col-sm-4">
+									<div class="col-sm-3">
 										<input type="text" class="form-control" placeholder="" data-toggle="tooltip" data-placement="bottom" title="Tooltip for name">
 									</div>
-									<label class="col-sm-2 control-label">Date</label>
-									<div class="col-sm-4">
-									<!-- 	<input type="text" class="form-control ll-skin-vigo " id="date_example" placeholder="Date picker"> -->
+									<div class="col-sm-1"></div><label class="col-sm-2 control-label">Date</label>
+									<div class="col-sm-3">
+									<!-- 	<input type="text" class="form-control ll-skin-vigo " id="date_example" placeholder="Select Date"> -->
                             <input type='text'
                               class="form-control"
                               id="date_example" />
@@ -357,9 +366,9 @@
 
 								<div class="form-group">
 						<label class="col-sm-2 control-label">Issuer</label>
-						<div class="col-sm-3">
+						<div class="col-sm-2">
 							<select class="form-control">
-								  <option value="-">--Select--</option>
+								  <option value="-">- Select -</option>
 				              	  <option value="ABCD">A-D</option>
 					              <option value="EFGH">E-H</option>
 					              <option value="IJKL">I-L</option>
@@ -372,10 +381,10 @@
 						<div class="col-sm-1">
 							<button type="button" class="btn btn-primary btn-xs">Change</button>
 						</div>
-						<label class="col-sm-2 control-label">Approved by Process owner</label>
-						<div class="col-sm-3">
+						<div class="col-sm-1"></div><label class="col-sm-2 control-label">Approved by Process owner</label>
+						<div class="col-sm-2">
 							<select class="form-control">
-								  <option value="-">--Select--</option>
+								  <option value="-">- Select -</option>
 				              	  <option value="ABCD">A-D</option>
 					              <option value="EFGH">E-H</option>
 					              <option value="IJKL">I-L</option>
@@ -392,11 +401,11 @@
 
 					<div class="form-group">
 						<label class="col-sm-2 control-label">Revision Level</label>
-						<div class="col-sm-4">
+						<div class="col-sm-3">
 							<input type="text" class="form-control" placeholder="" data-toggle="tooltip" data-placement="bottom" title="Tooltip for name">
 						</div>
-						<label class="col-sm-2 control-label">Approved by Documents Control Admins</label>
-						<div class="col-sm-4">
+						<div class="col-sm-1"></div><label class="col-sm-2 control-label">Approved by Documents Control Admins</label>
+						<div class="col-sm-3">
 							<select class="form-control">
 								<option>Industry</option>
 								<option>Home</option>
@@ -409,11 +418,11 @@
 
 					<div class="form-group">
 						<label class="col-sm-2 control-label">Comments</label>
-						<div class="col-sm-4">
+						<div class="col-sm-3">
 							<textarea class="form-control" rows="3"></textarea>
 						</div>
-						<label class="col-sm-2 control-label">Approved by QMS Manager</label>
-						<div class="col-sm-4">
+						<div class="col-sm-1"></div><label class="col-sm-2 control-label">Approved by QMS Manager</label>
+						<div class="col-sm-3">
 							<select class="form-control">
 								<option>Industry</option>
 								<option>Home</option>
@@ -425,9 +434,9 @@
 					</div>
 
 					<div class="form-group">
-						<div class="col-sm-6"></div>
-						<label class="col-sm-2 control-label">Status</label>
-						<div class="col-sm-4">
+						<div class="col-sm-5"></div>
+						<div class="col-sm-1"></div><label class="col-sm-2 control-label">Status</label>
+						<div class="col-sm-3">
 							<select class="form-control">
 								<option>Draft</option>
 								<option>Active</option>
@@ -436,7 +445,7 @@
 						</div>
 					</div>
 					<div class="form-group" id="showbutton" style="display:none;">
-						<div class="col-sm-7"></div>
+						<div class="col-sm-6"></div>
 						<div class="col-sm-3">
 							<input type="button" value="Hide Enter/Modify Revision Details" onclick="hidechildsection();"class="btn btn-primary">
 						</div>
@@ -515,19 +524,26 @@
   function toggle1(value){
       document.getElementById('hardcopychecked').disabled= true;
       document.getElementById('electronicchecked').disabled = true;
+      document.getElementById('browse').disabled = true;
   	if (value == "hardcopy") 
         document.getElementById('hardcopychecked').disabled= false;
   	
   	else if (value == "electronic") {
         document.getElementById('electronicchecked').disabled = false;
+         document.getElementById('browse').disabled = false;
   	}
   	else{
   	document.getElementById('hardcopychecked').disabled= false;
      document.getElementById('electronicchecked').disabled = false;
+       document.getElementById('browse').disabled = false;
   	}
+
   }
+
+
+
+
+
   </script>
-
-
   </body>
 </html>

@@ -125,7 +125,7 @@
                                <i class="fa fa-plus-square"></i>
                                <span>Document</span>
                             </a>
-                             <ul class="sub">
+                             <ul class="sub sub-sub">
                               <li><a href="../document/addDocument.html">Add Document</a></li>
                               <li><a href="../document/viewDocumentRevision.html">View Revision</a></li>
                               <li><a href="../document/viewDocumentDetails.html">View Documents</a></li>
@@ -136,7 +136,7 @@
                                <i class="fa fa-plus-square"></i>
                                <span>Forms/Records</span>
                             </a>
-                             <ul class="sub">
+                             <ul class="sub sub-sub">
                               <li><a href="../forms/addForm.html">Add Form</a></li>
                               <li><a href="../forms/viewFormRevision.html">View Revision</a></li>
                               <li><a href="../forms/viewFormDetails.html">View Forms</a></li>
@@ -224,18 +224,18 @@
       <div class="box-content">
           <div class="form-group">
             <label class="col-sm-2 control-label">ID </label>
-            <div class="col-sm-4">  
+            <div class="col-sm-3">  
               <input type="text" class="form-control" placeholder="" readonly=true value="EMP0027">
             </div>
-            <label class="col-sm-2 control-label">Name</label>
-            <div class="col-sm-4">
+            <div class="col-sm-1"></div><label class="col-sm-2 control-label">Name</label>
+            <div class="col-sm-3">
               <input type="text" id="name" class="form-control" onblur="nameChildUpdate(this.value);">
             </div>
           </div>
 
           <div class="form-group">
             <label class="col-sm-2 control-label">Job Title</label>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
                <select class="form-control" id="jobTitle" onchange="jobChildUpdate(this.value);">
                 <option>- Select -</option>
                 <option value="Job Title 1">Job Title 1</option>
@@ -243,9 +243,9 @@
                 <option value="Job Title 3">Job Title 3 </option>
               </select>
             </div>
-            <label class="col-sm-2 control-label">Date Hired</label>
-            <div class="col-sm-4">
-              <input type="text" class="form-control" id="dateHired" onchange="dateChildUpdate(this.value);"  placeholder="date picker">
+            <div class="col-sm-1"></div><label class="col-sm-2 control-label">Date Hired</label>
+            <div class="col-sm-3">
+              <input type="text" class="form-control" id="dateHired" onchange="dateChildUpdate(this.value);"  placeholder="Select Date">
             </div>
             
           </div>
@@ -253,8 +253,15 @@
           <div class="form-group">
             <label class="col-sm-2 control-label">Attachments</label>
             <div class="col-sm-3">
-            <input type="file" name="files[0]"  data-toggle="tooltip" data-placement="bottom" title="Here you can scan or attach documents such as resume, diploma, certificates, etc">
-            </div>
+              <div class="input-group">
+                <span class="input-group-btn">
+                <button type="button" class="btn btn-primary btn-sm btn-file btn-files" id="browse">
+                        Browse&hellip;
+                 <input  name="files[0]"  data-toggle="tooltip" data-placement="bottom" title="Here you can scan or attach documents such as resume, diploma, certificates, etc" type="file" multiple /> 
+                </button></span>
+                 <input type="text" class="form-control uploadInput" readonly>
+             </div>
+            </div> 
             <div class="col-sm-2">
               <!--  <input class="btn btn-primary" type="button" value="Click to Add more Attachments" /> -->
               <button type="button" id="addFile" class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="Add Attachment">Add More <i class="fa fa-paperclip"></i></button>
@@ -266,9 +273,9 @@
           </div>
           <div class="form-group">
              <div class="col-sm-2"></div>
-           <div class="col-sm-4" id="fileTable">
+           <div class="col-sm-3" id="fileTable">
             </div> 
-               <label class="col-sm-2 control-label">Working As</label>
+               <div class="col-sm-1"></div><label class="col-sm-2 control-label">Working As</label>
             <div class="col-sm-4">
               <div class="checkbox-inline">
                 <label>
@@ -290,41 +297,32 @@
              </div>
             </div>
            </div>   
-          <div class="form-group" id="hidebutton">
-            <div class="col-sm-7"></div>
-            <div class="col-sm-3">          
-              <input type="button" value="Enter/Modify Training Details" onclick="showchildsection();" class=" btn btn-primary ">
-            </div>
-            <div class="col-sm-2">  
-                <button type="submit" class="btn btn-theme">Submit</button> 
-                <button type="button" class="btn btn-default">Cancel</button>
-            </div>
-          </div>   
+
       </div>    
     </div>
   </div>  
   <!-- inner Fields -->
-        <div class="col-xs-12 col-sm-12" id="childsection" style="display:none;">
+        <div class="col-xs-12 col-sm-12">
            <div class="form-panel">
             <div class="box-content">
                <div class="form-group">
             <label class="col-sm-2 control-label">Name</label>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
               <input type="text" class="form-control" readonly=true id="nameChild" >
             </div>
-             <label class="col-sm-2 control-label">Date Hired </label>
-            <div class="col-sm-4">  
+             <div class="col-sm-1"></div><label class="col-sm-2 control-label">Date Hired </label>
+            <div class="col-sm-3">  
               <input type="text" class="form-control" placeholder="" readonly=true id="dateHiredChild" >
             </div>
           </div>
 
           <div class="form-group">
             <label class="col-sm-2 control-label">Job Title</label>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
               <input type="text" class="form-control" placeholder="" readonly=true id="jobTitleChild">
             </div>
-            <label class="col-sm-2 control-label">List of functions needes</label>
-            <div class="col-sm-4">
+            <div class="col-sm-1"></div><label class="col-sm-2 control-label">List of functions needes</label>
+            <div class="col-sm-3">
              <div class="checkbox-inline">
                 <label>
                   <input type="checkbox">Calibration 
@@ -348,11 +346,11 @@
 
           <div class="form-group">
             <label class="col-sm-2 control-label">Documented In</label>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
                <input class="form-control" type="text">
             </div>
-            <label class="col-sm-2 control-label">Qualified By</label>
-            <div class="col-sm-4">
+            <div class="col-sm-1"></div><label class="col-sm-2 control-label">Qualified By</label>
+            <div class="col-sm-3">
               <select class="form-control" id="qualified" onchange="qualifiedBy(this.value);">
                   <option value=""> -Select-</option>
                 <option value="1">Education</option>
@@ -364,41 +362,41 @@
 
           <div class="form-group">
             <label class="col-sm-2 control-label">Type of Training</label>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
                 <select class="form-control" id="typeofTraining" disabled>
                   <option value=""> -Select-</option>
                 <option value="1">Classroom</option>
                 <option value="2">Hands on</option>
               </select>
             </div>
-             <label class="col-sm-2 control-label">Trainer</label>
-            <div class="col-sm-4">
+             <div class="col-sm-1"></div><label class="col-sm-2 control-label">Trainer</label>
+            <div class="col-sm-3">
                <input class="form-control" type="text" id="trainer" disabled>
             </div>
           </div>
             <div class="form-group">
             <label class="col-sm-2 control-label">Training Due Date</label>
-            <div class="col-sm-4">
-              <input type="text" class="form-control" placeholder="date picker"  id="trainingDueDate"  disabled>
+            <div class="col-sm-3">
+              <input type="text" class="form-control" placeholder="Select Date"  id="trainingDueDate"  disabled>
             </div>
-             <label class="col-sm-2 control-label">Training Completion Date</label>
-            <div class="col-sm-4">  
-              <input type="text" class="form-control" placeholder="date picker" id="trainingCompletionDate" disabled>
+             <div class="col-sm-1"></div><label class="col-sm-2 control-label">Training Completion Date</label>
+            <div class="col-sm-3">  
+              <input type="text" class="form-control" placeholder="Select Date" id="trainingCompletionDate" disabled>
             </div>
           </div>
             <div class="form-group">
             <label class="col-sm-2 control-label">Training Effectiveness Notes</label>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
               <input type="text" class="form-control" id="trainingEffectiveNotes" disabled>
             </div>
-             <label class="col-sm-2 control-label">Training Effectivenesss Review Due Date</label>
-            <div class="col-sm-4">  
-              <input type="text" class="form-control" id="effectiveReviewDueDate"  placeholder="date picker">
+             <div class="col-sm-1"></div><label class="col-sm-2 control-label">Training Effectivenesss Review Due Date</label>
+            <div class="col-sm-3">  
+              <input type="text" class="form-control" id="effectiveReviewDueDate"  placeholder="Select Date">
             </div>
           </div>
   
           <div class="form-group" id="showbutton" style="display:none;">
-            <div class="col-sm-7"></div>
+            <div class="col-sm-6"></div>
             <div class="col-sm-3">
               <input type="button" value="Hide Enter/Modify Training Details" onclick="hidechildsection();"class="btn btn-primary">
             </div>
@@ -467,14 +465,23 @@
                         $('#addFile')
                                 .click(
                                         function() {
-                                          
+                                          if (count < 3) {
                                             var fileIndex = ++count;
                                            
                                             var id = "file"+fileIndex;
                                             $('#fileTable')
                                                     .append(
-                                                            '   <span id="'+id+'"><input  type="file" name="files['+ fileIndex +']" /><br></span>'
+                                                             ' <span id="'+id+'"> <div class="input-group">  <span class="input-group-btn">'+
+                                                                    '<button type="button" class="browse btn btn-primary btn-sm btn-files" >'+
+                                                                      'Browse&hellip;'+
+                                                                     '<input   name="files['+ fileIndex +']"id="files'+ fileIndex +'"  class="file" type="file" multiple />'+
+                                                                   '</button></span>'+
+                                                                    '<input type="text" class="form-control uploadInput" id="inputPath'+fileIndex+'" readonly></div><br></span>'
                                                                     );
+                                                   }
+                                                   else{
+                                                    alert("Exceeds");
+                                                   } 
                                         });
                          
                           $('#removeFile')
@@ -505,18 +512,6 @@
 $('#effectiveReviewDueDate').datetimepicker({
   pickTime : false
 });
- function showchildsection()
- {
-   document.getElementById('childsection').style.display="block";
-   document.getElementById('hidebutton').style.display="none";
-   document.getElementById('showbutton').style.display="block";
- }
- function hidechildsection()
- {
-   document.getElementById('childsection').style.display="none";
-   document.getElementById('hidebutton').style.display="block";
-   document.getElementById('showbutton').style.display="none";
- }
 
  function nameChildUpdate(value){
   document.getElementById("nameChild").value = value;
@@ -552,6 +547,7 @@ $('#effectiveReviewDueDate').datetimepicker({
      document.getElementById("mangmentRepresentative").disabled = false;
   if (processOwner || documentControl) {
       document.getElementById("mangmentRepresentative").disabled = true;
+  
   }
   else if(mangmentRepresentative){
     document.getElementById("processOwner").disabled = true;
@@ -559,7 +555,64 @@ $('#effectiveReviewDueDate').datetimepicker({
   
   }
  }
+
+/*$(".file1 :file").change(function() {
+  alert("change");
+  var input = $(this),
+      numFiles = input.get(0).files ? input.get(0).files.length : 1,
+      label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+  input.trigger('fileselect', [numFiles, label]);
+});
+
+$(document).ready( function() {
+  $(".file1 :file").on('fileselect', function(event, numFiles, label) {
+        alert(numFiles);
+        var input = $(this).parents('.input-group').find(':text'),
+            log = numFiles > 1 ? numFiles + ' files selected' : label;
+        
+        if( input.length ) {
+            input.val(log);
+        } else {
+            if( log ) alert(log);
+        }
+        
+    });
+  }); */
+
+$(document).on('click', '.browse', function(){
+ 
+});
+$(document).on('change', '.file', function(){
+   var input = $(this),
+  name = input.attr('id');
+      numFiles = input.get(0).files ? input.get(0).files.length : 1,
+      label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+      if (name == "files1") {document.getElementById('inputPath1').value=label;};
+      if (name == "files2") {document.getElementById('inputPath2').value=label;};
+      if (name == "files3") {document.getElementById('inputPath3').value=label;};
+});
   </script>
  
   </body>
+  <style type="text/css">
+.btn-files {
+  position: relative;
+  overflow: hidden;
+}
+.btn-files input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 80%;
+  min-height: 100%;
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  background: red;
+  cursor: inherit;
+  display: block;
+}
+
+  </style>
 </html>
